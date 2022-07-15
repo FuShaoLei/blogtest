@@ -1,0 +1,1799 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>FuShaoLei Blog</title>
+    <link>https://fushaolei.github.io/</link>
+    <description>Recent content on FuShaoLei Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Sat, 02 Jul 2022 17:34:37 +0000</lastBuildDate>
+    
+        <atom:link href="https://fushaolei.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+        <item>
+        <title>《图解Http》笔记</title>
+        <link>https://fushaolei.github.io/post/diagram-http-note/</link>
+        <pubDate>Sat, 02 Jul 2022 17:34:37 +0000</pubDate>
+        
+        <guid>https://fushaolei.github.io/post/diagram-http-note/</guid>
+        <description>FuShaoLei Blog https://fushaolei.github.io/post/diagram-http-note/ -&lt;blockquote&gt;
+&lt;p&gt;好久没写博客了，但是笔记是有常常写的，只是懒的把笔记放到博客上，因为我觉得，博客里一定要有内容，至少百分之八十的文章，要让人读了感觉有收获，我觉得这样个人博客才能够受欢迎，而自己平常做的笔记，比较随意，所以不太敢放上来，但是我觉得也不用那么刻意，毕竟看博客最多的可能是自己，现在也关闭了评论系统了，其实可以用gitalk，但是我觉得这个东西，比较粗糙，因为有时候换个url什么之类的，可能它又另启一个仓库，感觉比较傻瓜，当然，这只是过去我对它的认知，再加上评论的人不是很多，如果是交流学习的话，我感觉还是发邮件好一点，因为你会比较慎重。话不多说，下面是正文&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;第-1-章-了解web及网络基础&#34;&gt;第 1 章 了解web及网络基础&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;HTTP，全名&lt;code&gt;Hypertext Transfer Protocol&lt;/code&gt;，超文本传输协议&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;互联网是再TCP/IP协议族的基础上运作起来的&lt;/p&gt;
+&lt;p&gt;TCP/IP协议族分为四层：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;应用层：决定了向用户提供应用服务时的通信活动，如FTP，DNS，HTTP等&lt;/li&gt;
+&lt;li&gt;传输层：提供数据传输，如TCP，UDP&lt;/li&gt;
+&lt;li&gt;网络层：处理数据包？&lt;/li&gt;
+&lt;li&gt;链路层：用来处理连接网路的硬件部分&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;与HTTP密切相关的几个协议：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;IP协议：作用是保证数据包传送到指定目标&lt;/li&gt;
+&lt;li&gt;TCP协议：作用是可靠传输&lt;/li&gt;
+&lt;li&gt;DNS服务：负责解析域名成IP地址&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;URI和URL&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;URI是&lt;strong&gt;统一资源标识符&lt;/strong&gt;，强调是唯一标识&lt;/li&gt;
+&lt;li&gt;URL是&lt;strong&gt;统一资源定位符&lt;/strong&gt;，强调的是位置，在什么位置上&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;第-2-章-简单的http协议&#34;&gt;第 2 章 简单的HTTP协议&lt;/h2&gt;
+&lt;p&gt;请求访问资源的一端为客户端，提供资源的一端为服务器端，始终都是由客户端来建立通信的&lt;/p&gt;
+&lt;p&gt;客户端请求报文：&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;//  方法  URI     版本协议
+    GET /user/   HTTP/1.1
+// Request Headers   
+    Host: api.github.com
+    Content-Type: text/plain
+    Content-Length:21
+// Request Body
+    name=fushaolei&amp;amp;age=21
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;服务端响应报文：&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;//  版本协议    状态码  状态信息
+	HTTP/1.1  200   OK
+// Response Headers        
+    Content-Type: application/json
+    Content-Length:21
+// Response Body
+    bodybodybodybodybodybodybodybodybodybodybodybodybodybodybodybodybodybodybodybody
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Http是不保存状态的协议&lt;/p&gt;
+&lt;p&gt;各种请求方法：&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;方法&lt;/th&gt;
+&lt;th&gt;说明&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;GET&lt;/td&gt;
+&lt;td&gt;请求资源，无Request Body，有Response Body&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;POST&lt;/td&gt;
+&lt;td&gt;用于增加或修改资源，有Request Body，有Response Body&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;PUT&lt;/td&gt;
+&lt;td&gt;同样用于增加或修改资源，但和POST不同的是，PUT是幂等的（调用一次与连续调用多次是等价的），有Response Body&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;HEAD&lt;/td&gt;
+&lt;td&gt;获得报文首部，没有Response Body&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;DELETE&lt;/td&gt;
+&lt;td&gt;删除文件&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;OPTIONS&lt;/td&gt;
+&lt;td&gt;询问支持方法&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;TRACE&lt;/td&gt;
+&lt;td&gt;追踪路径，可以查询发出去的请求是被怎样加工修改的&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;CONNECT&lt;/td&gt;
+&lt;td&gt;要求用隧道协议连接代理&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;使用Cookie进行状态管理，客户端保存好服务器端发送过来的Set-Cookie字段，在每次请求的时候带上Cookie，从而验证身份&lt;/p&gt;
+&lt;h2 id=&#34;第-3-章-http报文内的http信息&#34;&gt;第 3 章 HTTP报文内的HTTP信息&lt;/h2&gt;
+&lt;p&gt;Http报文本质是由多行（CR+LF换行符）数据构成的&lt;strong&gt;字符串文本&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;报文结构：&lt;/p&gt;
+&lt;p&gt;请求报文：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;请求行
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;各种首部字段
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;// 换行，就这里空一行
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;&lt;/span&gt;Request body&lt;span style=&#34;&#34;&gt;（&lt;/span&gt;如果有的话&lt;span style=&#34;&#34;&gt;）&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;响应报文：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;状态行
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;各种首部字段
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;// 换行，就这里空一行
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;&lt;/span&gt;Response body&lt;span style=&#34;&#34;&gt;（&lt;/span&gt;如果有的话&lt;span style=&#34;&#34;&gt;）&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;首部字段有4种，分别是，通用首部，请求首部，响应首部，实体首部&lt;/p&gt;
+&lt;p&gt;内容编码：用于压缩和解压缩内容，有这几种：gzip，compress，deflate，identity（不进行编码）&lt;/p&gt;
+&lt;p&gt;分块传输编码：将实体分割成块传给客户端&lt;/p&gt;
+&lt;p&gt;发送多种数据的集合：multipart/form-data，multipart/byteranges，都会使用到boundary字符串来划分，比如boundary=abc，那么各个实体部分的起始行都会用&amp;ndash;abc来进行标记，然后使用&amp;ndash;abc&amp;ndash;来作为结束的标志，而且每个实体部分的起始行都可含有首部字符&lt;/p&gt;
+&lt;p&gt;获取部分内容：Content-Range: bytes=5001-10000&lt;/p&gt;
+&lt;h2 id=&#34;第-4-章-返回结果的http状态码&#34;&gt;第 4 章 返回结果的HTTP状态码&lt;/h2&gt;
+&lt;p&gt;状态码的类别：&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;状态码&lt;/th&gt;
+&lt;th&gt;说明&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;1XX&lt;/td&gt;
+&lt;td&gt;infonational&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;2XX&lt;/td&gt;
+&lt;td&gt;success&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;3XX&lt;/td&gt;
+&lt;td&gt;redirection&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;4XX&lt;/td&gt;
+&lt;td&gt;client error&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;5XX&lt;/td&gt;
+&lt;td&gt;server error&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;常见状态码：&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;状态码&lt;/th&gt;
+&lt;th&gt;说明&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;200&lt;/td&gt;
+&lt;td&gt;OK，被服务器正常处理，且对应请求的实体会返回&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;204&lt;/td&gt;
+&lt;td&gt;Not Content，被服务器正常处理，但没有实体返回&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;206&lt;/td&gt;
+&lt;td&gt;Partial Content，范围请求，响应报文应该有Content-Range来指定内容&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;301&lt;/td&gt;
+&lt;td&gt;Move Permanently，永久重定向&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;302&lt;/td&gt;
+&lt;td&gt;Found，临时重定向&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;303&lt;/td&gt;
+&lt;td&gt;See Other&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;304&lt;/td&gt;
+&lt;td&gt;Not Modified&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;307&lt;/td&gt;
+&lt;td&gt;Temporary Redirect&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;400&lt;/td&gt;
+&lt;td&gt;Bad Request，错误的请求&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;401&lt;/td&gt;
+&lt;td&gt;Unauthorized，未验证身份&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;403&lt;/td&gt;
+&lt;td&gt;Forbidden，访问被拒绝&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;404&lt;/td&gt;
+&lt;td&gt;Not Found 无法找到资源&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;500&lt;/td&gt;
+&lt;td&gt;Internal Server Error&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;503&lt;/td&gt;
+&lt;td&gt;Service Unavailable&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;第-5-章-与http协作的web服务器&#34;&gt;第 5 章 与HTTP协作的Web服务器&lt;/h2&gt;
+&lt;p&gt;通信数据转发程序：代理（服务器和客户端的“中间人”），网关（转发通信数据），隧道（安全通信）&lt;/p&gt;
+&lt;p&gt;在HTTP之前出现的协议：FTP，NNTP，Archie，WAIS，Gopher&lt;/p&gt;
+&lt;h2 id=&#34;第-6-章-http首部&#34;&gt;第 6 章 HTTP首部&lt;/h2&gt;
+&lt;p&gt;格式：&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;首部字段名:字段值1，字段值2
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;各种首部字段：&lt;/p&gt;
+&lt;p&gt;通用首部字段&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;字段名&lt;/th&gt;
+&lt;th&gt;说明&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Cache-Control&lt;/td&gt;
+&lt;td&gt;指定缓存的工作机制，有一堆&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Connnection&lt;/td&gt;
+&lt;td&gt;管理持久连接&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Date&lt;/td&gt;
+&lt;td&gt;创建Http报文的日期和时间&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Transfer-Encoding&lt;/td&gt;
+&lt;td&gt;传输报文主体时采用的编码&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Upgrade&lt;/td&gt;
+&lt;td&gt;检测http及其他协议是否有高可用版本&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;请求首部字段：&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;字段名&lt;/th&gt;
+&lt;th&gt;客户端想向服务器说明的&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Accept&lt;/td&gt;
+&lt;td&gt;能够处理的媒体类型&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Accept-Charset&lt;/td&gt;
+&lt;td&gt;支持的字符集&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Accept-Encoding&lt;/td&gt;
+&lt;td&gt;能支持的内容编码（gzip，compress，deflate，identity）&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Accept-Language&lt;/td&gt;
+&lt;td&gt;能处理的语言&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Authorization&lt;/td&gt;
+&lt;td&gt;认证信息&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Host&lt;/td&gt;
+&lt;td&gt;目标主机地址（&lt;strong&gt;给目标主机定位子主机的&lt;/strong&gt;），&lt;strong&gt;这是唯一一个必须包含在请求内的字段&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Range&lt;/td&gt;
+&lt;td&gt;对于只想获取部分资源，这个字段指定部分资源的范围&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Referer&lt;/td&gt;
+&lt;td&gt;请求的URI是从哪个web页面发起的&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;User-Agent&lt;/td&gt;
+&lt;td&gt;浏览器的种类&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Cookie&lt;/td&gt;
+&lt;td&gt;请求需要验证Cookie时带上&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;响应首部字段：&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;字段名&lt;/th&gt;
+&lt;th&gt;服务器想向客户端说明的&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Location&lt;/td&gt;
+&lt;td&gt;重定向的uri&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Retry-After&lt;/td&gt;
+&lt;td&gt;稍后发出请求的时间&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Server&lt;/td&gt;
+&lt;td&gt;http服务器的信息&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Set-Cookie&lt;/td&gt;
+&lt;td&gt;返回给客户端Cookie&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;实体首部字段：&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;字段名&lt;/th&gt;
+&lt;th&gt;说明&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Content-Encoding&lt;/td&gt;
+&lt;td&gt;实体的内容编码&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Content-Language&lt;/td&gt;
+&lt;td&gt;实体使用的语言是什么&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Content-Length&lt;/td&gt;
+&lt;td&gt;实体的大小（单位是字节）&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Content-Location&lt;/td&gt;
+&lt;td&gt;实体对应的URI&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Content-Range&lt;/td&gt;
+&lt;td&gt;字节为单位的实体范围&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Content-Type&lt;/td&gt;
+&lt;td&gt;实体媒体类型&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;第-7-章-确保web安全的https&#34;&gt;第 7 章 确保Web安全的HTTPS&lt;/h2&gt;
+&lt;p&gt;http的缺点：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;明文传输，内容可能会被窃听&lt;/li&gt;
+&lt;li&gt;不验证身份，有可能遭遇伪装&lt;/li&gt;
+&lt;li&gt;无法验证报文的完整性，可能已被篡改（像这样，请求或响应传输途中，遭攻击者拦截并篡改内容的攻击称为&lt;strong&gt;中间人攻击&lt;/strong&gt;）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Https = Http + 加密 + 认证 + 完整性保护，简单来说 Https = Http + SSL&lt;/p&gt;
+&lt;p&gt;HTTPS通信步骤：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;客户端发送Client Hello给服务端&lt;/li&gt;
+&lt;li&gt;服务端返回Server Hello给客户端&lt;/li&gt;
+&lt;li&gt;服务器发送Certificate报文，里边包含公钥证书&lt;/li&gt;
+&lt;li&gt;服务器发送Server Hello Done通知客户端，最初握手结束&lt;/li&gt;
+&lt;li&gt;客户端发送Client Key Exchange报文，里边包含Pre-master secret随机密码串&lt;/li&gt;
+&lt;li&gt;客户端发送Change Cipher Spec报文，提示服务端，之后的通信将采用Pre-master secret密钥加密&lt;/li&gt;
+&lt;li&gt;客户端发送Finished报文，该报文包含建立连接至今全部报文的整体校验值&lt;/li&gt;
+&lt;li&gt;服务端发送Change Cipher Spec&lt;/li&gt;
+&lt;li&gt;服务端发送Finished&lt;/li&gt;
+&lt;li&gt;SSL连接建立完成&lt;/li&gt;
+&lt;/ol&gt;
+- https://fushaolei.github.io/post/diagram-http-note/ - </description>
+        </item>
+    
+    
+    
+        <item>
+        <title>Linux笔记</title>
+        <link>https://fushaolei.github.io/post/linux-note/</link>
+        <pubDate>Sat, 10 Apr 2021 18:23:55 +0800</pubDate>
+        
+        <guid>https://fushaolei.github.io/post/linux-note/</guid>
+        <description>FuShaoLei Blog https://fushaolei.github.io/post/linux-note/ -&lt;h2 id=&#34;第-1-讲-入门&#34;&gt;第 1 讲 入门&lt;/h2&gt;
+&lt;p&gt;Linux是一个&lt;strong&gt;开源的&lt;/strong&gt;操作系统&lt;strong&gt;内核&lt;/strong&gt;，以Linux作为内核的发行版有：Debian、Ubuntu、CentOS、OpenSUSE、Arch、Deepin、Mint等&lt;/p&gt;
+&lt;p&gt;Linux默认使用Ext4文件系统格式&lt;/p&gt;
+&lt;p&gt;Linux上，文件名称&lt;strong&gt;区分大小写&lt;/strong&gt;，Windows上不区分&lt;/p&gt;
+&lt;p&gt;在Linux上，&lt;code&gt;.&lt;/code&gt;开头的&lt;strong&gt;文件&lt;/strong&gt;是&lt;strong&gt;隐藏文件&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&#34;第-2-讲-目录结构和shell基础&#34;&gt;第 2 讲 目录结构和shell基础&lt;/h2&gt;
+&lt;p&gt;Linux使用 &lt;code&gt;/&lt;/code&gt; 表示根目录，而且所有的目录都至少包含两个子目录： &lt;code&gt;.&lt;/code&gt; 和 &lt;code&gt;..&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;.&lt;/code&gt; 表示当前目录；&lt;code&gt;..&lt;/code&gt; 表示上一层目录。（&lt;code&gt;/&lt;/code&gt;的&lt;code&gt;..&lt;/code&gt;指向自己）&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;~&lt;/code&gt;表示用户主目录&lt;/p&gt;
+&lt;p&gt;开头带&lt;code&gt;/&lt;/code&gt;的表示&lt;strong&gt;绝对路径&lt;/strong&gt;，开头不带&lt;code&gt;/&lt;/code&gt;的表示&lt;strong&gt;相对路径&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;目录说明&#34;&gt;目录说明&lt;/h3&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;目录&lt;/th&gt;
+&lt;th&gt;说明&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;/&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;系统根目录&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;/usr&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;用户的程序，配置等信息&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;/home&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;默认创建用户会在此创建&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;/etc&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;存放系统配置文件&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;/bin&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;/sbin&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;/root&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;/boot&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;/lib&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;/dev&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;/media&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;/proc&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;/var&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;/sys&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;/lost+found&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;/tmp&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;/usr/bin&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;/usr/sbin&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;终端和shell&#34;&gt;终端和shell&lt;/h3&gt;
+&lt;p&gt;终端是是计算机最外围设备。用于获取用户输入，并显示程序的输出结果。&lt;/p&gt;
+&lt;p&gt;shell是指运行命令的程序， Ubuntu 默认使用 bash 作为默认的 shell 。&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;命令的分类&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;内建命令&lt;/strong&gt;：是shell本身的一部分&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;外部命令&lt;/strong&gt;：独立的程序文件&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;一些具有辅助效果的命令&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;命令&lt;/th&gt;
+&lt;th&gt;说明&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;man&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;man [命令]&lt;/code&gt;查看外部命令的帮助手册，&lt;code&gt;man -k [字段]&lt;/code&gt;查看哪些文档里包含这个字段&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;help&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;help [命令]&lt;/code&gt;或&lt;code&gt;[命令] --help&lt;/code&gt;查看内建命令的帮助手册&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;type&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;type [命令]&lt;/code&gt;查看命令是哪种类型的&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;whereis/which&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;whereis/which [命令]&lt;/code&gt;查看命令是在那个目录&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr&gt;
+&lt;p&gt;两个常用命令&lt;/p&gt;
+&lt;h3 id=&#34;cd&#34;&gt;cd&lt;/h3&gt;
+&lt;p&gt;change directory的缩写，用于切换工作目录&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;命令&lt;/th&gt;
+&lt;th&gt;说明&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;cd&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;切换到用户主目录&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;cd -&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;切换到上一个工作目录，常用于在两个目录之间来回切换&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;cd [目录名]&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;切换到指定目录，前面带&lt;code&gt;/&lt;/code&gt;表示绝对路径，否则就是相对路径&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;cd~username&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;将工作目录改变为username的主目录&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;ls&#34;&gt;ls&lt;/h3&gt;
+&lt;p&gt;list的缩写，用于列出文件&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;命令&lt;/th&gt;
+&lt;th&gt;说明&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;ls -a&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;显示所有文件，包括隐藏文件，常用&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;ls -sh&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;以易读的方式显示文件大小，常用&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;ls -l&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;显示详细信息，包括权限、所有者、创建时间、名称···&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;ls -R&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;递归显示目录&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;ls -S&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;按文件大小排序显示，大文件在前&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;ls -t&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;以创建时间排序显示，最近创建的在前面&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;shell常用命令&#34;&gt;shell常用命令&lt;/h3&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;命令&lt;/th&gt;
+&lt;th&gt;说明&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;mkdir&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;创建目录&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;rmdir&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;删除空目录&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;touch&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;创建空文件&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;cat&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;显示文件内容&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;cp&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;复制文件/目录&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;rm&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;删除文件/目录&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;echo&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;输出字符串&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;mv&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;移动文件/目录&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;ln&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;创建连接&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;第-3-讲-用户管理&#34;&gt;第 3 讲 用户管理&lt;/h2&gt;
+&lt;p&gt;在Linux中 root用户是超级用户，具有最高级别的权限，软件的安装啊，卸载啊，文件的编辑保存啊都要用最高权限去执行&lt;/p&gt;
+&lt;p&gt;其他用户可以临时获取root权限，也可直接切换到root用户&lt;/p&gt;
+&lt;h3 id=&#34;sudo&#34;&gt;sudo&lt;/h3&gt;
+&lt;p&gt;supper user do的缩写，&lt;strong&gt;临时获取root权限&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;可用sudo passwd root指令来设置root的密码&lt;/p&gt;
+&lt;p&gt;sudo -i 快速切换到root用户&lt;/p&gt;
+&lt;p&gt;sudo -u指定一个用户来运行命令&lt;/p&gt;
+&lt;h3 id=&#34;su&#34;&gt;su&lt;/h3&gt;
+&lt;p&gt;switch user的缩写，不指定的话默认切换到root用户&lt;/p&gt;
+&lt;h3 id=&#34;创建普通用户&#34;&gt;创建普通用户&lt;/h3&gt;
+&lt;p&gt;sudo adduser myuser&lt;/p&gt;
+&lt;p&gt;创建用户的同时回创建一个同名用户组&lt;/p&gt;
+&lt;p&gt;这些普通用户默认不能获取sudo权限&lt;/p&gt;
+&lt;p&gt;创建普通用户并加入已有的组：sudo adduser myuser &amp;ndash;ingroup mygroup&lt;/p&gt;
+&lt;h3 id=&#34;创建用户组&#34;&gt;创建用户组&lt;/h3&gt;
+&lt;p&gt;sudo addgroup mygroup&lt;/p&gt;
+&lt;h3 id=&#34;赋予普通用户sudo权限的方法&#34;&gt;赋予普通用户sudo权限的方法&lt;/h3&gt;
+&lt;p&gt;方法一，直接修改/etc/group下sudo的信息&lt;/p&gt;
+&lt;p&gt;方法二，利用sudo usermod -G mygroup -a myuser指令&lt;/p&gt;
+&lt;h3 id=&#34;删除用户和组&#34;&gt;删除用户和组&lt;/h3&gt;
+&lt;p&gt;删除用户-sudo deluser myuser，这时候这个用户的主目录还在&lt;/p&gt;
+&lt;p&gt;删除用户并删除主目录-sudo deluser &amp;ndash;remove-home myuser&lt;/p&gt;
+&lt;p&gt;删除组-sudo delgroup mygroup&lt;/p&gt;
+&lt;h2 id=&#34;第-4-讲-文件权限&#34;&gt;第 4 讲 文件权限&lt;/h2&gt;
+&lt;p&gt;一切皆文件&lt;/p&gt;
+&lt;h3 id=&#34;文件类型&#34;&gt;文件类型&lt;/h3&gt;
+&lt;p&gt;使用ls -l即可查看类型，其中用10个字符表现类型和权限&lt;/p&gt;
+&lt;p&gt;第一个字符表示类型&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;字符&lt;/th&gt;
+&lt;th&gt;类型&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;-&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;普通文件&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;d&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;目录&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;c&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;字符设备&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;b&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;块设备&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;p&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;管道&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;s&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;套接字文件&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;l&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;符号链接（软链接）&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;后9个字符表示权限，3个一组（都是以rwx一组出现的，如没有某个权限，将用&lt;code&gt;-&lt;/code&gt;替代），分别表示文件&lt;strong&gt;所属用户&lt;/strong&gt;，&lt;strong&gt;用户组&lt;/strong&gt;，&lt;strong&gt;其他用户对应的权限&lt;/strong&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;字符&lt;/th&gt;
+&lt;th&gt;类型&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;r&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;可读，100&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;w&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;可写，010&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;x&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;可执行，001，如果一个目录没有可执行权限则无法访问&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;chmod&#34;&gt;chmod&lt;/h3&gt;
+&lt;p&gt;change mod的缩写，用于设置文件权限&lt;/p&gt;
+&lt;p&gt;chmod +x 可执行权限&lt;/p&gt;
+&lt;p&gt;chmod -x去掉可执行权限&lt;/p&gt;
+&lt;h3 id=&#34;chown&#34;&gt;chown&lt;/h3&gt;
+&lt;p&gt;change owner的缩写，用于修改文件所属用户和组&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;命令&lt;/th&gt;
+&lt;th&gt;说明&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;chown myuser:myuser myfile&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;更改文件myfile所属用户和组为myuser&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;chown :mygroup myfile&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;更改文件myfile所属用户组为mygroup&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;chown myuser: myfile&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;更改文件myfile所属用户为myuser&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;chown myuser:myuser myfile/ -R&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;目录myfile中所有文件所属用户和用户组改为myuser&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;第-5-讲-软件的卸载与安装&#34;&gt;第 5 讲 软件的卸载与安装&lt;/h2&gt;
+&lt;h3 id=&#34;dpkg&#34;&gt;dpkg&lt;/h3&gt;
+&lt;p&gt;dpkg不会联网查询软件包信息，只能在本地管理软件包&lt;/p&gt;
+&lt;p&gt;解压：sudo dpkg -x [软件包]&lt;/p&gt;
+&lt;p&gt;安装：sudo dpkg -i [软件包]&lt;/p&gt;
+&lt;p&gt;移除软件包：sudo dpkg &amp;ndash;remove [软件包]&lt;/p&gt;
+&lt;h3 id=&#34;apt&#34;&gt;apt&lt;/h3&gt;
+&lt;p&gt;可以从软件源安装软甲，卸载软件，以及获取软件更新信息，升级软件等等&lt;/p&gt;
+&lt;p&gt;获取更新：sudo apt update&lt;/p&gt;
+&lt;p&gt;查看更新列表：sudo apt list &amp;ndash;upgradable&lt;/p&gt;
+&lt;p&gt;升级：sudo apt upgrade&lt;/p&gt;
+&lt;p&gt;移除软件包：sudo apt remove [软件包名称]&lt;/p&gt;
+&lt;p&gt;安装：sudo apt install [软件名] （如果之前安装过的话会升级到最新版）&lt;/p&gt;
+&lt;p&gt;卸载 sudo apt pu&lt;/p&gt;
+&lt;h2 id=&#34;第-6-讲-编辑文件&#34;&gt;第 6 讲 编辑文件&lt;/h2&gt;
+&lt;h3 id=&#34;nano&#34;&gt;nano&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;可修改配置文件/ect/nanorc以自定义nano编辑器&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;打开：nano [文件]&lt;/p&gt;
+&lt;p&gt;保存：ctrl + s&lt;/p&gt;
+&lt;p&gt;退出：ctrl + x&lt;/p&gt;
+&lt;h3 id=&#34;vim&#34;&gt;vim&lt;/h3&gt;
+&lt;p&gt;分为3种模式。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;命令模式&lt;/li&gt;
+&lt;li&gt;输入模式（i 是在当前位置输入， a 会把光标向右移动一个， o 是在下一行输入。）&lt;/li&gt;
+&lt;li&gt;底行模式（输入冒号&lt;code&gt;:&lt;/code&gt;后选择输入命令）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;按i进入编辑模式&lt;/p&gt;
+&lt;p&gt;退出 按&lt;code&gt;esc&lt;/code&gt;后输入冒号&lt;code&gt;:q&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;:w&lt;/code&gt;是保存&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;命令&lt;/th&gt;
+&lt;th&gt;说明&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;cd&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;切换到用户主目录&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;cd -&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;切换到上一个工作目录，常用于在两个目录之间来回切换&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;cd [目录名]&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;切换到指定目录，前面带&lt;code&gt;/&lt;/code&gt;表示绝对路径，否则就是相对路径&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;cd~username&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;将工作目录改变为username的主目录&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Linux中，文件名和命令是区分大小写的&lt;/p&gt;
+- https://fushaolei.github.io/post/linux-note/ - </description>
+        </item>
+    
+    
+    
+        <item>
+        <title>树莓派入门</title>
+        <link>https://fushaolei.github.io/post/raspberry-pi-start/</link>
+        <pubDate>Fri, 26 Mar 2021 23:58:55 +0800</pubDate>
+        
+        <guid>https://fushaolei.github.io/post/raspberry-pi-start/</guid>
+        <description>FuShaoLei Blog https://fushaolei.github.io/post/raspberry-pi-start/ -&lt;p&gt;树莓派入门❌
+树莓派吃灰✅&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/fushaolei/img2/20210326114448.jpg&#34; alt=&#34;&#34;&gt;
+型号是1代B+型，买来时不太懂Linux方面的东西，所以安了个系统后就闲置吃灰了，直到今天，学习了一些Linux知识后又重新捣鼓了起来，这篇文章主要记录了我如何在没有屏幕的情况下安装系统以及通过putty连接到树莓派的。&lt;/p&gt;
+&lt;h2 id=&#34;一-烧录系统到sd卡&#34;&gt;一 烧录系统到sd卡&lt;/h2&gt;
+&lt;p&gt;我使用的是官方提供的工具，简单又方便。指路：&lt;a href=&#34;https://www.raspberrypi.org/software/&#34;&gt;https://www.raspberrypi.org/software/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/fushaolei/img2/20210327003757.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;傻瓜式的操作了，就不多讲了&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;烧录之后，sd卡会变得奇奇怪怪的，当然也可把sd卡恢复成原来的样子，这里记录一下还原的的步骤&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;管理员方式启动cmd&lt;/li&gt;
+&lt;li&gt;输入  diskpart&lt;/li&gt;
+&lt;li&gt;list  disk&lt;/li&gt;
+&lt;li&gt;select disk 1 #选择第一个磁盘 （这里我的sd卡是 disk 1）&lt;/li&gt;
+&lt;li&gt;clean&lt;/li&gt;
+&lt;li&gt;create partition primary&lt;/li&gt;
+&lt;li&gt;active&lt;/li&gt;
+&lt;li&gt;format fs=fat32 quick&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;二-将sd卡插入树莓派等待安装&#34;&gt;二 将sd卡插入树莓派等待安装&lt;/h2&gt;
+&lt;p&gt;安装过程中你可以看到黄灯在不规律的闪动，等到黄灯不闪了，只有红灯在亮的时候，八成是好了。&lt;/p&gt;
+&lt;h2 id=&#34;三-连接树莓派&#34;&gt;三 连接树莓派&lt;/h2&gt;
+&lt;p&gt;首先先让树莓派连上网，这里我用的是网线的方式，然后用ssh连接树莓派，这里我使用的是putty&lt;/p&gt;
+&lt;p&gt;其中默认账号为&lt;strong&gt;pi&lt;/strong&gt;，密码为&lt;strong&gt;raspberry&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;如果连接被拒绝，则可能是因为新版系统默认没有开SSH，可以将sd卡插到读卡器，手动用电脑，在根目录下创建一个名为ssh，无后缀的文件&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;登录成功之后&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/fushaolei/img2/20210327123848.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;四-优化&#34;&gt;四 优化&lt;/h2&gt;
+&lt;p&gt;改个密码&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;passwd
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;换源&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://blog.csdn.net/weixin_45437140/article/details/102872988&#34;&gt;树莓派 raspbian （各版本）换国内源&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;五-随便跑个程序看看&#34;&gt;五 随便跑个程序看看&lt;/h2&gt;
+&lt;p&gt;安个jdk8&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo apt install openjdk-8-jdk
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;启动项目&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;java -jar demo.jar
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;运行成功
+&lt;img src=&#34;https://cdn.jsdelivr.net/gh/fushaolei/img2/20210327141140.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;后续想用来练习练习linux相关的指令或者&lt;del&gt;跑个博客&lt;/del&gt;（性能太差了，糟心@_@）什么的&lt;/p&gt;
+&lt;h2 id=&#34;学习网站&#34;&gt;学习网站&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://raspberrypi.club/&#34;&gt;树莓派俱乐部&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://shumeipai.nxez.com/&#34;&gt;树莓派实验室&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.lxx1.com/&#34;&gt;科技爱好者博客&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;参考&#34;&gt;参考&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://blog.csdn.net/github_38111866/article/details/76038665&#34;&gt;没有显示器情况下，安装和使用树莓派&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://zhuanlan.zhihu.com/p/77585297&#34;&gt;树莓派（以及各种派）使用指南&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://blog.csdn.net/ZHANG_TIMI/article/details/102717785&#34;&gt;sd卡烧录后恢复容量&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+- https://fushaolei.github.io/post/raspberry-pi-start/ - </description>
+        </item>
+    
+    
+    
+        <item>
+        <title>Java关键字总结</title>
+        <link>https://fushaolei.github.io/post/java-keyword/</link>
+        <pubDate>Wed, 03 Mar 2021 13:34:37 +0000</pubDate>
+        
+        <guid>https://fushaolei.github.io/post/java-keyword/</guid>
+        <description>FuShaoLei Blog https://fushaolei.github.io/post/java-keyword/ -&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;关键字&lt;/th&gt;
+&lt;th&gt;说明&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;class&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;定义一个类&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;enum&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;枚举类型&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;abstract&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;抽象类或方法&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;interface&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;接口&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;extends&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;定义一个类的父类，或者通配符的上界&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;implements&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;定义一个类实现的接口&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;new&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;new&lt;/code&gt;操作符加上构造器，构造一个新的对象，返回值是一个对象的&lt;strong&gt;引用&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;this&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;一是指隐式参数的调用，二是指调用该类的其他构造器（而且只能放在第一行的位置）&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;super&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;一是调用超类的方法，二是调用超类的构造器&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;import&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;导入一个包&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;package&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;包含类的一个包&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;public&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;访问修饰符，对外部完全可见&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;private&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;访问修饰符，仅对本类可见&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;protected&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;对本包及所有子类可见&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+- https://fushaolei.github.io/post/java-keyword/ - </description>
+        </item>
+    
+    
+    
+        <item>
+        <title>《Java核心技术I》笔记</title>
+        <link>https://fushaolei.github.io/post/core-java-1-note/</link>
+        <pubDate>Fri, 15 Jan 2021 13:34:37 +0000</pubDate>
+        
+        <guid>https://fushaolei.github.io/post/core-java-1-note/</guid>
+        <description>FuShaoLei Blog https://fushaolei.github.io/post/core-java-1-note/ -&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;日期&lt;/th&gt;
+&lt;th&gt;说明&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;2021/01/31&lt;/td&gt;
+&lt;td&gt;读完了第一遍，边读边记，看的比较随意，除了第一第二章外，有些难的或者偏也都直接跳过了😜，看第二遍的时候再补回来吧 maybe。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;概述&#34;&gt;概述&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;第 1 章 + 第 2 章&lt;/strong&gt; ： 这两章介绍了一些东西，比如Java的发展历史啊，Java的特性啊，以及Java的运行环境等等。特别要说的是，Java是一门&lt;strong&gt;面向对象&lt;/strong&gt;程序设计语言，程序设计语言的成功取决于&lt;strong&gt;是否可以实现需要的功能&lt;/strong&gt;，而不是语法的精巧性。以及JDK（Java Development Kit：Java开发工具包）与JRE（Java Runtime Environment：Java运行时环境）&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;第 3 章 Java的基本程序设计结构&lt;/strong&gt;：这一章讲了Java的一些基础知识，比如注释啊，8 种基本类型啊（int,short,long,byte,double,float,boolean,char），变量（如何声明，初始化变量）与常量，运算符（其中还提到了短路的概念），介绍了字符串，输入输出等（这一节其实还讲了Math的一些静态方法，不过我觉得不是很重要，需要的时候可以查嘛，所以这里就不记录了）&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;第 4 章 对象与类&lt;/strong&gt;：这一章介绍了面向对象思想，还有类与对象的关系，说了面向对象的一些特性，以及自定义类的一些内容，还有使用构造器时代码的执行顺序&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;第-3-章-java的基本程序设计结构&#34;&gt;第 3 章 	Java的基本程序设计结构&lt;/h2&gt;
+&lt;h3 id=&#34;1第一个程序&#34;&gt;1.第一个程序&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#0e84b5;font-weight:bold&#34;&gt;Hello&lt;/span&gt; &lt;span style=&#34;color:#666&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	&lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;static&lt;/span&gt; &lt;span style=&#34;color:#902000&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#06287e&#34;&gt;main&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;(&lt;/span&gt;String&lt;span style=&#34;color:#666&#34;&gt;[]&lt;/span&gt; args&lt;span style=&#34;color:#666&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#666&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;		System&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#4070a0&#34;&gt;out&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#4070a0&#34;&gt;println&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#4070a0&#34;&gt;&amp;#34;Hello World&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	&lt;span style=&#34;color:#666&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#666&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;说明&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;public&lt;/code&gt;（访问修饰符） 用于控制对所修饰的类或对象或字段的&lt;strong&gt;访问级别&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;class表示这是一个类，Hello则是这个类的类名&lt;/li&gt;
+&lt;li&gt;main方法是所有程序的&lt;strong&gt;入口&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;大括号表示方法体的开始与结束&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;2注释&#34;&gt;2.注释&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;//单行注释
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;/*
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;多行注释，（不能嵌套使用）
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;*/&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;/**
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt; * 文档注释
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt; * 可用于自动的生成文档
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt; */&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;3数据类型&#34;&gt;3.数据类型&lt;/h3&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;基本类型&lt;/th&gt;
+&lt;th&gt;位数&lt;/th&gt;
+&lt;th&gt;字节&lt;/th&gt;
+&lt;th&gt;默认值&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;int&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;32&lt;/td&gt;
+&lt;td&gt;4&lt;/td&gt;
+&lt;td&gt;0&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;short&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;16&lt;/td&gt;
+&lt;td&gt;2&lt;/td&gt;
+&lt;td&gt;0&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;long&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;64&lt;/td&gt;
+&lt;td&gt;8&lt;/td&gt;
+&lt;td&gt;0L&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;byte&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;8&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;0&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;char&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;16&lt;/td&gt;
+&lt;td&gt;2&lt;/td&gt;
+&lt;td&gt;&amp;lsquo;u0000&amp;rsquo;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;float&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;32&lt;/td&gt;
+&lt;td&gt;4&lt;/td&gt;
+&lt;td&gt;0f&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;double&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;64&lt;/td&gt;
+&lt;td&gt;8&lt;/td&gt;
+&lt;td&gt;0d&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;boolean&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;false&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;4变量与常量&#34;&gt;4.变量与常量&lt;/h3&gt;
+&lt;h4 id=&#34;变量&#34;&gt;变量&lt;/h4&gt;
+&lt;h5 id=&#34;声明变量&#34;&gt;声明变量&lt;/h5&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#902000&#34;&gt;int&lt;/span&gt; a&lt;span style=&#34;color:#666&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;String name&lt;span style=&#34;color:#666&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;即 以&lt;code&gt;变量类型&lt;/code&gt;  &lt;code&gt;变量名&lt;/code&gt;这种形式来声明一个变量&lt;/p&gt;
+&lt;h5 id=&#34;变量初始化&#34;&gt;变量初始化&lt;/h5&gt;
+&lt;p&gt;声明一个变量后，必须用赋值语句对变量进行&lt;strong&gt;显式初始化&lt;/strong&gt;，如下&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#902000&#34;&gt;int&lt;/span&gt; a &lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt; 0&lt;span style=&#34;color:#666&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;String name &lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#4070a0&#34;&gt;&amp;#34;任我行&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;常量&#34;&gt;常量&lt;/h4&gt;
+&lt;blockquote&gt;
+&lt;p&gt;常量就是值不会变的变量&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;可用&lt;code&gt;final&lt;/code&gt;关键字来修饰常量，而且通常此常量名为大写&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;final&lt;/span&gt; String BAIDU_URL &lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#4070a0&#34;&gt;&amp;#34;www.baidu.com&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;枚举类型&#34;&gt;枚举类型&lt;/h4&gt;
+&lt;blockquote&gt;
+&lt;p&gt;作用：限制变量的取值范围&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;如下：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;enum&lt;/span&gt; Size &lt;span style=&#34;color:#666&#34;&gt;{&lt;/span&gt;SMALL&lt;span style=&#34;color:#666&#34;&gt;,&lt;/span&gt;MEDIUM&lt;span style=&#34;color:#666&#34;&gt;,&lt;/span&gt;LARGE&lt;span style=&#34;color:#666&#34;&gt;,&lt;/span&gt;EXTRA_LARGE&lt;span style=&#34;color:#666&#34;&gt;};&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;那么&lt;code&gt;Size&lt;/code&gt;类型的变量只能取里边的值&lt;/p&gt;
+&lt;h3 id=&#34;5运算符&#34;&gt;5.运算符&lt;/h3&gt;
+&lt;h4 id=&#34;算术运算符&#34;&gt;算术运算符&lt;/h4&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;算术运算符&lt;/th&gt;
+&lt;th&gt;表示&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;+&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;加&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;-&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;减&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;*&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;乘&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;/&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;除&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;%&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;取模&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h4 id=&#34;类型转换&#34;&gt;类型转换&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;如参与运算的两个数类型不一致，则结果为较大类型的整型&lt;/li&gt;
+&lt;li&gt;强制转换：(有可能损失信息)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;其他运算符&#34;&gt;其他运算符&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;二元运算符：例如&lt;code&gt;x+=4;&lt;/code&gt;，运算符放于等号左边&lt;/li&gt;
+&lt;li&gt;自增自减运算符
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;++x&lt;/code&gt; 前缀形式会先加1再使用&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;x++&lt;/code&gt; 后缀形式会先使用原来的值，之后才加1&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;关系运算符：如&lt;code&gt;==&lt;/code&gt;,&lt;code&gt;!=&lt;/code&gt;，&lt;code&gt;&amp;gt;=&lt;/code&gt;之类的，还有&lt;code&gt;&amp;amp;&amp;amp;&lt;/code&gt;和&lt;code&gt;||&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;三元运算符：&lt;code&gt;x&amp;gt;0 ? true : false&lt;/code&gt;如表达式为真，则为&lt;code&gt;true&lt;/code&gt;，如假则为&lt;code&gt;false&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;短路和运算符的逻辑&#34;&gt;短路（&lt;code&gt;&amp;amp;&amp;amp;&lt;/code&gt;和&lt;code&gt;||&lt;/code&gt;运算符的逻辑）&lt;/h4&gt;
+&lt;p&gt;如果第一个操作数已经能够确定表达式的值，第二个操作数就不必再计算了&lt;/p&gt;
+&lt;h3 id=&#34;6字符串&#34;&gt;6.字符串&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;这一节其实感觉没有什么好记的。。。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;String hello &lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#4070a0&#34;&gt;&amp;#34;Hello&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;// 取子串
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;&lt;/span&gt;String s &lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt; hello&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#4070a0&#34;&gt;substring&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;(&lt;/span&gt;0&lt;span style=&#34;color:#666&#34;&gt;,&lt;/span&gt;3&lt;span style=&#34;color:#666&#34;&gt;);&lt;/span&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;// Hel
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;// 判断是否相等
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;if&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;(&lt;/span&gt;hello&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#4070a0&#34;&gt;equals&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#4070a0&#34;&gt;&amp;#34;Hello&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;)){&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;//....
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;// 构建字符串
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;&lt;/span&gt;StringBuilder builder &lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;new&lt;/span&gt; StringBuilder&lt;span style=&#34;color:#666&#34;&gt;();&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;builder&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#4070a0&#34;&gt;append&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#4070a0&#34;&gt;&amp;#34;builder&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;builder&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#4070a0&#34;&gt;append&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#4070a0&#34;&gt;&amp;#34;str&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;String builderString &lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt; builder&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#4070a0&#34;&gt;toString&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;();&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;System&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#4070a0&#34;&gt;out&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#4070a0&#34;&gt;println&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;(&lt;/span&gt;builderString&lt;span style=&#34;color:#666&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;7输入与输出&#34;&gt;7.输入与输出&lt;/h3&gt;
+&lt;h4 id=&#34;输入&#34;&gt;输入&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Scanner input&lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;new&lt;/span&gt; Scanner&lt;span style=&#34;color:#666&#34;&gt;(&lt;/span&gt;System&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#4070a0&#34;&gt;in&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;System&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#4070a0&#34;&gt;out&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#4070a0&#34;&gt;printf&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#4070a0&#34;&gt;&amp;#34;请输入一个数字: &amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#902000&#34;&gt;int&lt;/span&gt; num&lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt;input&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#4070a0&#34;&gt;nextInt&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;();&lt;/span&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;//输入
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;&lt;/span&gt;System&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#4070a0&#34;&gt;out&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#4070a0&#34;&gt;println&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#4070a0&#34;&gt;&amp;#34;你输入的数字是：&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;+&lt;/span&gt;num&lt;span style=&#34;color:#666&#34;&gt;);&lt;/span&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;//输出
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;输出&#34;&gt;输出&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;System&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#4070a0&#34;&gt;out&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#4070a0&#34;&gt;print&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#4070a0&#34;&gt;&amp;#34;普通输出&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;System&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#4070a0&#34;&gt;out&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#4070a0&#34;&gt;println&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#4070a0&#34;&gt;&amp;#34;输出后换行&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;System&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#4070a0&#34;&gt;out&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#4070a0&#34;&gt;printf&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#4070a0&#34;&gt;&amp;#34;格式化输出 %.2f&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;,&lt;/span&gt; 10000&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#4070a0&#34;&gt;0&lt;/span&gt; &lt;span style=&#34;color:#666&#34;&gt;/&lt;/span&gt; 3&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#4070a0&#34;&gt;0&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;8控制流程&#34;&gt;8.控制流程&lt;/h3&gt;
+&lt;h5 id=&#34;条件分支流程&#34;&gt;条件分支流程&lt;/h5&gt;
+&lt;p&gt;普通分支语句&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#902000&#34;&gt;int&lt;/span&gt; a &lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt; 1&lt;span style=&#34;color:#666&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#902000&#34;&gt;int&lt;/span&gt; b &lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt; 2&lt;span style=&#34;color:#666&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color:#666&#34;&gt;(&lt;/span&gt;a &lt;span style=&#34;color:#666&#34;&gt;&amp;gt;&lt;/span&gt; b&lt;span style=&#34;color:#666&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#666&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    System&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#4070a0&#34;&gt;out&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#4070a0&#34;&gt;println&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#4070a0&#34;&gt;&amp;#34;a大于b&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;);&lt;/span&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;//如果a大于b则执行这个语句
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;}&lt;/span&gt; &lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;else&lt;/span&gt; &lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color:#666&#34;&gt;(&lt;/span&gt;a &lt;span style=&#34;color:#666&#34;&gt;==&lt;/span&gt; b&lt;span style=&#34;color:#666&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#666&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    System&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#4070a0&#34;&gt;out&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#4070a0&#34;&gt;println&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#4070a0&#34;&gt;&amp;#34;a等于b&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;);&lt;/span&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;//如果a等于b则执行这个语句
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;}&lt;/span&gt; &lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;else&lt;/span&gt; &lt;span style=&#34;color:#666&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    System&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#4070a0&#34;&gt;out&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#4070a0&#34;&gt;println&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#4070a0&#34;&gt;&amp;#34;a小于b&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;);&lt;/span&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;//否则就a小于b，当以上两种情况都不是的时候执行
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;条件多分支语句&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#902000&#34;&gt;int&lt;/span&gt; g&lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt;2&lt;span style=&#34;color:#666&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;switch&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;(&lt;/span&gt;g&lt;span style=&#34;color:#666&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#666&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;case&lt;/span&gt; 1&lt;span style=&#34;color:#666&#34;&gt;:{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        System&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#4070a0&#34;&gt;out&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#4070a0&#34;&gt;println&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#4070a0&#34;&gt;&amp;#34;是1&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;);&lt;/span&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;//当g是1时执行
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;&lt;/span&gt;        &lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;break&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#666&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;case&lt;/span&gt; 2&lt;span style=&#34;color:#666&#34;&gt;:{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        System&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#4070a0&#34;&gt;out&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#4070a0&#34;&gt;println&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#4070a0&#34;&gt;&amp;#34;是2&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;);&lt;/span&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;//当g是2时执行
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;&lt;/span&gt;        &lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;break&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#666&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;default&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;:{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        System&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#4070a0&#34;&gt;out&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#4070a0&#34;&gt;println&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#4070a0&#34;&gt;&amp;#34;都不是&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;);&lt;/span&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;//当以上情况都不是的时候执行
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;&lt;/span&gt;        &lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;break&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#666&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#666&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h5 id=&#34;循环流程&#34;&gt;循环流程&lt;/h5&gt;
+&lt;p&gt;根据条件，反复执行某些操作&lt;/p&gt;
+&lt;h6 id=&#34;for&#34;&gt;&lt;code&gt;for&lt;/code&gt;&lt;/h6&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	&lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;for&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#902000&#34;&gt;int&lt;/span&gt; i&lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt;0&lt;span style=&#34;color:#666&#34;&gt;;&lt;/span&gt;i&lt;span style=&#34;color:#666&#34;&gt;&amp;lt;&lt;/span&gt;5&lt;span style=&#34;color:#666&#34;&gt;;&lt;/span&gt;i&lt;span style=&#34;color:#666&#34;&gt;++)&lt;/span&gt; &lt;span style=&#34;color:#666&#34;&gt;{&lt;/span&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;//int i=0是初始值，i&amp;lt;5是循环条件。i++是循环后更新i的值，然后进入下一轮循环
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;&lt;/span&gt;		System&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#4070a0&#34;&gt;out&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#4070a0&#34;&gt;println&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#4070a0&#34;&gt;&amp;#34;循环第&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;+&lt;/span&gt;i&lt;span style=&#34;color:#666&#34;&gt;+&lt;/span&gt;&lt;span style=&#34;color:#4070a0&#34;&gt;&amp;#34;次&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	&lt;span style=&#34;color:#666&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h6 id=&#34;while&#34;&gt;&lt;code&gt;while&lt;/code&gt;&lt;/h6&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;		&lt;span style=&#34;color:#902000&#34;&gt;int&lt;/span&gt; u&lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt;5&lt;span style=&#34;color:#666&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;		&lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;while&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;(&lt;/span&gt;u&lt;span style=&#34;color:#666&#34;&gt;&amp;gt;&lt;/span&gt;0&lt;span style=&#34;color:#666&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#666&#34;&gt;{&lt;/span&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;//当为true时执行
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;&lt;/span&gt;			System&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#4070a0&#34;&gt;out&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#4070a0&#34;&gt;println&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#4070a0&#34;&gt;&amp;#34;u=&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;+&lt;/span&gt;u&lt;span style=&#34;color:#666&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;			&lt;span style=&#34;color:#666&#34;&gt;--&lt;/span&gt;u&lt;span style=&#34;color:#666&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;		&lt;span style=&#34;color:#666&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h6 id=&#34;dowhile&#34;&gt;&lt;code&gt;do&lt;/code&gt;..&lt;code&gt;while&lt;/code&gt;&lt;/h6&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;		&lt;span style=&#34;color:#902000&#34;&gt;int&lt;/span&gt; p&lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt;0&lt;span style=&#34;color:#666&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;		&lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;do&lt;/span&gt; &lt;span style=&#34;color:#666&#34;&gt;{&lt;/span&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;//无条件进入循环
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;&lt;/span&gt;			&lt;span style=&#34;color:#666&#34;&gt;++&lt;/span&gt;p&lt;span style=&#34;color:#666&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;			System&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#4070a0&#34;&gt;out&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#4070a0&#34;&gt;println&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#4070a0&#34;&gt;&amp;#34;p=&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;+&lt;/span&gt;p&lt;span style=&#34;color:#666&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;		&lt;span style=&#34;color:#666&#34;&gt;}&lt;/span&gt;&lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;while&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;(&lt;/span&gt;p&lt;span style=&#34;color:#666&#34;&gt;&amp;lt;&lt;/span&gt;5&lt;span style=&#34;color:#666&#34;&gt;);&lt;/span&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;//首先执行一次循环体后进行判断，若为true则继续进行下去
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h6 id=&#34;for-each增强型for循环&#34;&gt;&lt;code&gt;for each&lt;/code&gt;（增强型&lt;code&gt;for&lt;/code&gt;循环）&lt;/h6&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;for&lt;/span&gt; &lt;span style=&#34;color:#666&#34;&gt;(&lt;/span&gt; 类型 变量名&lt;span style=&#34;color:#666&#34;&gt;:&lt;/span&gt; 数组或集合 &lt;span style=&#34;color:#666&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#666&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;循环体
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#666&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;与普通for循环的区别：&lt;strong&gt;for each循环语句的循环变量将会遍历数组中的每个元素，而不是下标值&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id=&#34;中断控制流程的语句&#34;&gt;中断控制流程的语句&lt;/h4&gt;
+&lt;p&gt;&lt;strong&gt;break&lt;/strong&gt;：跳出一个switch case 或者一个循环&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;带标签的break&lt;/strong&gt;：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#902000&#34;&gt;int&lt;/span&gt; a &lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt; 1&lt;span style=&#34;color:#666&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#002070;font-weight:bold&#34;&gt;read_data:&lt;/span&gt; &lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;// 标签名（放在希望跳出的最外层的循环之前），后面跟着冒号
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;while&lt;/span&gt; &lt;span style=&#34;color:#666&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;true&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#666&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color:#666&#34;&gt;(&lt;/span&gt;a &lt;span style=&#34;color:#666&#34;&gt;==&lt;/span&gt; 1&lt;span style=&#34;color:#666&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;break&lt;/span&gt; read_data&lt;span style=&#34;color:#666&#34;&gt;;&lt;/span&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;// break后要带着标签
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;&lt;/span&gt;    System&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#4070a0&#34;&gt;out&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#4070a0&#34;&gt;println&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#4070a0&#34;&gt;&amp;#34;in&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#666&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;// 当里边发生了break read_data就会跳到下面这个语句
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;&lt;/span&gt;System&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#4070a0&#34;&gt;out&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#4070a0&#34;&gt;println&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#4070a0&#34;&gt;&amp;#34;out&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;主要用在一些嵌套很深的循环语句中，希望发生失误后完全跳出循环体&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;continue&lt;/strong&gt;：将控制转移到最内层循环的首部&lt;/p&gt;
+&lt;h3 id=&#34;9大数&#34;&gt;9.大数&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;BigInteger&lt;/code&gt;实现任意精度的整数运算&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;BigDecimal&lt;/code&gt;实现任意精度的浮点数运算&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;10数组&#34;&gt;10.数组&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;存储一组具有&lt;strong&gt;相同数据类型&lt;/strong&gt;的数据元素的有序集合&lt;/li&gt;
+&lt;li&gt;用&lt;code&gt;new&lt;/code&gt;操作符创建数组，整数类型的所有元素初始化为0，boolean类型的初始化为false，对象类型的则初始化为null&lt;/li&gt;
+&lt;li&gt;数组一旦被创建，长度就不能修改了&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;// 声明
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#902000&#34;&gt;int&lt;/span&gt; num&lt;span style=&#34;color:#666&#34;&gt;[];&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#902000&#34;&gt;int&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;[]&lt;/span&gt; sum&lt;span style=&#34;color:#666&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;// 静态初始化
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#902000&#34;&gt;int&lt;/span&gt; num&lt;span style=&#34;color:#666&#34;&gt;[]={&lt;/span&gt;1&lt;span style=&#34;color:#666&#34;&gt;,&lt;/span&gt;2&lt;span style=&#34;color:#666&#34;&gt;,&lt;/span&gt;3&lt;span style=&#34;color:#666&#34;&gt;,&lt;/span&gt;4&lt;span style=&#34;color:#666&#34;&gt;,&lt;/span&gt;5&lt;span style=&#34;color:#666&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;//动态初始化
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#902000&#34;&gt;int&lt;/span&gt; num&lt;span style=&#34;color:#666&#34;&gt;[]=&lt;/span&gt;&lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;new&lt;/span&gt; &lt;span style=&#34;color:#902000&#34;&gt;int&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;[&lt;/span&gt;5&lt;span style=&#34;color:#666&#34;&gt;];&lt;/span&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;//预先分配内存空间
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;for&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#902000&#34;&gt;int&lt;/span&gt; i&lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt;0&lt;span style=&#34;color:#666&#34;&gt;;&lt;/span&gt;i&lt;span style=&#34;color:#666&#34;&gt;&amp;lt;&lt;/span&gt;5&lt;span style=&#34;color:#666&#34;&gt;;&lt;/span&gt;i&lt;span style=&#34;color:#666&#34;&gt;++){&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	num&lt;span style=&#34;color:#666&#34;&gt;[&lt;/span&gt;i&lt;span style=&#34;color:#666&#34;&gt;]=&lt;/span&gt;i&lt;span style=&#34;color:#666&#34;&gt;*&lt;/span&gt;3&lt;span style=&#34;color:#666&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#666&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;第-4-章对象与类&#34;&gt;第 4 章	对象与类&lt;/h2&gt;
+&lt;h3 id=&#34;1面向对象&#34;&gt;1.面向对象&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;面向对象编程&lt;/strong&gt;，是一种通过&lt;strong&gt;对象&lt;/strong&gt;的方式，把&lt;strong&gt;现实世界映射到计算机模型&lt;/strong&gt;的一种编程方法。&lt;/li&gt;
+&lt;li&gt;面向对象程序设计：程序由对象来组成&lt;/li&gt;
+&lt;li&gt;类：构造对象的模板或蓝图&lt;/li&gt;
+&lt;li&gt;对象：类的实例化&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;类和对象的关系好比 模具 和 具体的用模具实际做出来的东西&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;这一节里其实还提到了封装和继承的概念&lt;/p&gt;
+&lt;p&gt;封装，以前的我理解为封装就是将类里的字段对外隐藏，而其他类想要改变这些字段只能调用我的公共方法，而不可以直接修改。在读第二遍的时候，我发现封装的思想主要是为了&lt;strong&gt;隐藏自己内部的实现&lt;/strong&gt;（内部实现不重要，重要的是对外提供的方法），保证了独立性。&lt;/p&gt;
+&lt;p&gt;继承就是通过扩展一些已有的类来构建新的类，而且新的类将会具有被扩展类的全部属性和方法，提高了&lt;strong&gt;重用性&lt;/strong&gt;。&lt;/p&gt;
+&lt;h3 id=&#34;2使用预定义类&#34;&gt;2.使用预定义类&lt;/h3&gt;
+&lt;h4 id=&#34;构造器&#34;&gt;构造器&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;用来构造并初始化对象的一种特殊的方法&lt;/li&gt;
+&lt;li&gt;构造器的名字应该与类名相同&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;这里要明确一个东西，比方说，我定义了一个类叫做&lt;code&gt;Animal&lt;/code&gt;，然后做了如下的操作&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Animal mAnimal&lt;span style=&#34;color:#666&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;此时，&lt;code&gt;mAnimal&lt;/code&gt;叫做&lt;strong&gt;对象变量&lt;/strong&gt;，它是一个&lt;strong&gt;变量&lt;/strong&gt;，&lt;strong&gt;不是一个对象&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;然后做如下操作&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;mAnimal &lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;new&lt;/span&gt; Animal&lt;span style=&#34;color:#666&#34;&gt;();&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;此时&lt;code&gt;mAnimal&lt;/code&gt;&lt;strong&gt;引用了一个对象&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;变量只能是引用对象&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id=&#34;更改器方法和访问器方法&#34;&gt;更改器方法和访问器方法&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;更改器方法描述的是使用了方法之后，对象的状态会改变&lt;/li&gt;
+&lt;li&gt;访问器方法描述的是使用了方法之后，对象的状态没有改变&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;3用户自定义类&#34;&gt;3.用户自定义类&lt;/h3&gt;
+&lt;h4 id=&#34;隐式参数与显示参数&#34;&gt;隐式参数与显示参数&lt;/h4&gt;
+&lt;p&gt;一句话，隐式参数是调用方法的对象本身（在方法中可用&lt;code&gt;this&lt;/code&gt;来表示），显示参数是方法名后面的数值&lt;/p&gt;
+&lt;h4 id=&#34;java中4种访问修饰符&#34;&gt;Java中4种访问修饰符&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;private&lt;/code&gt;：仅对本类可见&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;public&lt;/code&gt;：对外部完全可见&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;protected&lt;/code&gt;：对本包及所有子类可见&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;默认（无需修饰符）&lt;/code&gt;：对本包可见&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;4静态字段和静态方法&#34;&gt;4.静态字段和静态方法&lt;/h3&gt;
+&lt;h4 id=&#34;静态字段&#34;&gt;静态字段&lt;/h4&gt;
+&lt;p&gt;静态字段即用&lt;code&gt;static&lt;/code&gt;修饰的字段，静态字段是属于&lt;strong&gt;类&lt;/strong&gt;，不属于单个任何对象的&lt;/p&gt;
+&lt;h4 id=&#34;静态方法&#34;&gt;静态方法&lt;/h4&gt;
+&lt;p&gt;用&lt;code&gt;static&lt;/code&gt;修饰的方法，属于类，不属于对象，即在静态方法中不能使用&lt;code&gt;this&lt;/code&gt;关键字（即，&lt;strong&gt;没有隐式参数&lt;/strong&gt;），静态方法不能访问实例字段，但是可以访问静态字段&lt;/p&gt;
+&lt;h3 id=&#34;5方法参数&#34;&gt;5.方法参数&lt;/h3&gt;
+&lt;p&gt;跳过&lt;/p&gt;
+&lt;h3 id=&#34;6对象构造&#34;&gt;6.对象构造&lt;/h3&gt;
+&lt;h4 id=&#34;重载&#34;&gt;重载&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;方法签名：通过指定&lt;strong&gt;方法名&lt;/strong&gt;和&lt;strong&gt;参数类型&lt;/strong&gt;来描述一个方法&lt;/li&gt;
+&lt;li&gt;重载即是出现了多个方法，&lt;strong&gt;有相同的名字，但是不同的参数&lt;/strong&gt;，程序会在调用方法时根据参数类型来选择使用哪一个方法&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;调用构造器后的处理的优先级顺序&#34;&gt;调用构造器后的处理的优先级顺序&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;如果第一行调用了另一个构造器（使用&lt;code&gt;this(...)&lt;/code&gt;，另外，在构造器中调用另一个构造器这个语句也只能写在&lt;strong&gt;第一行&lt;/strong&gt;），则执行另一个构造器&lt;/li&gt;
+&lt;li&gt;否则则先后执行：
+&lt;ol&gt;
+&lt;li&gt;静态字段&lt;/li&gt;
+&lt;li&gt;静态的初始化块&lt;/li&gt;
+&lt;li&gt;所有实例字段初始化为默认值（0，false，null）&lt;/li&gt;
+&lt;li&gt;初始化块&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;最后才是执行构造器主体代码&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;以前总弄不清静态字段还有静态代码块的执行顺序，今天读到这里，可谓天清地明&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;7包&#34;&gt;7.包&lt;/h3&gt;
+&lt;p&gt;使用包来确保类名的&lt;strong&gt;唯一性&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;静态导入&lt;/p&gt;
+&lt;h2 id=&#34;第-5-章继承&#34;&gt;第 5 章	继承&lt;/h2&gt;
+&lt;h3 id=&#34;1类子类超类&#34;&gt;1.类，子类，超类&lt;/h3&gt;
+&lt;h4 id=&#34;this和super的含义&#34;&gt;&lt;code&gt;this&lt;/code&gt;和&lt;code&gt;super&lt;/code&gt;的含义&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;this&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;一是指隐式参数的调用&lt;/li&gt;
+&lt;li&gt;二是指调用&lt;strong&gt;该类的其他构造器&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;super&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;一是调用超类的方法&lt;/li&gt;
+&lt;li&gt;二 是调用超类的构造器&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;多态&#34;&gt;多态&lt;/h4&gt;
+&lt;p&gt;一个对象变量可以指示多种实际类型的现象称为多态&lt;/p&gt;
+&lt;p&gt;替换原则：程序中出现超类对象的任何地方都可以使用子类对象替换。例如：可将子类对象赋给超类变量&lt;/p&gt;
+&lt;p&gt;重载解析：。。。&lt;/p&gt;
+&lt;p&gt;动态绑定与静态绑定：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;动态绑定：在运行时能够自动地选择恰当的方法（调用的方法依赖隐式参数的实际类型）&lt;/li&gt;
+&lt;li&gt;静态绑定：用&lt;code&gt;private&lt;/code&gt;，&lt;code&gt;static&lt;/code&gt;，&lt;code&gt;final&lt;/code&gt;修饰的方法，编译器将准确的知道该调用哪个方法&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;强制类型转换&#34;&gt;强制类型转换&lt;/h4&gt;
+&lt;p&gt;唯一原因：要在暂时忽视对象的实际类型之后使用对象的全部功能。&lt;/p&gt;
+&lt;p&gt;可用&lt;code&gt;instanceof&lt;/code&gt;操作符来判断所属类型&lt;/p&gt;
+&lt;h4 id=&#34;抽象类&#34;&gt;抽象类&lt;/h4&gt;
+&lt;p&gt;更具有一般性的，只用作派生其他类的基类，而不是用来构造实例的类&lt;/p&gt;
+&lt;p&gt;可以包含字段和具体方法&lt;/p&gt;
+&lt;p&gt;不能被实例化&lt;/p&gt;
+&lt;h3 id=&#34;2object所有类的超类&#34;&gt;2.&lt;code&gt;Object&lt;/code&gt;：所有类的超类&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;Object&lt;/code&gt;类是Java中所有类的氏族，每个类都自动的继承自&lt;code&gt;Object&lt;/code&gt;类&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;在Java中，只有基本类型不是对象&lt;/strong&gt;。&lt;/p&gt;
+&lt;h3 id=&#34;4对象包装器和自动装箱拆箱&#34;&gt;4.对象包装器和自动装箱拆箱&lt;/h3&gt;
+&lt;h4 id=&#34;对象包装器&#34;&gt;对象包装器&lt;/h4&gt;
+&lt;p&gt;因为基本类型不是对象，但有时候又需要把基本类型转换成对象来使用，所以就出现了对象包装器这个概念。&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;基本类型&lt;/th&gt;
+&lt;th&gt;对应的包装器类&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;int&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;Integer&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;long&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;Long&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;float&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;Float&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;double&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;Double&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;short&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;Short&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;byte&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;Byte&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;char&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;Character&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;boolean&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;Boolean&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;包装器类是&lt;code&gt;final&lt;/code&gt;的&lt;/p&gt;
+&lt;h4 id=&#34;自动装箱与自动拆箱&#34;&gt;自动装箱与自动拆箱&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        List&lt;span style=&#34;color:#666&#34;&gt;&amp;lt;&lt;/span&gt;Integer&lt;span style=&#34;color:#666&#34;&gt;&amp;gt;&lt;/span&gt; list &lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;new&lt;/span&gt; ArrayList&lt;span style=&#34;color:#666&#34;&gt;&amp;lt;&amp;gt;();&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        list&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#4070a0&#34;&gt;add&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;(&lt;/span&gt;2&lt;span style=&#34;color:#666&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;如上面给出的例子，&lt;code&gt;list&lt;/code&gt;添加一个元素的时候，元素类型本该是&lt;code&gt;Integer&lt;/code&gt;类型，可是&lt;code&gt;2&lt;/code&gt;只是个&lt;code&gt;int&lt;/code&gt;类型，不过没关系，&lt;code&gt;list.add(2)&lt;/code&gt;将自动的变成&lt;code&gt;list.add(Integer.valueOf(2))&lt;/code&gt;，这种变换称为&lt;strong&gt;自动装箱&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;同样的，如果想将一个&lt;code&gt;Integer&lt;/code&gt;对象赋给一个&lt;code&gt;int&lt;/code&gt;值时，将会&lt;strong&gt;自动拆箱&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&#34;第-6-章接口lambda表达式与内部类&#34;&gt;第 6 章	接口，lambda表达式与内部类&lt;/h2&gt;
+&lt;h3 id=&#34;1接口&#34;&gt;1.接口&lt;/h3&gt;
+&lt;p&gt;在Java程序设计语言中，接口不是类，而是对希望符合这个接口类的一组&lt;strong&gt;需求&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;接口中的所有方法都自动是&lt;code&gt;public&lt;/code&gt;方法（但是实现接口时，必须把方法声明为&lt;code&gt;public&lt;/code&gt;）&lt;/p&gt;
+&lt;p&gt;接口中的字段总是&lt;code&gt;public static final&lt;/code&gt;的&lt;/p&gt;
+&lt;p&gt;接口绝不会有实例字段&lt;/p&gt;
+&lt;p&gt;接口同样不能被实例化，但是接口变量可以引用&lt;strong&gt;实现了这个接口&lt;/strong&gt;的类对象&lt;/p&gt;
+&lt;p&gt;一个类只能有一个超类，但可以实现&lt;code&gt;多个接口&lt;/code&gt;&lt;/p&gt;
+&lt;h3 id=&#34;2lambda表达式&#34;&gt;2.&lt;code&gt;lambda&lt;/code&gt;表达式&lt;/h3&gt;
+&lt;p&gt;先跳过，看的云里雾里的@_@&lt;/p&gt;
+&lt;h3 id=&#34;3内部类&#34;&gt;3.内部类&lt;/h3&gt;
+&lt;p&gt;定义在另一个类中的类&lt;/p&gt;
+&lt;p&gt;原因：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;内部类可以对同一包中的其他类隐藏&lt;/li&gt;
+&lt;li&gt;内部类方法可以访问外部类的私有属性&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;常规内部类中可以有&lt;code&gt;static&lt;/code&gt;字段（但也都必须是&lt;code&gt;final&lt;/code&gt;），但是不能有&lt;code&gt;static&lt;/code&gt;方法&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id=&#34;局部内部类&#34;&gt;局部内部类&lt;/h4&gt;
+&lt;p&gt;在一个方法中局部地定义这个类&lt;/p&gt;
+&lt;p&gt;声明局部类时不能有访问说明符（&lt;code&gt;public&lt;/code&gt;等）&lt;/p&gt;
+&lt;p&gt;对外界完全隐藏&lt;/p&gt;
+&lt;h4 id=&#34;静态内部类&#34;&gt;静态内部类&lt;/h4&gt;
+&lt;p&gt;内部类不需要访问外围类对象，就应该使用静态内部类&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;静态内部类可以有静态字段和静态方法&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;在接口中声明的内部类自动是&lt;code&gt;static&lt;/code&gt;和&lt;code&gt;public&lt;/code&gt;&lt;/p&gt;
+&lt;h2 id=&#34;第-7-章异常断言和日志&#34;&gt;第 7 章	异常，断言和日志&lt;/h2&gt;
+&lt;p&gt;派生于&lt;code&gt;Error&lt;/code&gt;类或&lt;code&gt;RuntimeException&lt;/code&gt;类的所有异常称为&lt;strong&gt;非检查型异常&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;所有其他异常称为&lt;strong&gt;检查型异常&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;这一章的剩余部分先略过，先不看&lt;/p&gt;
+&lt;h2 id=&#34;第-8-章泛型程序设计&#34;&gt;第 8 章	泛型程序设计&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;泛型方法&lt;/strong&gt;：可以在普通类型中定义，也可在泛型类中定义&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#0e84b5;font-weight:bold&#34;&gt;ArrayAlg&lt;/span&gt; &lt;span style=&#34;color:#666&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;static&lt;/span&gt; &lt;span style=&#34;color:#666&#34;&gt;&amp;lt;&lt;/span&gt;T&lt;span style=&#34;color:#666&#34;&gt;&amp;gt;&lt;/span&gt; T &lt;span style=&#34;color:#06287e&#34;&gt;getMiddle&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;(&lt;/span&gt;T&lt;span style=&#34;color:#666&#34;&gt;...&lt;/span&gt; a&lt;span style=&#34;color:#666&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#666&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;return&lt;/span&gt; a&lt;span style=&#34;color:#666&#34;&gt;[&lt;/span&gt;a&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#4070a0&#34;&gt;length&lt;/span&gt; &lt;span style=&#34;color:#666&#34;&gt;/&lt;/span&gt; 2&lt;span style=&#34;color:#666&#34;&gt;];&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#666&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#666&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;限定类型&lt;/strong&gt;： 限定&lt;code&gt;T&lt;/code&gt;只能是限定类型的子类型&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#666&#34;&gt;&amp;lt;&lt;/span&gt;T &lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;extends&lt;/span&gt; Comparable&lt;span style=&#34;color:#666&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#666&#34;&gt;&amp;lt;&lt;/span&gt;T &lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;extends&lt;/span&gt; Comparable &lt;span style=&#34;color:#666&#34;&gt;&amp;amp;&lt;/span&gt; Serializable&lt;span style=&#34;color:#666&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;//甚至是多个限定
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;类型擦除&lt;/strong&gt;：指的是定义了一个泛型类型，都会自动提供一个相应的原始类型。（原始类型用第一个限定来替换类型变量，如无限定，则替换为&lt;code&gt;Object&lt;/code&gt;类型）&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;通配符（&lt;code&gt;?&lt;/code&gt;）&lt;/strong&gt;：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#666&#34;&gt;&amp;lt;?&lt;/span&gt; &lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;extends&lt;/span&gt; Employee&lt;span style=&#34;color:#666&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;//表示参数类型是Employee的子类
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;&amp;lt;?&lt;/span&gt; &lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;super&lt;/span&gt; Employee&lt;span style=&#34;color:#666&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;//表示参数类型是Employee的超类
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;第-9-章-集合&#34;&gt;第 9 章 集合&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;集合类型&lt;/th&gt;
+&lt;th&gt;说明&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;ArrayList&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;可以&lt;strong&gt;动态&lt;/strong&gt;增长和缩减空间的一个索引序列&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;LinkedList&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;链表，可在任何位置高效的插入和删除的一个有序序列&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;iterator与iterable&#34;&gt;&lt;code&gt;Iterator&lt;/code&gt;与&lt;code&gt;Iterable&lt;/code&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;Iterator&lt;/code&gt;和&lt;code&gt;Iterable&lt;/code&gt;都是接口&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;Iterator&lt;/code&gt;：迭代器，Java 1.2引入，用来代替&lt;code&gt; Enumeration&lt;/code&gt;的，通过&lt;code&gt;hasNext&lt;/code&gt;和&lt;code&gt;next&lt;/code&gt;方法可以逐个访问集合中的每个元素&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Iterable&lt;/code&gt;：Java 1.5 引入，为的是&lt;strong&gt;Implementing this interface allows an object to be the target of the &amp;ldquo;for-each loop&amp;rdquo; statement.&lt;/strong&gt;，也就是&lt;code&gt;for each&lt;/code&gt;循环可以处理任何实现了&lt;code&gt;Iterable&lt;/code&gt;接口的对象&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;第-12-章并发&#34;&gt;第 12 章	并发&lt;/h2&gt;
+&lt;p&gt;多线程：一个程序可以同时运行多个线程&lt;/p&gt;
+&lt;p&gt;多进程和多线程的区别：每个进程都拥有自己的一整套变量，而线程则&lt;strong&gt;共享数据&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;新建线程的两种方式&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;一：新建类实现&lt;code&gt;Runnable&lt;/code&gt;接口（完成&lt;code&gt;run&lt;/code&gt;方法），然后赋给一个&lt;code&gt;Thread&lt;/code&gt;对象&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;static&lt;/span&gt; &lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#0e84b5;font-weight:bold&#34;&gt;MyRun&lt;/span&gt; &lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;implements&lt;/span&gt; Runnable &lt;span style=&#34;color:#666&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#555;font-weight:bold&#34;&gt;@Override&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#902000&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#06287e&#34;&gt;run&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;()&lt;/span&gt; &lt;span style=&#34;color:#666&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            System&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#4070a0&#34;&gt;out&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#4070a0&#34;&gt;println&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#4070a0&#34;&gt;&amp;#34;MyRun&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#666&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#666&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;// 使用
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;&lt;/span&gt;        Runnable r &lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;new&lt;/span&gt; MyRun&lt;span style=&#34;color:#666&#34;&gt;();&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        Thread thread1 &lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;new&lt;/span&gt; Thread&lt;span style=&#34;color:#666&#34;&gt;(&lt;/span&gt;r&lt;span style=&#34;color:#666&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        thread1&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#4070a0&#34;&gt;start&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;();&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;二：建立一个&lt;code&gt;Thread&lt;/code&gt;的子类&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;static&lt;/span&gt; &lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#0e84b5;font-weight:bold&#34;&gt;MyThread&lt;/span&gt; &lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;extends&lt;/span&gt; Thread &lt;span style=&#34;color:#666&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#555;font-weight:bold&#34;&gt;@Override&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#902000&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#06287e&#34;&gt;run&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;()&lt;/span&gt; &lt;span style=&#34;color:#666&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            &lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;super&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#4070a0&#34;&gt;run&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;();&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            System&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#4070a0&#34;&gt;out&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#4070a0&#34;&gt;println&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#4070a0&#34;&gt;&amp;#34;MyThread&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#666&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#666&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;// 使用
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;&lt;/span&gt;        Thread thread2 &lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;new&lt;/span&gt; MyThread&lt;span style=&#34;color:#666&#34;&gt;();&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        thread2&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#4070a0&#34;&gt;start&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;();&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;线程的状态&#34;&gt;线程的状态&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;New&lt;/code&gt;：新建&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Runnable&lt;/code&gt;：可运行（可能正在运行也可能没有运行）&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Blocked&lt;/code&gt;：阻塞&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Waiting&lt;/code&gt;：等待&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Timed waiting&lt;/code&gt;：计时等待&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Terminated&lt;/code&gt;：终止&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;code&gt;synchronized&lt;/code&gt;关键字&lt;/p&gt;
+&lt;p&gt;从Java1.0版开始，Java中的每个对象都有一个内部锁。如果一个方法声明时有 synchronized 关键字，那么，要调用这个方法，线程必须获得内部对象锁&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;volatile&lt;/code&gt;修饰符：用来修饰字段，可以让多线程安全地读取一个字段&lt;/p&gt;
+- https://fushaolei.github.io/post/core-java-1-note/ - </description>
+        </item>
+    
+    
+    
+        <item>
+        <title>常用Git指令</title>
+        <link>https://fushaolei.github.io/post/common-git/</link>
+        <pubDate>Tue, 12 Jan 2021 00:00:00 +0000</pubDate>
+        
+        <guid>https://fushaolei.github.io/post/common-git/</guid>
+        <description>FuShaoLei Blog https://fushaolei.github.io/post/common-git/ -&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;指令&lt;/th&gt;
+&lt;th&gt;说明&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;git add .&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;将修改放入暂存区&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;git status&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;查看状态&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;git log&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;查看commit版本号&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;git reset --hard 版本号&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;版本回退，hard强制回退，soft的话会保留修改&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;git stash&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;将修改保存起来&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;git stash save &amp;quot;xxx&amp;quot;&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;将修改保存起来，并设置这个保存的标签&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;git stash apply stash@{x}&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;将修改移出来&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;git branch -vv&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;查看本地分支是否与远端分支建立了连接&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;git push origin &amp;lt;分支名&amp;gt;:&amp;lt;分支名&amp;gt;&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;仅仅将本地分支推送到远端分支， &lt;strong&gt;注意:这个操作只是单纯的把本地的分支推送到远端,尚未建立连接&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;git push --set-upstream origin &amp;lt;分支名&amp;gt;&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;将本地分支推送到远端分支并建立连接&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;git checkout -b &amp;lt;分支名&amp;gt; origin/&amp;lt;分支名&amp;gt;&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;拉取远程分支到本地（本地与远程建立连接，前提是本地已经有其他分支了）&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+- https://fushaolei.github.io/post/common-git/ - </description>
+        </item>
+    
+    
+    
+        <item>
+        <title>常用软件及网址</title>
+        <link>https://fushaolei.github.io/post/useful-software/</link>
+        <pubDate>Sun, 10 Jan 2021 12:14:48 +0800</pubDate>
+        
+        <guid>https://fushaolei.github.io/post/useful-software/</guid>
+        <description>FuShaoLei Blog https://fushaolei.github.io/post/useful-software/ -&lt;h2 id=&#34;常用软件&#34;&gt;常用软件&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;软件名&lt;/th&gt;
+&lt;th&gt;说明&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;https://www.huorong.cn/&#34;&gt;火绒&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;用来杀毒的，虽然可能没什么毒&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;https://www.xunlei.com/&#34;&gt;迅雷&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;有时在浏览器上下不动的东西在迅雷上会莫名的下的很快&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;https://www.jetbrains.com/&#34;&gt;JetBrains系列产品&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;开发利器&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;https://developer.android.com/studio&#34;&gt;Android Studio&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;开发Android常用IDE&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;https://typora.io/&#34;&gt;Typora &lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;用于书写markdown&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;https://git-scm.com/&#34;&gt;Git &lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;版本控制工具&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;https://code.visualstudio.com/&#34;&gt;VScode&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;用于开发，几乎什么格式的都能打开，再加上各种各样的神奇插件，这个软件简直无敌&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;https://www.sumatrapdfreader.org/free-pdf-reader.html&#34;&gt;Sumatra PDF阅读器&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;一款小巧的pdf阅读器，缺点是颜值太低咯QAQ&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;https://www.freedownloadmanager.org/zh/&#34;&gt;Free Download Manager&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;用于下载&lt;a href=&#34;https://youtube.com/&#34;&gt;youtube&lt;/a&gt;上的视频&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;https://www.charlesproxy.com/&#34;&gt;Charles&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;抓包常用工具&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;常用网址&#34;&gt;常用网址&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;网址&lt;/th&gt;
+&lt;th&gt;说明&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;https://www.amazon.cn/Kindle%E7%94%B5%E5%AD%90%E4%B9%A6/b?ie=UTF8&amp;amp;node=116169071&amp;amp;ref_=sa_menu_top_ebook&#34;&gt;亚马逊官网&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;用于购物，我通常在这买书&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;https://www.bilibili.com/&#34;&gt;bilibili&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;视频网站&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+- https://fushaolei.github.io/post/useful-software/ - </description>
+        </item>
+    
+    
+    
+        <item>
+        <title>Hello Hugo</title>
+        <link>https://fushaolei.github.io/post/hello-hugo/</link>
+        <pubDate>Fri, 08 Jan 2021 12:54:02 +0800</pubDate>
+        
+        <guid>https://fushaolei.github.io/post/hello-hugo/</guid>
+        <description>FuShaoLei Blog https://fushaolei.github.io/post/hello-hugo/ -&lt;p&gt;近来总是不满意自己的hexo主题，怎么改都觉得不满意，其实我这样已经违背了博客的初衷了，但没办法，明知背道而驰了我还是不想停下来，就这样。我不断的修改着自己的主题，然后还不断着物色主题商店的主题，没有一个令我满意的，就连自己做的那个，也是因为不满意而自暴自弃了。&lt;/p&gt;
+&lt;p&gt;遂转到hugo。&lt;/p&gt;
+&lt;p&gt;而且我还发现，hugo比hexo安装的时候快多了，hugo只需要下一个程序而已，而hexo需要安装什么nodejs环境啊之类的，比较麻烦。&lt;/p&gt;
+&lt;p&gt;所以，早知道一开始就选hugo啦！！！！&lt;/p&gt;
+&lt;p&gt;搭建教程参考这篇文章：&lt;a href=&#34;https://blog.csdn.net/weixin_41263449/article/details/107584336&#34;&gt;使用Github(Action)+Hugo搭建自己的博客
+&lt;/a&gt;&lt;/p&gt;
+- https://fushaolei.github.io/post/hello-hugo/ - </description>
+        </item>
+    
+    
+    
+        <item>
+        <title>在新浪实习是一种什么体验？</title>
+        <link>https://fushaolei.github.io/post/work-in-sina/</link>
+        <pubDate>Tue, 15 Dec 2020 15:07:39 +0000</pubDate>
+        
+        <guid>https://fushaolei.github.io/post/work-in-sina/</guid>
+        <description>FuShaoLei Blog https://fushaolei.github.io/post/work-in-sina/ -&lt;h2 id=&#34;机缘&#34;&gt;机缘&lt;/h2&gt;
+&lt;p&gt;2020年的六月份开始，为应学校的要求，我开始找实习工作，前后历经三个月，个中各种心酸事暂且不提，终于在九月份的某一天，我收到了来自新浪的实习offer。凭着年轻的一股劲以及对大城市的向往，一个南方少年，在一个月黑风高的夜晚，只身乘坐火车来到了这个名为北京的城市，开始了将近三个月的实习生涯。&lt;/p&gt;
+&lt;h2 id=&#34;初见&#34;&gt;初见&lt;/h2&gt;
+&lt;p&gt;报道的前一天，为了计划好第二天的路程，我进行了一次实地考察。新浪大厦位于海淀区西北旺东路10号院8号楼，旁边就是网易，百度，腾讯等大厂，刚来的时候看的这个场景还是蛮震撼的。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;距离我租的宿舍大概三四公里这样，然后每天我都要骑那么二三十分钟的车才能到这里（就当作锻炼了）。不要问我为什么不坐公司的大巴@_@，那是真特么晕啊，第一次坐的时候差点在车上吐了。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/fushaolei/img/20201216142854.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;办完入职手续后，组里的leader便来接我了，然后就是安环境(用于code review的环境)，然后熟悉熟悉代码什么的。中午的时候还是大佬们带我去吃的午饭，然后逛逛新浪大厦什么的，熟悉熟悉环境。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;好家伙 果然是企业级开发，一上来就给我整傻了，光项目就有2.5G大，跑了差不多一个小时才好。然后项目里面一大堆分包，什么MVP模式啊，什么Kotlin啊，什么自定义的组件，给我看傻了&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;和大家相处一段时间后 ，感觉组里的人情味比较浓， 技术氛围也很浓， 甚至有时候会给我一种就是在学校里几个同学一起做项目的错觉，不过就是项目大了些，技术复杂了些而已，当然 这都是后话了&lt;/p&gt;
+&lt;h2 id=&#34;吃在新浪&#34;&gt;吃在新浪&lt;/h2&gt;
+&lt;p&gt;在新浪，我这个日常实习生唯一的福利就是  早餐会减免六块钱了。&lt;/p&gt;
+&lt;p&gt;所以我早晨吃的特别饱，然后午餐就可以少吃一些，省些钱。（写到这里，眼前浮现的是以往大手大脚花钱的自己，泪，夺眶而出QAQ）&lt;/p&gt;
+&lt;p&gt;下面放两个我很喜欢的早餐搭配，就不配图了，&lt;/p&gt;
+&lt;p&gt;豆腐脑+吐司煎蛋+南瓜饼&lt;/p&gt;
+&lt;p&gt;还有，紫米粥+咸菜+肉包+凉糕（现在看起来好奇怪当时自己的口味😂）刚开始为了吃早餐我还起的挺早的，后面因为赖床，就没吃了，然后午餐晚餐一般一顿都要二十以上这样，最便宜的西红柿鸡蛋面都要14块钱，哎，穷学生伤不起啊。不过后面发现了麻辣烫可以便宜些，于是也有吃过一段时间的麻辣烫哈哈。后期，基本都是两个菜配一碗饭了，肉根本不敢点，一碗肉就将近二十了，简直可怕。想想在学校的食堂，吃一顿饭也就七块钱，来到这里钱包都被榨干了(╯‵□′)╯︵┻━┻&lt;/p&gt;
+&lt;h2 id=&#34;玩在新浪&#34;&gt;玩在新浪&lt;/h2&gt;
+&lt;p&gt;新浪的第一层布置了娱乐区，有健身房，舞蹈房，动感单车，还有台球桌，桌上足球等娱乐项目，像我一般都是午饭和晚饭后去打打台球，一两个月下来，Android技术没有涨多少，台球技术倒是进步了很多哈哈哈哈&lt;/p&gt;
+&lt;h2 id=&#34;日常工作&#34;&gt;日常工作&lt;/h2&gt;
+&lt;p&gt;我所实习的岗位是 新浪新闻客户端，那我日常实习就是大佬给我分配需求，然后我去做就可以了（通常大佬都会给一些比较容易的活。。），有那么大概一个流程，如下&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;确认需求&lt;/strong&gt;（有时候还要找产品进行确认）&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;开发&lt;/strong&gt;（其实大多时间都是在等编译。。）&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;code review&lt;/strong&gt;（这时候大佬会看我写的代码，然后指出哪里哪里不对什么的，修改后再此review，通过后才能进行下一步）&lt;/li&gt;
+&lt;li&gt;交给测试进行&lt;strong&gt;分支测试&lt;/strong&gt;（有时候有些bug测试都测不出来。。）&lt;/li&gt;
+&lt;li&gt;有bug的话改bug，没有的话就测试会&lt;strong&gt;交给产品进行确认&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;产品确认完毕就可以合入主分支了，然后进行&lt;strong&gt;集成测试&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;这里要吐槽一下，那么大的公司居然不给实习生发个电脑。只能用着自己的那个垃圾电脑，每次build都要半个小时(╯‵□′)╯︵┻━┻ 每天都是在等待build中度过。。。难受的一批，这也是我离职的一部分原因，受不了了&lt;/p&gt;
+&lt;h2 id=&#34;工资&#34;&gt;工资&lt;/h2&gt;
+&lt;p&gt;给的真的少，还特么扣税，我一个月的工资扣完税后只剩 2500 这样，这可是北京啊。反正我已经倒贴了好多，每个月光租房就花去了1700，剩下的没多少了。如果你也想来新浪实习的话，请慎重考虑！&lt;/p&gt;
+&lt;h2 id=&#34;实习体会与收获&#34;&gt;实习体会与收获&lt;/h2&gt;
+&lt;p&gt;第一次实习就到了这样蛮不错的公司，我感觉自己真是个幸运儿哈哈。然后组里的大佬也都蛮照顾我的，尤其带我的那个大佬说过一句让我印象深刻的话，他说 我们写的代码是写给人看的，确实，这个项目会不断的修修改改，当别人修改到你的代码的时候，不知道你在写什么，想要干什么，这样的话就得从头来过了，直接的增加了代码的维护成本。所以，工作中，我也严格要求自己，让自己的代码变得易读又简洁，就也是我每一次写代码的目标。通过这次实习，除了学会了基本的工作流程以外，在日常开发中也让我重新认识了一些概念，比如面向对象开发啊，如何体现到代码中去，比如&lt;code&gt;Android&lt;/code&gt;的布局啊，怎么样效率才高啊，又比如&lt;code&gt;listview&lt;/code&gt;的&lt;code&gt;view&lt;/code&gt;复用机制，这些都是我以前从未去了解或者去接触 实践过的。同时，还让我意识到了自己的基础是多么的薄弱，还需加强。
+总体来说，收获满满啊。因为要回学校考试，再加上我受不了我那个破电脑的编译速度以及一些其他原因，十二月份的某一天，我便从新浪离职了。经历了两个多月的历练，我完成了学生到打工人的身份上的转变，从此 我也是一名社畜啦~&lt;/p&gt;
+&lt;p&gt;走啦！有缘再见！愿各位都有个美好的前程！&lt;/p&gt;
+- https://fushaolei.github.io/post/work-in-sina/ - </description>
+        </item>
+    
+    
+    
+        <item>
+        <title>一日游</title>
+        <link>https://fushaolei.github.io/post/life-travel-in-gugong/</link>
+        <pubDate>Mon, 14 Dec 2020 16:53:37 +0000</pubDate>
+        
+        <guid>https://fushaolei.github.io/post/life-travel-in-gugong/</guid>
+        <description>FuShaoLei Blog https://fushaolei.github.io/post/life-travel-in-gugong/ -&lt;p&gt;来北京实习也已经有两个多月了，但是因为这个学期选了三门课 要做网上的作业，然后又因为自己比较懒，再加上天气变冷了，虽然一直在北京，但从未出去玩过。眼看下个星期就要离职了，这时不出去玩更待何时？&lt;/p&gt;
+&lt;p&gt;于是，在十二月十二号的早晨十点，我便乘坐地铁，去往故宫。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;然而，快到故宫的时候我才发现我没带身份证，还有学生证也没带，就很无语&amp;hellip;..不过最后还是硬着头皮进去了。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/fushaolei/img/20201214210454.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/fushaolei/img/20201214210515.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/fushaolei/img/20201214205801.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;末了还去朋友宿舍撸了撸他的猫&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/fushaolei/img/20201214210713.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/fushaolei/img/20201214210843.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;晚上还一起吃了烤串，喝个啤酒什么的，好不快活！&lt;/p&gt;
+- https://fushaolei.github.io/post/life-travel-in-gugong/ - </description>
+        </item>
+    
+    
+  </channel>
+</rss> 

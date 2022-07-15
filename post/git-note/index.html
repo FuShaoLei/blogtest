@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html><head>
+<title>Git学习笔记</title>
+
+
+
+
+<meta charset="utf-8">
+<meta name="X-UA-Compatible" content="IE=edge">
+<meta name="google-site-verification" content="">
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+<meta content="telephone=no" name="format-detection">
+<meta name="description" content="">
+<meta name="renderer" content="webkit">
+<meta name="theme-color" content="#ffffff">
+
+
+
+<meta property="og:title" content="Git学习笔记" />
+<meta property="og:description" content="
+使用Git是程序员必备的一个技能，虽然以前有跟着老师学过，但是一知半解，所以重新学过，本文记录了我学习Git的全过程
+" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://fushaolei.github.io/post/git-note/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2020-02-03T10:55:36+00:00" />
+<meta property="article:modified_time" content="2020-02-03T10:55:36+00:00" /><meta property="og:site_name" content="My Blog" />
+
+
+
+
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Git学习笔记"/>
+<meta name="twitter:description" content="
+使用Git是程序员必备的一个技能，虽然以前有跟着老师学过，但是一知半解，所以重新学过，本文记录了我学习Git的全过程
+"/>
+
+
+
+
+
+
+
+<script src="/vendor/js/jquery.min.js" ></script>
+<script src="/vendor/js/popper.min.js" ></script>
+<script src="/vendor/js/bootstrap.min.js" ></script>
+<script src="/vendor/js/smooth-scroll.polyfills.min.js" ></script>
+<link type="text/css" rel="stylesheet" href="/vendor/css/bootstrap.min.css">
+<script src="/vendor/js/vue.min.js" ></script>
+
+
+
+
+
+
+<link rel="stylesheet" href="https://fushaolei.github.io/scss/journal.min.dc4ef6417e0b24516ad7ebbc5adbdea56076e098522fb6969d77f192b2ffdc32.css" integrity="sha256-3E72QX4LJFFq1&#43;u8WtvepWB24JhSL7aWnXfxkrL/3DI=" media="screen">
+
+
+
+<link rel="stylesheet" href="https://fushaolei.github.io/scss/dark-mode.min.0716df34872be9a62e2bc2b98610a4697511418644587d53f4794a4b36247be5.css" integrity="sha256-BxbfNIcr6aYuK8K5hhCkaXURQYZEWH1T9HlKSzYke&#43;U=" media="screen">
+
+
+<script src="https://fushaolei.github.io//js/loadCSS.js"></script>
+<script>
+  loadCSS("https://fonts.googleapis.com/css?family=Lora|Montserrat|Fira+Mono|Noto+Serif+SC|Material+Icons");
+</script>
+
+
+
+
+  
+    <script src="https://fushaolei.github.io//js/toc-collapse.js"></script>
+  
+
+
+
+
+
+
+
+
+
+
+</head>
+<body>
+    	<div id="app"><div ref="sideContainer" class="side-container">
+    
+    <a class="a-block nav-head false" href="https://fushaolei.github.io/">
+    
+        <div class="nav-title">
+            FuShaoLei Blog
+        </div>
+        
+    </a>
+
+    <div class="nav-link-list">
+        
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/page/about">
+                关于
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/page/link">
+                友链
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="https://travellings.now.sh/">
+                开往
+            </a>
+            
+        
+    </div>
+
+    
+
+    <div class="nav-footer">
+        
+Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> by <a href="https://amazingrise.net">Rise</a>
+<br>
+移植自 <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a>'s <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> <br>
+<br>
+
+&copy;
+	
+	2022 FuShaoLei Blog
+	
+
+    </div>
+    
+</div><div ref="extraContainer" class="extra-container">
+    
+    
+    <div class="pagination">
+        <a id="globalBackToTop" class="pagination-action animated-visibility" href="#top" :class="{ invisible: scrollY == 0 }">
+            <i class="material-icons pagination-action-icon">
+                keyboard_arrow_up
+            </i>
+        </a>
+        
+        <a class="pagination-action" v-on:click="toggleDarkMode">
+            <i class="material-icons pagination-action-icon" v-if="isDarkMode">
+                brightness_4
+            </i>
+            <i class="material-icons pagination-action-icon" v-else="isDarkMode">
+                brightness_7
+            </i>
+        </a>
+        
+        
+    </div>
+</div>
+<div class="single-column-drawer-container" ref="drawer"
+     v-bind:class="{ 'single-column-drawer-container-active': isDrawerOpen }">
+    <div class="drawer-content">
+        <div class="drawer-menu">
+            
+            
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/page/about">
+                    关于
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/page/link">
+                    友链
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="https://travellings.now.sh/">
+                    开往
+                </a>
+                
+            
+            
+        </div>
+    </div>
+</div>
+<transition name="fade">
+    <div v-bind:class="{ 'single-column-drawer-mask': mounted }" v-if="isDrawerOpen" v-on:click="toggleDrawer"></div>
+</transition>
+<nav ref="navBar" class="navbar sticky-top navbar-light single-column-nav-container">
+    <div ref="navBackground" class="nav-background"></div>
+    <div class="container container-narrow nav-content">
+        <button id="nav_dropdown_btn" class="nav-dropdown-toggle" type="button" v-on:click="toggleDrawer">
+            <i class="material-icons">
+                menu
+            </i>
+        </button>
+        <a ref="navTitle" class="navbar-brand" href="https://fushaolei.github.io/">
+            FuShaoLei Blog
+        </a>
+        
+        <button type="button" class="nav-darkmode-toggle" v-on:click="toggleDarkMode">
+            <i class="material-icons" v-if="isDarkMode">
+                brightness_4
+            </i>
+            <i class="material-icons" v-else="isDarkMode">
+                brightness_7
+            </i>
+        </button>
+        
+    </div>
+</nav>
+<div class="single-column-header-container" ref="pageHead"
+     v-bind:style="{ transform: 'translateZ(0px) translateY('+.3*scrollY+'px)', opacity: 1-navOpacity }">
+    <a href="https://fushaolei.github.io/">
+        <div class="single-column-header-title">FuShaoLei Blog</div>
+        
+
+    </a>
+</div>
+
+            <div id="content">
+<div ref="streamContainer" class="stream-container">
+    <div class="post-list-container post-list-container-shadow">
+        <div class="post">
+            
+            
+            
+
+            <div class="post-head-wrapper-text-only"
+                
+            >
+                <div class="post-title">
+                    Git学习笔记
+                    
+                    <div class="post-meta">
+                        
+                        <time itemprop="datePublished">
+                            2020-02-03
+                        </time>
+                        
+                        &nbsp;
+                        
+
+                        
+                            Tags:  
+                            
+                                <a href="/tags/git">Git</a>
+                                &nbsp;
+                            
+                        
+                        
+                    </div>
+                </div>
+            </div>
+            
+            <div class="post-body-wrapper">
+                
+                <div class="post-body" v-pre>
+                
+                    <blockquote>
+<p>使用Git是程序员必备的一个技能，虽然以前有跟着老师学过，但是一知半解，所以重新学过，本文记录了我学习Git的全过程</p>
+</blockquote>
+<h2 id="参考教程">参考教程</h2>
+<ul>
+<li>学习教程：<a href="https://www.liaoxuefeng.com/wiki/896043488029600">廖雪峰的Git教程</a></li>
+<li>测试：<a href="https://learngitbranching.js.org/">learngitbranching</a></li>
+</ul>
+<h2 id="笔记">笔记</h2>
+<h3 id="简介">🥝简介</h3>
+<p>由Linus用c语言开发的分布式版本控制系统</p>
+<h3 id="版本穿梭">💉版本穿梭</h3>
+<p>可先用<code>git log</code>指令查看一下有几个版本提交到了仓库里
+<img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9jZG4uanNkZWxpdnIubmV0L2doL2Z1c2hhb2xlaS9pbWcvMjAyMDA1MDYyMzQ0MDcucG5n?x-oss-process=image/format,png" alt="1"></p>
+<p>或用<code>git log --pretty=oneline</code>可以简单的看到版本号</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9jZG4uanNkZWxpdnIubmV0L2doL2Z1c2hhb2xlaS9pbWcvMjAyMDA1MDYyMzQ3NDkucG5n?x-oss-process=image/format,png" alt=""></p>
+<h4 id="版本倒退回过去">版本倒退（回过去）</h4>
+<p><code>git reset --hard ?</code><br>
+<strong>?里</strong></p>
+<ul>
+<li>可以填<code>HEAD^</code>标识上个版本，上上个版本就是<code>HEAD^^</code>，假如更上的话就是<code>HEAD~100</code></li>
+<li>也可以直接填版本号，只要写前几个就行，比如上面直接写<code>git reset --hard 9410f</code>就会退回到上一个版本了</li>
+</ul>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9jZG4uanNkZWxpdnIubmV0L2doL2Z1c2hhb2xlaS9pbWcvMjAyMDA1MDYyMzQ5MDEucG5n?x-oss-process=image/format,png" alt=""></p>
+<h4 id="版本恢复去未来">版本恢复（去未来）</h4>
+<p>首先查看一下历史信息<code>git reflog</code>,然后根据版本号写<code>git reset --hard 版本号</code>,就这么简单😋</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9jZG4uanNkZWxpdnIubmV0L2doL2Z1c2hhb2xlaS9pbWcvMjAyMDA1MDYyMzUwMjIucG5n?x-oss-process=image/format,png" alt=""></p>
+<h3 id="工作区和暂存区">🛀工作区和暂存区</h3>
+<p><code>git add 文件</code>指令是把文件修改添加到暂存区
+而<code>git commit -m &quot;XXXX&quot;</code>就是往分支上提交更改</p>
+<h4 id="撤销修改">撤销修改</h4>
+<h5 id="撤销未被git-add的修改">撤销未被<code>git add</code>的修改</h5>
+<p><code>git checkout -- file</code>可以把<code>file</code>在工作区的修改全部撤销
+这里出现了两种情况</p>
+<ul>
+<li>未<code>git add</code>，那么将恢复到未被修改的样子</li>
+<li>已<code>git add</code>，然后又修改了一下，那么将恢复到<code>git add</code>后的样子，就是恢复到最近一次<code>git add</code>后的样子</li>
+</ul>
+<h5 id="撤销提交到git-add的修改">撤销提交到<code>git add</code>的修改</h5>
+<p>这里分两步走：</p>
+<ul>
+<li>首先要把在暂存区的给提出来，<code>git restore --staged file</code>，也就是恢复到未提交修改的状态</li>
+<li>然后在<code>git checkout -- file</code> 把在工作区的修改（<code>git restore --staged file</code>提出来的）全部撤销</li>
+</ul>
+<p><strong>注：</strong>
+由于git更新换代，所以这里与廖老师的有些出入，关于<code>git restore --staged file</code>的功能如下：</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9jZG4uanNkZWxpdnIubmV0L2doL2Z1c2hhb2xlaS9pbWcvMjAyMDA1MDYyMzU0MzMucG5n?x-oss-process=image/format,png" alt=""></p>
+<h4 id="删除文件">删除文件</h4>
+<h5 id="删错了">删错了</h5>
+<p>可以用<code>git checkout -- file（被删文件名）</code>来恢复那个被删文件</p>
+<h5 id="确实要删">确实要删</h5>
+<p>直接<code>git rm file（要删文件名）</code>，然后再<code>git commit </code>提交修改，就行了</p>
+<blockquote>
+<p>一些想法：这里的<code>git rm file</code>实际上也是将要做的修改提交到暂存区，然后<code>git commit</code>才提交修改，因此如果这里想反悔的话，可以用<code>git restore --staged file</code>把在暂存区的修改给撤销掉
+<img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9jZG4uanNkZWxpdnIubmV0L2doL2Z1c2hhb2xlaS9pbWcvMjAyMDA1MDYyMzU1MDUucG5n?x-oss-process=image/format,png" alt="">
+由图很简单的知道，绿色就代表放入了暂存区，红色就代表未放入</p>
+</blockquote>
+<p>由上面许许多多案列可以知道，git操作时，总是先在暂存区里进行操作，然后再提交到分支上🔑</p>
+<h3 id="分支管理">🤳分支管理</h3>
+<h4 id="创建-合并分支">创建 合并分支</h4>
+<h5 id="创建">创建</h5>
+<p><code>git switch -c &lt;branch~name&gt;</code>可以创建然后并转换到这个分支上
+<code>git switch &lt;branch~name&gt;</code>可用于切换分支，<code>git branch</code>可以看到已有分支，前面带一个<code>*</code>的表示现在所在的分支
+<code>git branch -d &lt;branch~name&gt;</code>这个指令用于删除分支，前提是切换到了其他分支，
+如下
+<img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9jZG4uanNkZWxpdnIubmV0L2doL2Z1c2hhb2xlaS9pbWcvMjAyMDA1MDYyMzU1MjgucG5n?x-oss-process=image/format,png" alt=""></p>
+<h5 id="关于合并">关于合并</h5>
+<p><code>git merge &lt;branch~name&gt;</code>合并分支，<strong>产生的冲突只发生在当前的分支上</strong></p>
+<h6 id="合并冲突与解决方法">🔥合并冲突与解决方法</h6>
+<blockquote>
+<p>产生原因：分支与分支在同一个地方（有待研究）的<strong>不同修改</strong>导致合并时的冲突,这时只能手动的修改冲突的地方，并提交</p>
+</blockquote>
+<p>产生冲突后：</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9jZG4uanNkZWxpdnIubmV0L2doL2Z1c2hhb2xlaS9pbWcvMjAyMDA1MDYyMzU1NTQucG5n?x-oss-process=image/format,png" alt="">
+<img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9jZG4uanNkZWxpdnIubmV0L2doL2Z1c2hhb2xlaS9pbWcvMjAyMDA1MDYyMzU2MTEucG5n?x-oss-process=image/format,png" alt=""></p>
+<p>这时只能手动修改后提交（<code>git add</code>， <code>git commit</code>）</p>
+<p>提交完后可通过 <code>git log --graph --pretty=oneline --abbrev-commit</code>查看合并的情况
+<img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9jZG4uanNkZWxpdnIubmV0L2doL2Z1c2hhb2xlaS9pbWcvMjAyMDA1MDYyMzU3MzYucG5n?x-oss-process=image/format,png" alt=""></p>
+<p>简单总结一下，合并产生的冲突<strong>只能手动解决后提交</strong></p>
+<blockquote>
+<p>终于明白上学期和别人合写App时会出现的<code>&lt;&lt;&lt;&lt;&lt;&lt;HEAD</code>标识了😋</p>
+</blockquote>
+<p>####### 💧合并分支时的模式</p>
+<ul>
+<li>普通的<code>git merge &lt;branch~name&gt;</code> 优先采用<code>Fast forward</code>模式，不会记录分支信息</li>
+<li>用<code>git merge --no-ff -m &quot;xxxx&quot; &lt;branch~name&gt;</code>会禁用<code>Fast forward</code>模式 则会记录分支</li>
+</ul>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9jZG4uanNkZWxpdnIubmV0L2doL2Z1c2hhb2xlaS9pbWcvMjAyMDA1MDYyMzU4MDgucG5n?x-oss-process=image/format,png" alt=""></p>
+<h4 id="bug分支">BUG分支</h4>
+<p>修复bug时，通过创建新的分支来进行修复，然后合并到<code>master</code></p>
+<p>当工作现场没有完成的时候👉<code>git stash</code>隐藏工作现场以方便修改bug，用<code>git stash list</code>可查看隐藏的东西，当修复完后可用<code>git stash pop</code>来进行恢复</p>
+<blockquote>
+<p><strong>注：</strong> <code>git stash pop</code>（恢复工作现场并删除隐藏）=<code>git stash apply</code>（恢复工作现场）+<code>git stash drop</code>（删除隐藏）</p>
+<blockquote>
+<p>有的时候需要一个个恢复工作现场<img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9jZG4uanNkZWxpdnIubmV0L2doL2Z1c2hhb2xlaS9pbWcvMjAyMDA1MDYyMzU4MzIucG5n?x-oss-process=image/format,png" alt="">
+那就应该先<code>git stash list</code>查看一下隐藏的列表，再<code>git stash apply stash@{x}</code>恢复，然后还有<code>git stash drop</code></p>
+</blockquote>
+</blockquote>
+<h5 id="在master修复的bug的操作复制到其他分支上">在master修复的bug的操作复制到其他分支上</h5>
+<p>在要复制到的分支（此分支得先<code>commit</code>后再操作）上：<code>git cherry-pick  &lt;commit码&gt;</code>这里的 <code>&lt;commit~码&gt;</code>是指修复bug的分支的commit号，就像下面这张图的<code>34bbddd</code></p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9jZG4uanNkZWxpdnIubmV0L2doL2Z1c2hhb2xlaS9pbWcvMjAyMDA1MDYyMzU5NDkucG5n?x-oss-process=image/format,png" alt=""></p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9jZG4uanNkZWxpdnIubmV0L2doL2Z1c2hhb2xlaS9pbWcvMjAyMDA1MDcwMDAxNTUucG5n?x-oss-process=image/format,png" alt=""></p>
+<h4 id="多人协作待重读未总结">📌多人协作(待重读，未总结)</h4>
+<p><code>git remote -v</code>可以查看远程库的信息，可以发现，若本地的分支如不推送到远程，对其他人是不可见的，可用<code>git push origin &lt;branch~name&gt;</code>来推送，如果失败可以先<code>git pull</code>然后再修改什么的，在本地创建和远程分支对应的分支，使用<code>git checkout -b branch-name origin/branch-name</code>，本地和远程分支的名称最好一致；
+建立本地分支和远程分支的关联，使用<code>git branch --set-upstream branch-name origin/branch-name</code>
+从远程抓取分支，使用<code>git pull</code>，如果有冲突，要先处理冲突。</p>
+<h4 id="rebase未理解">📌rebase(未理解)</h4>
+<p><code>git rebase</code>操作可以把本地未push的分叉提交历史整理成直线；</p>
+<h3 id="指令总结">🍻指令总结</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">指令</th>
+<th style="text-align:center">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><code>git init</code></td>
+<td style="text-align:center">初始化</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>git status</code></td>
+<td style="text-align:center">查看状态</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>git diff .</code></td>
+<td style="text-align:center">可以查看具体被修改了那些内容（应在<code>git add .</code>前使用）</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>git log</code></td>
+<td style="text-align:center">可以查看有几个版本提交到仓库里</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>git log --pretty=oneline</code></td>
+<td style="text-align:center">同上，不过简化了些</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>git reflog</code></td>
+<td style="text-align:center">可以查看每一次命令（可以看到版本号）</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>gir reset --hard 版本号</code></td>
+<td style="text-align:center">版本退回或回溯</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>git add 文件名</code></td>
+<td style="text-align:center">把修改放到暂存区</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>git commit -m &quot;xxxxx&quot;</code></td>
+<td style="text-align:center">一次性把暂存区的所有修改提交到分支上</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>git checkout -- &lt;file~name&gt;</code></td>
+<td style="text-align:center">可把未<code>git add</code>的文件修改全部撤销</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>git retore --staged &lt;file~name&gt;</code></td>
+<td style="text-align:center">把<code>&lt;file~name&gt;</code>在暂存区的东西移出(到工作区，也就是可以进行<code>git checkout -- &lt;file~name&gt;</code>操作)</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>git rm &lt;file~name&gt;</code></td>
+<td style="text-align:center">删除file文件，并提交修改到暂存区中</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>git switch &lt;branch~name&gt;</code></td>
+<td style="text-align:center">切换分支</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>git switch -c &lt;branch~name&gt;</code></td>
+<td style="text-align:center">创建并切换到新的分支</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>git branch</code></td>
+<td style="text-align:center">查看已有分支，带<code>*</code>的是现所在分支</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>git branch -d &lt;branch~name&gt;</code></td>
+<td style="text-align:center">删除分支（前提是已<code>switch</code>到其他分支上）</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>git branch -D &lt;branch~name&gt;</code></td>
+<td style="text-align:center">删除分支,强行删除</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>git merge &lt;branch~name&gt;</code></td>
+<td style="text-align:center">合并分支（优先采用<code>Fast forward</code>模式）</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>git merge --no-ff -m &quot;xxxx&quot; &lt;branch~name&gt;</code></td>
+<td style="text-align:center">合并分支（禁用<code>Fast forward</code>模式）</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>git log --graph --pretty=oneline --abbrev-commit</code></td>
+<td style="text-align:center">查看合并情况</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>git stash</code></td>
+<td style="text-align:center">隐藏工作现场</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>git stash list</code></td>
+<td style="text-align:center">可查看<code>stash</code>的东西</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>git stash pop</code></td>
+<td style="text-align:center">恢复工作现场，注：<code>git stash pop</code>=<code>git stash apply</code>+<code>git stash drop</code></td>
+</tr>
+<tr>
+<td style="text-align:center"><code>git cherry-pick  &lt;commit码&gt;</code></td>
+<td style="text-align:center">复制操作</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>git remote</code></td>
+<td style="text-align:center">查看远程库的信息，用<code>git remote -v</code>可以看到更详细的信息</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>git push origin &lt;branch~name&gt;</code></td>
+<td style="text-align:center">推送名为<code>&lt;branch~name&gt;</code>的分支</td>
+</tr>
+</tbody>
+</table>
+                    
+                    <HR width="100%" id="EOF">
+		    <p style="color:#777;">最后修改于 2020-02-03</p>
+                    
+                </div>
+            </div>
+            
+            
+            <nav class="post-pagination">
+
+                
+                <a class="newer-posts" href="https://fushaolei.github.io/post/idea-note/">
+			下回<br>IDEA安装
+                </a>
+                
+                
+                
+                <a class="older-posts">
+			上回<br>这是最旧的文章了。
+                </a>
+                
+            </nav>
+            <div class="post-comment-wrapper">
+                
+
+
+
+
+
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+            </div><div id="single-column-footer">
+Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> by <a href="https://amazingrise.net">Rise</a>
+<br>
+移植自 <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a>'s <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> <br>
+<br>
+
+&copy;
+	
+	2022 FuShaoLei Blog
+	
+</div>
+            </div>
+    <script>
+let app;
+
+app = new Vue({
+    el: '#app',
+    data: {
+        scrollY: 0,
+        navOpacity: 0,
+        isDrawerOpen: false,
+        mounted: false,
+        isDarkMode: false
+    },
+    methods: {
+            sgn(t, x) {
+                let k = 1. / (1. - 2 * t);
+                if (x <= t) return 0;
+                else if (x >= 1 - t) return 1;
+                else {
+                    return k * (x - t);
+                }
+            },
+            handleScroll() {
+                this.scrollY = window.scrollY;
+                this.navOpacity = this.sgn(.0, Math.min(1, Math.max(0, window.scrollY / (this.pageHeadHeight() - this.navBarHeight() * 0.8))));
+                const {navBar, navBackground, navTitle, extraContainer, streamContainer} = this.$refs;
+
+                if (this.navOpacity >= 1) {
+                    navBackground.style.opacity = 1;
+                    navTitle.style.opacity = 1;
+                } else {
+                    navBackground.style.opacity = 0;
+                    navTitle.style.opacity = 0;
+                }
+            },
+            handleResize() {
+                const {navBar, navBackground, navTitle, extraContainer, streamContainer} = this.$refs;
+                extraContainer.style.left = (streamContainer.offsetWidth - extraContainer.offsetWidth) + 'px';
+            },
+            navBarHeight() {
+                return this.$refs.navBar.offsetHeight;
+            },
+            pageHeadHeight() {
+                return this.$refs.pageHead.offsetHeight;
+            },
+            toggleDrawer() {
+                this.isDrawerOpen = !this.isDrawerOpen;
+                document.getElementsByTagName('html')[0].style.overflow = this.isDrawerOpen ? 'hidden' : 'unset';
+            },
+            closeDrawer() {
+                this.isDrawerOpen = false;
+                document.getElementsByTagName('html')[0].style.overflow = this.isDrawerOpen ? 'hidden' : 'unset';
+            },
+            toggleDarkMode() {
+                this.isDarkMode = !this.isDarkMode;
+                if (this.isDarkMode==true){
+                    document.cookie = "night=1;path=/";
+                    document.body.classList.add("night");
+                } else {
+                    document.cookie = "night=0;path=/";
+                    document.body.classList.remove("night");
+                }
+            }
+    },
+    created() {
+        window.addEventListener('scroll', this.handleScroll);
+        window.addEventListener('resize', this.handleResize);
+        window._nonDesktop = function () {
+            let check = false;
+            (function (a) {
+                if (/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows ce|xda|xiino|android|ipad|playbook|silk/i.test(a) || /1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i.test(a.substr(0, 4))) check = true;
+            })(navigator.userAgent || navigator.vendor || window.opera);
+            return check;
+        };
+        
+        var night = document.cookie.replace(/(?:(?:^|.*;\s*)night\s*\=\s*([^;]*).*$)|^.*$/, "$1");
+        if (night==""){
+            if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                
+            }
+        }else{
+            
+            if (night=="1") {
+                this.toggleDarkMode();
+            }
+        }
+    },
+    mounted() {
+        this.handleScroll();
+        this.handleResize();
+        this.mounted = true;
+
+        
+    },
+    destroyed() {
+        window.removeEventListener('scroll', this.handleScroll);
+        window.removeEventListener('resize', this.handleResize);
+    }
+});
+</script>
+
+<script src="https://fushaolei.github.io//js/journal.js"></script>
+    </body>
+</html>

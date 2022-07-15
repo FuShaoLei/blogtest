@@ -1,0 +1,997 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>FuShaoLei Blog</title>
+    <link>https://fushaolei.github.io/</link>
+    <description>Recent content on FuShaoLei Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Sat, 02 Jul 2022 17:34:37 +0000</lastBuildDate>
+    
+        <atom:link href="https://fushaolei.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+        <item>
+        <title>获取jetbrains license</title>
+        <link>https://fushaolei.github.io/post/get-the-jetbrains-license/</link>
+        <pubDate>Sat, 21 Nov 2020 22:41:39 +0000</pubDate>
+        
+        <guid>https://fushaolei.github.io/post/get-the-jetbrains-license/</guid>
+        <description>FuShaoLei Blog https://fushaolei.github.io/post/get-the-jetbrains-license/ -&lt;h2 id=&#34;楔子&#34;&gt;楔子&lt;/h2&gt;
+&lt;p&gt;对于大多数收费软件，例如ps，pr，idea等等之类的，我大多数是白嫖，需要授权码的话就去网上随便一搜，遍地都是，一个不行就换下一个，总之 总是能找到可以用的。诸如此类的事情，数不胜数。甚至老师当时教springboot的时候（要用IDEA），就直接提供破解方法给我们了。。原因呢，很简单，因为我们学生无力购买这花费高昂的软件，然后又想使用，所以不得不用盗版的了，这也是情有可原的，再一个是，白嫖是人类的天性（也不能说是全部），就算软件的价格在可以承担的范围内，仍会有人去用盗版的，为什么，因为有免费的谁会去花钱呐哈哈哈。当然。当时安装IDEA的时候我也用的盗版，软件到期时间直接他吗的干到2089年😂估计那个时候我已经驾鹤西去了。&lt;/p&gt;
+&lt;p&gt;然后不知道怎么，在网上了解到，可以通过学生的身份去申请使用权，可是我没有学生邮箱啊，学校没发。。然后又了解到可以用自己的开源项目去申请，刚好手中有一个hexo主题的项目，hexo-theme-white，这主题也注入了自己好多的心血，今年七月开的坑，虽然已经暂停维护一个月了，不过已有六十多颗star，有将近二十个fork，还收到了4，5个PR，还是蛮开心的，第一次维护项目，那感觉真是奇妙啊，每一次被star都是对我的肯定，然后我还建了个群（不过现在已经解散了，感觉没什么用），大家讨论来讨论去的，还是蛮开心的，因为感觉自己的东西被别人认可了，那感觉真不是一时的开心，而是持续的，有时候可用偷偷躲在被窝里笑的开心哈哈哈&lt;/p&gt;
+&lt;h2 id=&#34;初试&#34;&gt;初试&lt;/h2&gt;
+&lt;p&gt;抱着试一试的心态，我打开了这个网址 &lt;a href=&#34;https://www.jetbrains.com/zh-cn/community/opensource/&#34;&gt;https://www.jetbrains.com/zh-cn/community/opensource/&lt;/a&gt; 点击申请后进入申请界面申请即可，注意开源项目必须是持续开发三个月的项目，当时我就用了我从六七月份开始开坑的hexo主题&lt;a href=&#34;https://github.com/FuShaoLei/hexo-theme-white&#34;&gt;hexo-theme-white&lt;/a&gt;项目进行申请，虽然只是一个小小的html项目，但是里边也侵入了我很多的心血和时间，不过我感到蛮快乐的，因为自己的开源项目得到了许多人的肯定（截至目前有70多颗Star了），然后这中间也有建立过QQ群，然后也和我的“用户”交流什么的啊，同时也得到了一些PR，啊，这感觉真是奇妙啊&lt;/p&gt;
+&lt;h2 id=&#34;回应&#34;&gt;回应&lt;/h2&gt;
+&lt;p&gt;然后，过了大概三四天吧，就有一个负责人联系我了：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/fushaolei/img/20201211003808.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;哦，原来是叫我把授权码填入Github的简介中啊，然后再过了两天，审批就通过了！JetBrains会给你发一个授权的网址，然后进去后注册你的账号，然后授权就完成啦！进入你的账户的主页就可以看到：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/fushaolei/img/20201211004151.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;左边可以看到我用来申请的项目，然后右边可以看到一个&lt;code&gt;License For non-commercial open source&lt;/code&gt;，即用于非商业的开源，不以商业目的的开源，然后下边可以看到，你可以用的软件，下载软件后登录你的账号密码就可以使用了！&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/fushaolei/img/20201211004533.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;后记&#34;&gt;后记&lt;/h2&gt;
+&lt;p&gt;顺便推荐JetBrains家好用的一些软件~，&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;DataGrip&lt;/code&gt;用于管理数据库的工具&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Clion&lt;/code&gt;写C或C++的IDE&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;IDEA&lt;/code&gt;功能强大的Java IDE&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;我暂时用到就那么多，一个好用的IDE会是程序员手中的利器，会让我在敲代码的时候幸福感满满啊&lt;/p&gt;
+- https://fushaolei.github.io/post/get-the-jetbrains-license/ - </description>
+        </item>
+    
+    
+    
+        <item>
+        <title>关于</title>
+        <link>https://fushaolei.github.io/page/about/</link>
+        <pubDate>Sat, 31 Oct 2020 12:42:57 +0000</pubDate>
+        
+        <guid>https://fushaolei.github.io/page/about/</guid>
+        <description>FuShaoLei Blog https://fushaolei.github.io/page/about/ -&lt;h2 id=&#34;关于本站&#34;&gt;关于本站&lt;/h2&gt;
+&lt;p&gt;记录生活，记录所学&lt;/p&gt;
+&lt;p&gt;本站源码：&lt;a href=&#34;https://github.com/FuShaoLei/auto-hugo-blog&#34;&gt;https://github.com/FuShaoLei/auto-hugo-blog&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;建站历史&#34;&gt;建站历史&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;2019/04/01 &lt;code&gt;hexo&lt;/code&gt;引擎 &lt;code&gt;next&lt;/code&gt;主题，部署在&lt;code&gt;github&lt;/code&gt;上&lt;/li&gt;
+&lt;li&gt;2019/04/04 添加了看板娘，头像选择等花里胡哨的特效&lt;/li&gt;
+&lt;li&gt;然后写了几篇水文，就弃之不管了&lt;/li&gt;
+&lt;li&gt;2020/01/23 删掉原来的库，重新建站，换成了&lt;code&gt;icarus&lt;/code&gt;主题&lt;/li&gt;
+&lt;li&gt;2020/03/01 因为很想要一款自己的主题，走上了开发hexo主题的道路&lt;/li&gt;
+&lt;li&gt;2020/05/05 先后开发了&lt;code&gt;hexo-theme-hiya&lt;/code&gt; 和 &lt;code&gt;hexo-theme-anyway&lt;/code&gt;主题&lt;/li&gt;
+&lt;li&gt;2020/05/10 &lt;code&gt;hexo-theme-hiya&lt;/code&gt;被官方收录&lt;/li&gt;
+&lt;li&gt;2020/05/15 心态爆炸，&lt;code&gt;hexo-theme-hiya&lt;/code&gt;和&lt;code&gt;hexo-theme-anyway&lt;/code&gt;弃之不管了&lt;/li&gt;
+&lt;li&gt;2020/05/19 重新建站，用的&lt;code&gt;Volantis&lt;/code&gt;主题，部署在&lt;code&gt;github pages&lt;/code&gt;上&lt;/li&gt;
+&lt;li&gt;2020/05/31 新建&lt;code&gt;vuepress&lt;/code&gt;站，用的&lt;code&gt;vuepress-theme-vdoing&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;2020/06/07 在阿里云买了一年的域名&lt;code&gt;sorryfu.top&lt;/code&gt;使用权&lt;/li&gt;
+&lt;li&gt;2020/06/09 把&lt;code&gt;vuepress&lt;/code&gt;笔记本上的内容都搬运到了博客上&lt;/li&gt;
+&lt;li&gt;2020/06/20 加入了&lt;code&gt;开往&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;2020/06/20 去繁存简，开发了&lt;code&gt;hexo-theme-white&lt;/code&gt; 并使用到了自己的博客上&lt;/li&gt;
+&lt;li&gt;2020/09/20 心态再次发生变换，移植开发了&lt;code&gt;hexo-theme-slate&lt;/code&gt;并结合&lt;code&gt;gtihub action&lt;/code&gt;实现了在线写博客，域名也不用了&lt;/li&gt;
+&lt;li&gt;2020/10/10 心态又变换了，仿照知乎开发了&lt;code&gt;hexo-theme-qaq&lt;/code&gt;，可谓返璞归真，回归本源&lt;/li&gt;
+&lt;li&gt;2020/10/18 那个折腾的心又起来了，仿照实体书的排版开发了&lt;code&gt;hexo-theme-tat&lt;/code&gt;，平平淡淡才是真&lt;/li&gt;
+&lt;li&gt;2020/11/23 懒了，不想开发了，激情没了，直接白嫖next主题，白嫖不香么，干嘛要自己开发&lt;/li&gt;
+&lt;li&gt;2020/12/05 换成了默认的主题 &lt;code&gt;landscape&lt;/code&gt;，兜兜转转，还是回到了原点&lt;/li&gt;
+&lt;li&gt;2020/12/15 换成了&lt;code&gt;hueman&lt;/code&gt;主题，暂时关闭了评论系统&lt;/li&gt;
+&lt;li&gt;2021/01/08 换成了构建速度更快的&lt;code&gt;hugo&lt;/code&gt;框架，采用&lt;code&gt;Diary&lt;/code&gt;主题模板建站&lt;/li&gt;
+&lt;li&gt;2021/01/14 开通了&lt;code&gt;disqus&lt;/code&gt;评论系统，需要翻墙才可以评论（因为暂时找不到好的评论系统QAQ）&lt;/li&gt;
+&lt;li&gt;2021/01/25 换了功能比较齐全的&lt;code&gt;stack&lt;/code&gt;主题（比如搜索功能以及标签云的展示），做了些简单的定制&lt;/li&gt;
+&lt;li&gt;2021/03/06 换成了小清新的MEME主题，关闭了评论系统&lt;/li&gt;
+&lt;li&gt;2021/03/08 依据blank主题修改成现在这个样子，并开启了utterances评论系统&lt;/li&gt;
+&lt;li&gt;2021/03/10 关闭了评论系统&lt;/li&gt;
+&lt;/ul&gt;
+- https://fushaolei.github.io/page/about/ - </description>
+        </item>
+    
+    
+    
+        <item>
+        <title>友链</title>
+        <link>https://fushaolei.github.io/page/link/</link>
+        <pubDate>Sat, 31 Oct 2020 12:42:57 +0000</pubDate>
+        
+        <guid>https://fushaolei.github.io/page/link/</guid>
+        <description>FuShaoLei Blog https://fushaolei.github.io/page/link/ -&lt;p&gt;这里面有的是单链 有的是双链 ~，有些链接可能已经挂了，但是我并不想把他们删掉，留作纪念吧，毕竟在这个快餐时代，没几个人有心思下来好好看你的博客了，更别说交换友链什么的了，世事无常，且行且珍惜。&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;链接&lt;/th&gt;
+&lt;th&gt;说明&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;https://www.ronce.cc/&#34;&gt;城南破事&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;第一个和我交换友链的小伙伴(≧∇≦)ﾉ&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;https://1940879828.github.io/&#34;&gt;竹青虫の窝&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;https://www.hack-er.cn/&#34;&gt;CtrlCV博客&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;https://www.cnblogs.com/charlottepl/&#34;&gt;两小无猜&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;大学室友，天才&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;https://www.cnblogs.com/occlive/&#34;&gt;策策的小黑屋&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;大学同学，Java之光小组扛把子&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;https://yiki.tech&#34;&gt;Guan FuQing&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;https://wenzia.com&#34;&gt;阿瑞&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;https://yichen.online&#34;&gt;依尘&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;https://blog.tmaize.net/&#34;&gt;TMaize Blog&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;jekyll主题tmaize-blog作者，技术大佬&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;http://2cat.net/&#34;&gt;猫鱼的小站&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;一个温暖的大姐姐的博客&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;https://rain.moimo.me&#34;&gt;M E S&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;https://subrige.xyz/&#34;&gt;明心&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;https://liuyifei.club&#34;&gt;饿龙不是龙哩&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;经常用我老婆做文章封面的人 🤣&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;https://yoyling.com&#34;&gt;YOYLING.&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;技术大佬&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;https://shoka.lostyu.me&#34;&gt;優萌初華&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Shoka作者&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;https://dmx.pub/&#34;&gt;DmxZ&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;blank作者&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;http://kangxh.xyz&#34;&gt;康&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;跆拳道组员&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;https://liurenfeng007.github.io/&#34;&gt;宸铄&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;一个老实人&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;https://blog.nmslwsnd.com/&#34;&gt;initcool&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;打倒了100个四大魔公的男人！&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;https://takuron.top/&#34;&gt;takuron&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;大佬，单链&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;https://nekodeng.gitee.io/&#34;&gt;itsNekoDeng&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;想要发光发热，不止于此。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;http://www.borebooks.top/&#34;&gt;般若格子&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;https://blog.imzy.ink/&#34;&gt;墨泽&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;生命不息 折腾不止&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;如果你也想和我互换友链，请按以下模板进行留言&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;[网站名称](网站链接) | 描述
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;我的信息如下&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;name: Sorryfu
+link: https://fushaolei.github.io/
+logo: https://cdn.jsdelivr.net/gh/fushaolei/img/20200524104925.jpg
+&lt;/code&gt;&lt;/pre&gt;- https://fushaolei.github.io/page/link/ - </description>
+        </item>
+    
+    
+    
+        <item>
+        <title>Android MVP模式思想</title>
+        <link>https://fushaolei.github.io/post/android-mvp/</link>
+        <pubDate>Tue, 06 Oct 2020 13:34:37 +0000</pubDate>
+        
+        <guid>https://fushaolei.github.io/post/android-mvp/</guid>
+        <description>FuShaoLei Blog https://fushaolei.github.io/post/android-mvp/ -&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
+&lt;p&gt;以前有学过，感觉理解不了，然后又用不到，然后就不了了之了 ，现在因为实习公司的项目有用到，如果不学的话感觉根本看不懂项目（其实学完之后还是看不懂😂），所以就重新学过，顺便记录一下&lt;/p&gt;
+&lt;h3 id=&#34;2021年1月13日补充&#34;&gt;2021年1月13日补充&lt;/h3&gt;
+&lt;p&gt;当初想的窄了，从细枝末节入手，缺乏一个全局的观念，现在想起来，其实下面所说的预备知识，其实是为&lt;strong&gt;优化&lt;/strong&gt;MVP模式所服务的。&lt;/p&gt;
+&lt;p&gt;以及，mvp模式只是一个思想，并没有具体的，标准的编码规定&lt;/p&gt;
+&lt;h2 id=&#34;预备知识&#34;&gt;预备知识&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;面向接口的编程思想&lt;/li&gt;
+&lt;li&gt;向上转型的概念&lt;/li&gt;
+&lt;li&gt;解耦&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;面向接口编程&#34;&gt;面向接口编程&lt;/h3&gt;
+&lt;p&gt;先复习一下接口的概念：&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;在Java程序设计语言中，接口不是类，而是对希望符合这个接口的类的一组需求（出自《Java核心卷一》p222页）
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;说白了，接口就是一组&lt;strong&gt;需求&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;而面向接口编程呢，就是在开始开发前，先定义好接口（可以理解为先列出一组需求），然后再进行开发&lt;/p&gt;
+&lt;h3 id=&#34;向上转型&#34;&gt;向上转型&lt;/h3&gt;
+&lt;p&gt;即&lt;strong&gt;父类引用指向子类对象&lt;/strong&gt;（即&lt;strong&gt;多态&lt;/strong&gt;），看完下面的代码应该更好理解些&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;interface&lt;/span&gt; &lt;span style=&#34;color:#0e84b5;font-weight:bold&#34;&gt;IStudent&lt;/span&gt; &lt;span style=&#34;color:#666&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    String &lt;span style=&#34;color:#06287e&#34;&gt;getName&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;();&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#666&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#0e84b5;font-weight:bold&#34;&gt;Student&lt;/span&gt; &lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;implements&lt;/span&gt; IStudent&lt;span style=&#34;color:#666&#34;&gt;{&lt;/span&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;//此时IStudent是父类，Student是子类
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#555;font-weight:bold&#34;&gt;@Override&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;public&lt;/span&gt; String &lt;span style=&#34;color:#06287e&#34;&gt;getName&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;()&lt;/span&gt; &lt;span style=&#34;color:#666&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#4070a0&#34;&gt;&amp;#34;任我行&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#666&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#666&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#0e84b5;font-weight:bold&#34;&gt;Test&lt;/span&gt; &lt;span style=&#34;color:#666&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;static&lt;/span&gt; &lt;span style=&#34;color:#902000&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#06287e&#34;&gt;main&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;(&lt;/span&gt;String&lt;span style=&#34;color:#666&#34;&gt;[]&lt;/span&gt; args&lt;span style=&#34;color:#666&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#666&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        IStudent iStudent&lt;span style=&#34;color:#666&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        iStudent&lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;new&lt;/span&gt; Student&lt;span style=&#34;color:#666&#34;&gt;();&lt;/span&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;//父类引用指向子类的对象，这里做了向上转型
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;&lt;/span&gt;        System&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#4070a0&#34;&gt;out&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#4070a0&#34;&gt;println&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#4070a0&#34;&gt;&amp;#34;学生的名字是：&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;+&lt;/span&gt;iStudent&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#4070a0&#34;&gt;getName&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;());&lt;/span&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;//打印结果：学生的名字是：任我行
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#666&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#666&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;解耦&#34;&gt;解耦&lt;/h3&gt;
+&lt;p&gt;解耦即降低依赖性&lt;/p&gt;
+&lt;h2 id=&#34;mvp模式&#34;&gt;MVP模式&lt;/h2&gt;
+&lt;p&gt;Actually，我觉得MVP模式的灵魂就是presenter层同时持有view层和model层的&lt;strong&gt;引用&lt;/strong&gt;（请联系上边的向上转型的概念）。&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;照此逻辑，我们简单实现一个常见的登录模块。根据&lt;strong&gt;面向接口编程&lt;/strong&gt;，我们首先列出我们的接口（需求）：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;/**
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt; * View层的需求
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt; */&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;interface&lt;/span&gt; &lt;span style=&#34;color:#0e84b5;font-weight:bold&#34;&gt;IView&lt;/span&gt; &lt;span style=&#34;color:#666&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;//1. 获取用户的输入信息
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;public&lt;/span&gt; User &lt;span style=&#34;color:#06287e&#34;&gt;getViewUser&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;();&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;//2. 登录成功的操作
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#902000&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#06287e&#34;&gt;loginSuceess&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;();&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;//3. 登录失败后的操作
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#902000&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#06287e&#34;&gt;loginFail&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;();&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#666&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;/**
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt; * Model层的需求
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt; */&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;interface&lt;/span&gt; &lt;span style=&#34;color:#0e84b5;font-weight:bold&#34;&gt;IModel&lt;/span&gt; &lt;span style=&#34;color:#666&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;     &lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;//判断信息是否正确
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;&lt;/span&gt;     &lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#902000&#34;&gt;boolean&lt;/span&gt; &lt;span style=&#34;color:#06287e&#34;&gt;isOk&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;(&lt;/span&gt;User user&lt;span style=&#34;color:#666&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#666&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;/**
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt; * presenter层的需求
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt; */&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;interface&lt;/span&gt; &lt;span style=&#34;color:#0e84b5;font-weight:bold&#34;&gt;IPresenter&lt;/span&gt; &lt;span style=&#34;color:#666&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;//登录操作
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#902000&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#06287e&#34;&gt;login&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;();&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#666&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;好了，接口写完，现在去实现接口：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#0e84b5;font-weight:bold&#34;&gt;View&lt;/span&gt; &lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;extends&lt;/span&gt; AppCompatActivity &lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;implements&lt;/span&gt; IView&lt;span style=&#34;color:#666&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;private&lt;/span&gt; EditText mUsername&lt;span style=&#34;color:#666&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;private&lt;/span&gt; EditText mPassword&lt;span style=&#34;color:#666&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;private&lt;/span&gt; Button mButton&lt;span style=&#34;color:#666&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;private&lt;/span&gt; IPresenter iPresenter&lt;span style=&#34;color:#666&#34;&gt;;&lt;/span&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;//present的引用
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#555;font-weight:bold&#34;&gt;@Override&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;protected&lt;/span&gt; &lt;span style=&#34;color:#902000&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#06287e&#34;&gt;onCreate&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;(&lt;/span&gt;Bundle savedInstanceState&lt;span style=&#34;color:#666&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#666&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;super&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#4070a0&#34;&gt;onCreate&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;(&lt;/span&gt;savedInstanceState&lt;span style=&#34;color:#666&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        setContentView&lt;span style=&#34;color:#666&#34;&gt;(&lt;/span&gt;R&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#4070a0&#34;&gt;layout&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#4070a0&#34;&gt;activity_main&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        mUsername &lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt; findViewById&lt;span style=&#34;color:#666&#34;&gt;(&lt;/span&gt;R&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#4070a0&#34;&gt;id&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#4070a0&#34;&gt;et_username&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        mPassword &lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt; findViewById&lt;span style=&#34;color:#666&#34;&gt;(&lt;/span&gt;R&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#4070a0&#34;&gt;id&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#4070a0&#34;&gt;et_password&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        mButton &lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt; findViewById&lt;span style=&#34;color:#666&#34;&gt;(&lt;/span&gt;R&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#4070a0&#34;&gt;id&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#4070a0&#34;&gt;btn_login&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        iPresenter &lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;new&lt;/span&gt; Presenter&lt;span style=&#34;color:#666&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;this&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;);&lt;/span&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;//父类引用指向子类对象，向上转型，这个this指向的是View本身，也就是是传入了一个IView的子类对象
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;&lt;/span&gt;        &lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;//此时Presenter同时持有Model层和View层的对象
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;&lt;/span&gt;        mButton&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#4070a0&#34;&gt;setOnClickListener&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;new&lt;/span&gt; android&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#4070a0&#34;&gt;view&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#4070a0&#34;&gt;View&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#4070a0&#34;&gt;OnClickListener&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;()&lt;/span&gt; &lt;span style=&#34;color:#666&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            &lt;span style=&#34;color:#555;font-weight:bold&#34;&gt;@Override&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            &lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#902000&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#06287e&#34;&gt;onClick&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;(&lt;/span&gt;android&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#4070a0&#34;&gt;view&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#4070a0&#34;&gt;View&lt;/span&gt; v&lt;span style=&#34;color:#666&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#666&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                iPresenter&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#4070a0&#34;&gt;login&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;();&lt;/span&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;//此操作会执行Pressenter对象的login方法
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;&lt;/span&gt;            &lt;span style=&#34;color:#666&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#666&#34;&gt;});&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#666&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;//实现IView的需求
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#555;font-weight:bold&#34;&gt;@Override&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;public&lt;/span&gt; User &lt;span style=&#34;color:#06287e&#34;&gt;getViewUser&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;()&lt;/span&gt; &lt;span style=&#34;color:#666&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;new&lt;/span&gt; User&lt;span style=&#34;color:#666&#34;&gt;(&lt;/span&gt;mUsername&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#4070a0&#34;&gt;getText&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;().&lt;/span&gt;&lt;span style=&#34;color:#4070a0&#34;&gt;toString&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;(),&lt;/span&gt;mPassword&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#4070a0&#34;&gt;getText&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;().&lt;/span&gt;&lt;span style=&#34;color:#4070a0&#34;&gt;toString&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;());&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#666&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#555;font-weight:bold&#34;&gt;@Override&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#902000&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#06287e&#34;&gt;loginSuceess&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;()&lt;/span&gt; &lt;span style=&#34;color:#666&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        Toast&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#4070a0&#34;&gt;makeText&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;this&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#4070a0&#34;&gt;&amp;#34;登录成功！&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;,&lt;/span&gt; Toast&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#4070a0&#34;&gt;LENGTH_SHORT&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;).&lt;/span&gt;&lt;span style=&#34;color:#4070a0&#34;&gt;show&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;();&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#666&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#555;font-weight:bold&#34;&gt;@Override&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#902000&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#06287e&#34;&gt;loginFail&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;()&lt;/span&gt; &lt;span style=&#34;color:#666&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        Toast&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#4070a0&#34;&gt;makeText&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;this&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#4070a0&#34;&gt;&amp;#34;登录失败！&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;,&lt;/span&gt; Toast&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#4070a0&#34;&gt;LENGTH_SHORT&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;).&lt;/span&gt;&lt;span style=&#34;color:#4070a0&#34;&gt;show&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;();&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#666&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#666&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#0e84b5;font-weight:bold&#34;&gt;Model&lt;/span&gt; &lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;implements&lt;/span&gt; IModel&lt;span style=&#34;color:#666&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;//IModel的需求
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#555;font-weight:bold&#34;&gt;@Override&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#902000&#34;&gt;boolean&lt;/span&gt; &lt;span style=&#34;color:#06287e&#34;&gt;isOk&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;(&lt;/span&gt;User user&lt;span style=&#34;color:#666&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#666&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color:#666&#34;&gt;(&lt;/span&gt;user&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#4070a0&#34;&gt;getUsername&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;().&lt;/span&gt;&lt;span style=&#34;color:#4070a0&#34;&gt;equals&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#4070a0&#34;&gt;&amp;#34;root&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;)&amp;amp;&amp;amp;&lt;/span&gt;user&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#4070a0&#34;&gt;getPassword&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;().&lt;/span&gt;&lt;span style=&#34;color:#4070a0&#34;&gt;equals&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#4070a0&#34;&gt;&amp;#34;123&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;)){&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            &lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;true&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#666&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;false&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#666&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#666&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;我觉得mvp模式的核心在此&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;//presenter层，联系model和view的枢纽
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#0e84b5;font-weight:bold&#34;&gt;Presenter&lt;/span&gt; &lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;implements&lt;/span&gt; IPresenter &lt;span style=&#34;color:#666&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;private&lt;/span&gt; IModel iModel&lt;span style=&#34;color:#666&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;private&lt;/span&gt; IView iView&lt;span style=&#34;color:#666&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#06287e&#34;&gt;Presenter&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;(&lt;/span&gt;IView iView&lt;span style=&#34;color:#666&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#666&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;this&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#4070a0&#34;&gt;iModel&lt;/span&gt; &lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;new&lt;/span&gt; Model&lt;span style=&#34;color:#666&#34;&gt;();&lt;/span&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;//向上转型
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;&lt;/span&gt;        &lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;this&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#4070a0&#34;&gt;iView&lt;/span&gt; &lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt; iView&lt;span style=&#34;color:#666&#34;&gt;;&lt;/span&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;//向上转型
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#666&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;//IPresenter的需求
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#555;font-weight:bold&#34;&gt;@Override&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#902000&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#06287e&#34;&gt;login&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;()&lt;/span&gt; &lt;span style=&#34;color:#666&#34;&gt;{&lt;/span&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;//当View层点击button的时候，将会调用到这个方法
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;&lt;/span&gt;        &lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color:#666&#34;&gt;(&lt;/span&gt;iModel&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#4070a0&#34;&gt;isOk&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;(&lt;/span&gt;iView&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#4070a0&#34;&gt;getViewUser&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;())){&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            iView&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#4070a0&#34;&gt;loginSuceess&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;();&lt;/span&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;//执行view层的loginSuceess
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;&lt;/span&gt;        &lt;span style=&#34;color:#666&#34;&gt;}&lt;/span&gt;&lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;else&lt;/span&gt; &lt;span style=&#34;color:#666&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            iView&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#4070a0&#34;&gt;loginFail&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;();&lt;/span&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;//执行view层的loginFail
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;&lt;/span&gt;        &lt;span style=&#34;color:#666&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#666&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#666&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;model，view，presenter的接口，就像是三条引子，把它们联系在了一起&lt;/p&gt;
+&lt;h2 id=&#34;参考资料&#34;&gt;参考资料&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;肥肠感谢这些参考资料的作者(≧∀≦)ゞ（重点推荐第一篇，讲的太好了）&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://mp.weixin.qq.com/s/DuNbl3V4gZY-ZCETbhZGug&#34;&gt;一步步带你精通MVP&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://juejin.im/post/6844903720036073480&#34;&gt;Android MVP架构从入门到精通-真枪实弹&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://blog.csdn.net/lmj623565791/article/details/46596109?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522160170643419724836748193%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&amp;amp;request_id=160170643419724836748193&amp;amp;biz_id=0&amp;amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~top_click~default-3-46596109.first_rank_ecpm_v3_pc_rank_v2&amp;amp;utm_term=android+mvp&amp;amp;spm=1018.2118.3001.4187&#34;&gt;浅谈 MVP in Android&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://blog.csdn.net/chenssy/article/details/12786385?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522160169439719724835832063%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&amp;amp;request_id=160169439719724835832063&amp;amp;biz_id=0&amp;amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_ecpm_v3~pc_rank_v2-1-12786385.first_rank_ecpm_v3_pc_rank_v2&amp;amp;utm_term=%E5%A4%9A%E6%80%81&amp;amp;spm=1018.2118.3001.4187&#34;&gt;java提高篇（三）&amp;mdash;&amp;ndash;理解java的三大特性之多态&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://blog.csdn.net/Cyy19970527/article/details/83177996?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522160171051919725255500190%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&amp;amp;request_id=160171051919725255500190&amp;amp;biz_id=0&amp;amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_ecpm_v3~pc_rank_v2-2-83177996.first_rank_ecpm_v3_pc_rank_v2&amp;amp;utm_term=%E9%9D%A2%E5%90%91%E6%8E%A5%E5%8F%A3%E7%BC%96%E7%A8%8B&amp;amp;spm=1018.2118.3001.4187&#34;&gt;面向接口编程思想(的好处)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://zhuanlan.zhihu.com/p/34026164&#34;&gt;Java的向上转型与向下转型&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+- https://fushaolei.github.io/post/android-mvp/ - </description>
+        </item>
+    
+    
+    
+        <item>
+        <title>GitHub Action &#43; Hexo 实现在线写作</title>
+        <link>https://fushaolei.github.io/post/github-action-hexo/</link>
+        <pubDate>Mon, 21 Sep 2020 22:01:51 +0000</pubDate>
+        
+        <guid>https://fushaolei.github.io/post/github-action-hexo/</guid>
+        <description>FuShaoLei Blog https://fushaolei.github.io/post/github-action-hexo/ -&lt;blockquote&gt;
+&lt;p&gt;心血来潮，研究了一下午，当写完的时候，上网一查，才发现已经有好多人都写过类似的文章了，但我感觉不记录就好像吃了亏什么的，所以，写了一篇蛮常见的文章，以此慰己&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;零前言&#34;&gt;零，前言&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://hexo.io/&#34;&gt;hexo&lt;/a&gt; 是一款快速、简洁且高效的静态博客框架，因为它的高可定制性，所以深受各个程序员的喜爱，我也曾一头扎进去研究过，先后开发了white和hiya主题，在使用过程中，也渐渐的发现了一些问题&lt;/p&gt;
+&lt;p&gt;情景一，当浏览自己某篇博客时发现了一些错误之后想要马上修改时，将要经历经历一下步骤&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;在本地的hexo博客文件夹中找到&lt;code&gt;source/_post&lt;/code&gt;文件夹&lt;/li&gt;
+&lt;li&gt;找到那个md文件，打开&lt;/li&gt;
+&lt;li&gt;修改&lt;/li&gt;
+&lt;li&gt;然后还要经历&lt;code&gt;hexo clean&lt;/code&gt;,&lt;code&gt;hexo g&lt;/code&gt;，&lt;code&gt;hexo d&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;情景二，当想要马上写一篇博客时，需要经历以下步骤&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;在博客根目录中&lt;code&gt;hexo n &amp;quot;博客名&amp;quot;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;点击进入&lt;code&gt;source/_post&lt;/code&gt;文件夹中找到这个md文件并打开&lt;/li&gt;
+&lt;li&gt;写博客&lt;/li&gt;
+&lt;li&gt;然后还要经历&lt;code&gt;hexo clean&lt;/code&gt;,&lt;code&gt;hexo g&lt;/code&gt;，&lt;code&gt;hexo d&lt;/code&gt;三连&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;以上过程想必使用过hexo博客的人都经历过吧？不知道你们什么感觉，反正这对于我这种急性子的人来说简直是忍不了(╯‵□′)╯︵┻━┻，而且每次写完博客啊，修改完博客啊之类的，还必须经历过&lt;code&gt;hexo clean&lt;/code&gt;,&lt;code&gt;hexo g&lt;/code&gt;，&lt;code&gt;hexo d&lt;/code&gt;才可以将博客推送到网上去，这玩意我一开始还有耐心，现在就不行了(ノ｀Д)ノ，幸好后来发现了github action可以实现自动部署，再结合自己以往开发hexo主题的经验，做出来了可以在线新建博客或者修改博客的功能（具体可参观我的&lt;a href=&#34;https://fushaolei.github.io/&#34;&gt;博客&lt;/a&gt;），效果如下：&lt;/p&gt;
+&lt;p&gt;新建文章&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/fushaolei/img/20200920220049.gif&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;修改文章&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/fushaolei/img/20200920220327.gif&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;就这样，利用github action交给github去做&lt;code&gt;hexo clean&lt;/code&gt;,&lt;code&gt;hexo g&lt;/code&gt;，&lt;code&gt;hexo d&lt;/code&gt;三连，很方便的实现了新建文章和修改文章，即优雅，又方便，那么这又是如何做到的呢？下面我将分为两个部分来说明，第一部分是如何结合github action来实现自动部署，第二部分是如何点击某个按钮后进入新建文章页，和修改文章页。&lt;/p&gt;
+&lt;h2 id=&#34;一使用github-aciton实现自动部署&#34;&gt;一，使用github aciton实现自动部署&lt;/h2&gt;
+&lt;p&gt;1.&lt;strong&gt;在github新建一个仓库，专门用来存放源文件&lt;/strong&gt;，我的源文件如下，供各位参考&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/fushaolei/img/20200920221609.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;什么？你不会要先git clone到本地后，再将源文件复制粘贴到里面再上传吧？这也太low太笨拙了吧哈哈哈，咳咳，如果你不会将本地仓库关联到远程仓库的话，请按下边步骤进行&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;在hexo源文件夹中 &lt;code&gt;hexo init &lt;/code&gt; 进行初始化&lt;/li&gt;
+&lt;li&gt;关联远程仓库 &lt;code&gt;git remote add origin git@github.com:&amp;lt;你的用户名&amp;gt;/&amp;lt;存放源文件的仓库名&amp;gt;.git&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git pull --rebase origin master&lt;/code&gt;和远程仓库进行一个同步&lt;/li&gt;
+&lt;li&gt;然后依次进行&lt;code&gt;git add .&lt;/code&gt;，&lt;code&gt;git commit -m &amp;quot;init repo&amp;quot;&lt;/code&gt;，&lt;code&gt;git push -u origin master&lt;/code&gt; ，然后就大功告成啦&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;上传好的源文件在github中如下&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/fushaolei/img/20200921000040.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;注意：如theme文件夹中主题文件中有&lt;code&gt;.git文件&lt;/code&gt;，请将其删除在上传&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;2.添加私钥和公钥&lt;/p&gt;
+&lt;p&gt;在&lt;code&gt;C:\Users\用户名\.ssh&lt;/code&gt;中可找到&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/fushaolei/img2/20200920221956.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;公钥的配置（正常来说应该是配置过了），直接在这个&lt;a href=&#34;https://github.com/settings/keys&#34;&gt;链接&lt;/a&gt;点击那个new SSH key就可配置&lt;/li&gt;
+&lt;li&gt;私钥的配置，点击 &lt;a href=&#34;https://github.com/&#34;&gt;https://github.com/&lt;/a&gt;&amp;lt;你的用户名&amp;gt;/&amp;lt;存放源文件的仓库名&amp;gt;/settings/secrets，新建私钥，注意，这里的名称要填&lt;code&gt;HEXO_DEPLOY_PRIVATE_KEY&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;3.添加github action&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/fushaolei/img/20200920224635.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;将以下的代码复制粘贴&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-yml&#34; data-lang=&#34;yml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;# workflow name&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#062873;font-weight:bold&#34;&gt;name&lt;/span&gt;:&lt;span style=&#34;color:#bbb&#34;&gt; &lt;/span&gt;Hexo Blog CI&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;# master branch on push, auto run&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#062873;font-weight:bold&#34;&gt;on&lt;/span&gt;:&lt;span style=&#34;color:#bbb&#34;&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;  &lt;/span&gt;&lt;span style=&#34;color:#062873;font-weight:bold&#34;&gt;push&lt;/span&gt;:&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;    &lt;/span&gt;&lt;span style=&#34;color:#062873;font-weight:bold&#34;&gt;branches&lt;/span&gt;:&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;      &lt;/span&gt;- master&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;      
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#062873;font-weight:bold&#34;&gt;jobs&lt;/span&gt;:&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;  &lt;/span&gt;&lt;span style=&#34;color:#062873;font-weight:bold&#34;&gt;build&lt;/span&gt;:&lt;span style=&#34;color:#bbb&#34;&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;    &lt;/span&gt;&lt;span style=&#34;color:#062873;font-weight:bold&#34;&gt;runs-on&lt;/span&gt;:&lt;span style=&#34;color:#bbb&#34;&gt; &lt;/span&gt;ubuntu-latest &lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;        
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;    &lt;/span&gt;&lt;span style=&#34;color:#062873;font-weight:bold&#34;&gt;steps&lt;/span&gt;:&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;    &lt;/span&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;# check it to your workflow can access it&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;    &lt;/span&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;# from: https://github.com/actions/checkout&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;    &lt;/span&gt;- &lt;span style=&#34;color:#062873;font-weight:bold&#34;&gt;name&lt;/span&gt;:&lt;span style=&#34;color:#bbb&#34;&gt; &lt;/span&gt;Checkout Repository master branch&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;      &lt;/span&gt;&lt;span style=&#34;color:#062873;font-weight:bold&#34;&gt;uses&lt;/span&gt;:&lt;span style=&#34;color:#bbb&#34;&gt; &lt;/span&gt;actions/checkout@master &lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;      
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;    &lt;/span&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;# from: https://github.com/actions/setup-node  &lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;    &lt;/span&gt;- &lt;span style=&#34;color:#062873;font-weight:bold&#34;&gt;name&lt;/span&gt;:&lt;span style=&#34;color:#bbb&#34;&gt; &lt;/span&gt;Setup Node.js 12.x &lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;      &lt;/span&gt;&lt;span style=&#34;color:#062873;font-weight:bold&#34;&gt;uses&lt;/span&gt;:&lt;span style=&#34;color:#bbb&#34;&gt; &lt;/span&gt;actions/setup-node@master&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;      &lt;/span&gt;&lt;span style=&#34;color:#062873;font-weight:bold&#34;&gt;with&lt;/span&gt;:&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;        &lt;/span&gt;&lt;span style=&#34;color:#062873;font-weight:bold&#34;&gt;node-version&lt;/span&gt;:&lt;span style=&#34;color:#bbb&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#4070a0&#34;&gt;&amp;#34;12.x&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;    
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;    &lt;/span&gt;- &lt;span style=&#34;color:#062873;font-weight:bold&#34;&gt;name&lt;/span&gt;:&lt;span style=&#34;color:#bbb&#34;&gt; &lt;/span&gt;Setup Hexo Dependencies&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;      &lt;/span&gt;&lt;span style=&#34;color:#062873;font-weight:bold&#34;&gt;run&lt;/span&gt;:&lt;span style=&#34;color:#bbb&#34;&gt; &lt;/span&gt;|&lt;span style=&#34;color:#4070a0;font-style:italic&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#4070a0;font-style:italic&#34;&gt;        npm install hexo-cli -g
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#4070a0;font-style:italic&#34;&gt;        npm install&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;        
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;    
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;    &lt;/span&gt;- &lt;span style=&#34;color:#062873;font-weight:bold&#34;&gt;name&lt;/span&gt;:&lt;span style=&#34;color:#bbb&#34;&gt; &lt;/span&gt;Setup Deploy Private Key&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;      &lt;/span&gt;&lt;span style=&#34;color:#062873;font-weight:bold&#34;&gt;env&lt;/span&gt;:&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;        &lt;/span&gt;&lt;span style=&#34;color:#062873;font-weight:bold&#34;&gt;HEXO_DEPLOY_PRIVATE_KEY&lt;/span&gt;:&lt;span style=&#34;color:#bbb&#34;&gt; &lt;/span&gt;${{ secrets.HEXO_DEPLOY_PRIVATE_KEY }}&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;      &lt;/span&gt;&lt;span style=&#34;color:#062873;font-weight:bold&#34;&gt;run&lt;/span&gt;:&lt;span style=&#34;color:#bbb&#34;&gt; &lt;/span&gt;|&lt;span style=&#34;color:#4070a0;font-style:italic&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#4070a0;font-style:italic&#34;&gt;        mkdir -p ~/.ssh/
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#4070a0;font-style:italic&#34;&gt;        echo &amp;#34;$HEXO_DEPLOY_PRIVATE_KEY&amp;#34; &amp;gt; ~/.ssh/id_rsa 
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#4070a0;font-style:italic&#34;&gt;        chmod 600 ~/.ssh/id_rsa
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#4070a0;font-style:italic&#34;&gt;        ssh-keyscan github.com &amp;gt;&amp;gt; ~/.ssh/known_hosts
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#4070a0;font-style:italic&#34;&gt;        &lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;        
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;    &lt;/span&gt;- &lt;span style=&#34;color:#062873;font-weight:bold&#34;&gt;name&lt;/span&gt;:&lt;span style=&#34;color:#bbb&#34;&gt; &lt;/span&gt;Setup Git Infomation&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;      &lt;/span&gt;&lt;span style=&#34;color:#062873;font-weight:bold&#34;&gt;run&lt;/span&gt;:&lt;span style=&#34;color:#bbb&#34;&gt; &lt;/span&gt;| &lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;        &lt;/span&gt;git config --global user.name &amp;#39;&amp;lt;你的用户名&amp;gt;&amp;#39; &lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;        &lt;/span&gt;git config --global user.email &amp;#39;&amp;lt;你登录的email&amp;gt;&amp;#39;&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;    &lt;/span&gt;- &lt;span style=&#34;color:#062873;font-weight:bold&#34;&gt;name&lt;/span&gt;:&lt;span style=&#34;color:#bbb&#34;&gt; &lt;/span&gt;Deploy Hexo &lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;      &lt;/span&gt;&lt;span style=&#34;color:#062873;font-weight:bold&#34;&gt;run&lt;/span&gt;:&lt;span style=&#34;color:#bbb&#34;&gt; &lt;/span&gt;|&lt;span style=&#34;color:#4070a0;font-style:italic&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#4070a0;font-style:italic&#34;&gt;        hexo clean
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#4070a0;font-style:italic&#34;&gt;        hexo generate 
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#4070a0;font-style:italic&#34;&gt;        hexo deploy&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;        
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;仔细看这段代码，里边要填上你的用户名和邮箱&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;DONE!大功告成啦，到这里可以去测试一下，修改修改某个文章标题，看看是否有效果&lt;/p&gt;
+&lt;p&gt;好了，利用GitHub action实现自动部署这一步已经完成了&lt;/p&gt;
+&lt;h2 id=&#34;二设置点击进入新建或编辑&#34;&gt;二，设置点击进入新建或编辑&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;如果你是一名hexo主题开发者的话，这一步对你来说就是无比的简单了，如果你是一名小白的话 也没关系，跟着我的步骤，稍微有些耐心，应该不是什么问题&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;新建文章&#34;&gt;新建文章&lt;/h3&gt;
+&lt;p&gt;其实完成了第一步，这一步就捉襟见肘了，无非就是点击一个按钮后跳转到&lt;strong&gt;存放hexo源文件仓库的&lt;code&gt;source/_posts&lt;/code&gt;路径的新建页面&lt;/strong&gt;，比如我，链接就是 &lt;a href=&#34;https://github.com/FuShaoLei/auto-blog/new/master/source/_posts&#34;&gt;https://github.com/FuShaoLei/auto-blog/new/master/source/_posts&lt;/a&gt; ，效果如下&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/fushaolei/img/20200920220049.gif&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;放一个模板： &lt;code&gt;https://github.com/&amp;lt;你的用户名&amp;gt;/&amp;lt;存放博客源文件的仓库名&amp;gt;/new/master/source/_posts&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;就是一个链接而已，你可以把它放在menu中，或者任何你想放的地方&lt;/p&gt;
+&lt;h3 id=&#34;修改文章&#34;&gt;修改文章&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;修改文章本质就是修改源文件中的&lt;code&gt;source/_posts&lt;/code&gt;目录下的md文件&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;而这个md是与path路径有关的，不过一般文章的path路径都类似&lt;code&gt;/2020/08/09/doc-white/&lt;/code&gt;这样的，有一个日期的前缀，而且有一个斜杠，所以一般要经历以下步骤，&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;去除这个post的path路径中的数字和斜杠&lt;/li&gt;
+&lt;li&gt;加上前缀&lt;code&gt;https://github.com/&amp;lt;你的用户名&amp;gt;/&amp;lt;存放源文件的仓库名&amp;gt;/edit/master/source/_posts/&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;加上后缀&lt;code&gt;.md&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;组合成类似&lt;code&gt;https://github.com/&amp;lt;你的用户名&amp;gt;/&amp;lt;存放源文件的仓库名&amp;gt;/edit/master/source/_posts/&amp;lt;文章名&amp;gt;.md&lt;/code&gt; 的链接即可&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;下面以&lt;code&gt;ejs&lt;/code&gt;举例（在&lt;code&gt;post.ejs&lt;/code&gt;中）&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-ejs&#34; data-lang=&#34;ejs&#34;&gt;
+&amp;lt;%
+&amp;lt;!-- 这个js函数是抄的，见笑 --&amp;gt;
+function trimNumber(str){
+    return str.replace(/\d+/g,&amp;#39;&amp;#39;).replace(/\//g,&amp;#39;&amp;#39;);
+}
+%&amp;gt;
+&amp;lt;article id=&amp;#34;post&amp;#34;&amp;gt;
+  &amp;lt;h1&amp;gt;&amp;lt;%= page.title%&amp;gt;&amp;lt;/h1&amp;gt;
+  &amp;lt;%-page.content%&amp;gt;
+  &amp;lt;a  href=&amp;#34;https://github.com/FuShaoLei/auto-blog/edit/master/source/_posts/&amp;lt;%=trimNumber(page.path)%&amp;gt;.md&amp;#34;&amp;gt;Edit Post&amp;lt;/a&amp;gt;
+&amp;lt;/article&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;好了，之后点击那个新增的超链接后 就会跳转到你想要修改的文章了，效果如下&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/fushaolei/img/20200920220327.gif&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;这样一来，当你新增或修改文章并点击那个&lt;code&gt;git commit&lt;/code&gt;后，都会出发github action，然后它就会帮你进行hexo三连，也就是自动部署啦&lt;/p&gt;
+&lt;h2 id=&#34;三后记&#34;&gt;三，后记&lt;/h2&gt;
+&lt;p&gt;如果你按照以上的步骤一一做完后，你就可以得到一个可以在线编辑的hexo网站了，这其中当然也有些缺点咯，比如下面两个&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;修改完后触发编译，需要等待一段时间（其实这属于鸡蛋里挑骨头了hhhh&lt;/li&gt;
+&lt;li&gt;想要上传图片的时候有一些不方便&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;参考文章&#34;&gt;参考文章&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://blog.csdn.net/u012208219/article/details/106883054?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522160061139819195188346686%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&amp;amp;request_id=160061139819195188346686&amp;amp;biz_id=0&amp;amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_ecpm_v3~pc_rank_v3-1-106883054.pc_ecpm_v3_pc_rank_v3&amp;amp;utm_term=github+action+%E8%87%AA%E5%8A%A8%E9%83%A8%E7%BD%B2hexo&amp;amp;spm=1018.2118.3001.4187&#34;&gt;利用GitHub+Actions自动部署Hexo博客&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+- https://fushaolei.github.io/post/github-action-hexo/ - </description>
+        </item>
+    
+    
+    
+        <item>
+        <title>white主题配置</title>
+        <link>https://fushaolei.github.io/post/doc-white-configration/</link>
+        <pubDate>Sun, 09 Aug 2020 23:31:29 +0000</pubDate>
+        
+        <guid>https://fushaolei.github.io/post/doc-white-configration/</guid>
+        <description>FuShaoLei Blog https://fushaolei.github.io/post/doc-white-configration/ -&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/fushaolei/img2/20200726101450.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;hi-there&#34;&gt;👋Hi there&lt;/h2&gt;
+&lt;p&gt;欢迎使用本主题 ，&lt;strong&gt;White&lt;/strong&gt; 是一个在个性和极简之间徘徊的主题，（因为作者本身性格就是这样的人，而且搞不好心态爆炸会删库跑路（现已跑路。。。），还请喜欢的各位及时fork🤣&lt;/p&gt;
+&lt;p&gt;如果你喜欢这款主题的话，不妨给我一个star 感激不尽！&lt;/p&gt;
+&lt;h2 id=&#34;安装&#34;&gt;安装&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;方便备份和更新&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ol&gt;
+&lt;li&gt;fork 本项目&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git clone https://github.com/&amp;lt;你的用户名&amp;gt;/hexo-theme-white.git themes/white&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;修改根目录下的&lt;code&gt;_config.yml&lt;/code&gt; 为&lt;code&gt;theme: white&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;主题配置&#34;&gt;主题配置&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;其实config文件里写的很明白了，现在就重新列一下，添加一些不必要的说明&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;可自定义style&#34;&gt;可自定义style&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-yml&#34; data-lang=&#34;yml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;############## style ##############&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#062873;font-weight:bold&#34;&gt;style&lt;/span&gt;:&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;  &lt;/span&gt;&lt;span style=&#34;color:#062873;font-weight:bold&#34;&gt;layout&lt;/span&gt;:&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;    &lt;/span&gt;&lt;span style=&#34;color:#062873;font-weight:bold&#34;&gt;max-width&lt;/span&gt;:&lt;span style=&#34;color:#bbb&#34;&gt; &lt;/span&gt;1130px&lt;span style=&#34;color:#bbb&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;#总体宽度&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;    &lt;/span&gt;&lt;span style=&#34;color:#062873;font-weight:bold&#34;&gt;post-max-width&lt;/span&gt;:&lt;span style=&#34;color:#bbb&#34;&gt; &lt;/span&gt;800px&lt;span style=&#34;color:#bbb&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;#文章内容宽度&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;  &lt;/span&gt;&lt;span style=&#34;color:#062873;font-weight:bold&#34;&gt;color&lt;/span&gt;:&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;    &lt;/span&gt;&lt;span style=&#34;color:#062873;font-weight:bold&#34;&gt;theme-main&lt;/span&gt;:&lt;span style=&#34;color:#bbb&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#4070a0&#34;&gt;&amp;#34;#1A98FF&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;# 主色调&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;    &lt;/span&gt;&lt;span style=&#34;color:#062873;font-weight:bold&#34;&gt;theme-secondary&lt;/span&gt;:&lt;span style=&#34;color:#bbb&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#4070a0&#34;&gt;&amp;#34;#DDF0FF&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;# 次色调&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;    &lt;/span&gt;&lt;span style=&#34;color:#062873;font-weight:bold&#34;&gt;text-main&lt;/span&gt;:&lt;span style=&#34;color:#bbb&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#4070a0&#34;&gt;&amp;#34;#333333&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;# 文字主色调&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;    &lt;/span&gt;&lt;span style=&#34;color:#062873;font-weight:bold&#34;&gt;text-secondary&lt;/span&gt;:&lt;span style=&#34;color:#bbb&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#4070a0&#34;&gt;&amp;#34;#898FA0&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;# 文字次色调&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;  &lt;/span&gt;&lt;span style=&#34;color:#062873;font-weight:bold&#34;&gt;animation&lt;/span&gt;:&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;    &lt;/span&gt;&lt;span style=&#34;color:#062873;font-weight:bold&#34;&gt;open&lt;/span&gt;:&lt;span style=&#34;color:#bbb&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;true&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;# 如果开启动画的话会引入animation.css&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;主页配置&#34;&gt;主页配置&lt;/h3&gt;
+&lt;h4 id=&#34;home页和archive可选配置&#34;&gt;home页和archive可选配置&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-yml&#34; data-lang=&#34;yml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;# home页可选类型&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#062873;font-weight:bold&#34;&gt;home&lt;/span&gt;:&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;  &lt;/span&gt;&lt;span style=&#34;color:#062873;font-weight:bold&#34;&gt;type&lt;/span&gt;:&lt;span style=&#34;color:#bbb&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#4070a0&#34;&gt;&amp;#34;img&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;# 主页的类型，可选 home | img | simple&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;# archive页可选类型&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#062873;font-weight:bold&#34;&gt;archive&lt;/span&gt;:&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;  &lt;/span&gt;&lt;span style=&#34;color:#062873;font-weight:bold&#34;&gt;type&lt;/span&gt;:&lt;span style=&#34;color:#bbb&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#4070a0&#34;&gt;&amp;#34;simple&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;# archive的类型，可选 img | simple&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;type为home就是一个封面，为img就是图片加标题的形式，simple就是极简模式&lt;/p&gt;
+&lt;h3 id=&#34;随机cover&#34;&gt;随机cover&lt;/h3&gt;
+&lt;p&gt;当你懒的找封面而又想用img模式的时候，我为你准备了些随机封面&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-yml&#34; data-lang=&#34;yml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#062873;font-weight:bold&#34;&gt;archive_img_mode&lt;/span&gt;:&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;  &lt;/span&gt;&lt;span style=&#34;color:#062873;font-weight:bold&#34;&gt;default_cover&lt;/span&gt;:&lt;span style=&#34;color:#bbb&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;#默认的cover&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;    &lt;/span&gt;- https://cdn.jsdelivr.net/gh/fushaolei/cdn-white@1.0/cover/01.jpg&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;    &lt;/span&gt;- https://cdn.jsdelivr.net/gh/fushaolei/cdn-white@1.0/cover/02.jpg&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;    &lt;/span&gt;- https://cdn.jsdelivr.net/gh/fushaolei/cdn-white@1.0/cover/03.jpg&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;    &lt;/span&gt;- https://cdn.jsdelivr.net/gh/fushaolei/cdn-white@1.0/cover/04.jpg&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;    &lt;/span&gt;- https://cdn.jsdelivr.net/gh/fushaolei/cdn-white@1.0/cover/05.jpg&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;    &lt;/span&gt;- https://cdn.jsdelivr.net/gh/fushaolei/cdn-white@1.0/cover/06.jpg&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;
+&lt;p&gt;图片均来自于bing的每日图片，版权归图片原作者所有，我只是搬到了自己的仓库方便使用，如果有侵犯到你的权益，请和我联系 ( •̀ ω •́ )y&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;浏览器标签页配置&#34;&gt;浏览器标签页配置&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-yml&#34; data-lang=&#34;yml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;# icon&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#062873;font-weight:bold&#34;&gt;icon&lt;/span&gt;:&lt;span style=&#34;color:#bbb&#34;&gt;  &lt;/span&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;#标签页图标，这里可填链接&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;#  header&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#062873;font-weight:bold&#34;&gt;site_name&lt;/span&gt;:&lt;span style=&#34;color:#bbb&#34;&gt; &lt;/span&gt;white.&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;menu&#34;&gt;menu&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-yml&#34; data-lang=&#34;yml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#062873;font-weight:bold&#34;&gt;menu&lt;/span&gt;:&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;  &lt;/span&gt;&lt;span style=&#34;color:#062873;font-weight:bold&#34;&gt;HOME&lt;/span&gt;:&lt;span style=&#34;color:#bbb&#34;&gt; &lt;/span&gt;/&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;  &lt;/span&gt;&lt;span style=&#34;color:#062873;font-weight:bold&#34;&gt;BLOG&lt;/span&gt;:&lt;span style=&#34;color:#bbb&#34;&gt; &lt;/span&gt;/archives&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;全局搜索&#34;&gt;全局搜索&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-yml&#34; data-lang=&#34;yml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;## 本地搜索&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#062873;font-weight:bold&#34;&gt;search&lt;/span&gt;:&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;  &lt;/span&gt;&lt;span style=&#34;color:#062873;font-weight:bold&#34;&gt;open&lt;/span&gt;:&lt;span style=&#34;color:#bbb&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;false&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;# 是否开启&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;  &lt;/span&gt;&lt;span style=&#34;color:#062873;font-weight:bold&#34;&gt;page&lt;/span&gt;:&lt;span style=&#34;color:#bbb&#34;&gt; &lt;/span&gt;/search&lt;span style=&#34;color:#bbb&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;# 页面路径（通常命名为search）&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;如果你想使用的话，请先到根目录执行&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-npm&#34; data-lang=&#34;npm&#34;&gt;npm install hexo-generator-search --save
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;然后新建一个名为search的page&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-npm&#34; data-lang=&#34;npm&#34;&gt;hexo new page &amp;#34;search&amp;#34;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;进入这个文件夹，更改它的&lt;code&gt;index.md&lt;/code&gt;文件，示例如下&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-md&#34; data-lang=&#34;md&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;---
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;layout: search
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;cover: &lt;span style=&#34;color:#d55537;font-weight:bold&#34;&gt;#你还可以自定义cover&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;---
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;然后将open设置为true即可开启&lt;/p&gt;
+&lt;h3 id=&#34;自我介绍&#34;&gt;自我介绍&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;当你的home页有用到type home模式的话 请配置此项&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-yml&#34; data-lang=&#34;yml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;# 自我介绍&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#062873;font-weight:bold&#34;&gt;intro&lt;/span&gt;:&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;  &lt;/span&gt;&lt;span style=&#34;color:#062873;font-weight:bold&#34;&gt;title&lt;/span&gt;:&lt;span style=&#34;color:#bbb&#34;&gt; &lt;/span&gt;Hi.I&amp;#39;m White.&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;  &lt;/span&gt;&lt;span style=&#34;color:#062873;font-weight:bold&#34;&gt;sub&lt;/span&gt;:&lt;span style=&#34;color:#bbb&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#4070a0&#34;&gt;&amp;#39;A [White](https://github.com/FuShaoLei/hexo-theme-white) theme for [Hexo](http://hexo.io/)&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;# markdown语法&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;  &lt;/span&gt;&lt;span style=&#34;color:#062873;font-weight:bold&#34;&gt;avator&lt;/span&gt;:&lt;span style=&#34;color:#bbb&#34;&gt; &lt;/span&gt;https://cdn.jsdelivr.net/gh/fushaolei/img/20200524104925.jpg&lt;span style=&#34;color:#bbb&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;#头像 暂时还没用到&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;  &lt;/span&gt;&lt;span style=&#34;color:#062873;font-weight:bold&#34;&gt;author&lt;/span&gt;:&lt;span style=&#34;color:#bbb&#34;&gt; &lt;/span&gt;white&lt;span style=&#34;color:#bbb&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;#所有文章的默认作者&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;联系方式&#34;&gt;联系方式&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-yml&#34; data-lang=&#34;yml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;#联系方式  &lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;#更多图标：https://remixicon.com/&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#062873;font-weight:bold&#34;&gt;contact&lt;/span&gt;:&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;  &lt;/span&gt;&lt;span style=&#34;color:#062873;font-weight:bold&#34;&gt;Github&lt;/span&gt;:&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;    &lt;/span&gt;- https://github.com/FuShaoLei/hexo-theme-white&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;    &lt;/span&gt;- ri-github-line&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;  &lt;/span&gt;&lt;span style=&#34;color:#062873;font-weight:bold&#34;&gt;Email&lt;/span&gt;:&lt;span style=&#34;color:#bbb&#34;&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;    &lt;/span&gt;- mailto:1563250958@qq.com&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;    &lt;/span&gt;- ri-mail-line&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;格式就是&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-yml&#34; data-lang=&#34;yml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#062873;font-weight:bold&#34;&gt;名字&lt;/span&gt;:&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;  &lt;/span&gt;- 链接&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;  &lt;/span&gt;- 图标 &lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;更多图标请到 &lt;a href=&#34;https://remixicon.com/&#34;&gt;https://remixicon.com/&lt;/a&gt; 搜寻，感谢此图标项目的开源作者&lt;a href=&#34;https://github.com/xiaochunjimmy&#34;&gt;xiaochunjimmy&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;文章toc设置&#34;&gt;文章toc设置&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-yml&#34; data-lang=&#34;yml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;# 文章toc索引栏设置&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#062873;font-weight:bold&#34;&gt;toc&lt;/span&gt;:&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;  &lt;/span&gt;&lt;span style=&#34;color:#062873;font-weight:bold&#34;&gt;open&lt;/span&gt;:&lt;span style=&#34;color:#bbb&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;true&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;# 是否开启&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;  &lt;/span&gt;&lt;span style=&#34;color:#062873;font-weight:bold&#34;&gt;side&lt;/span&gt;:&lt;span style=&#34;color:#bbb&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;true&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;  &lt;/span&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;# 选择toc的位置，填true的话toc将会显示在文章的侧边，填false的话 toc将出现在文章的开头&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;  &lt;/span&gt;&lt;span style=&#34;color:#062873;font-weight:bold&#34;&gt;max&lt;/span&gt;:&lt;span style=&#34;color:#bbb&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#40a070&#34;&gt;2&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;#最大深度&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;  &lt;/span&gt;&lt;span style=&#34;color:#062873;font-weight:bold&#34;&gt;min&lt;/span&gt;:&lt;span style=&#34;color:#bbb&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#40a070&#34;&gt;2&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;#最小深度&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;其中side如果设置为false的话，将会出现在文章的top部分，如果设置为true的话，将会出现在侧边
+min设置的是最小深度，max设置的是最大深度，&lt;del&gt;如上面配置所示，min为2，说明h2索引是至少要出现的，不会出现h1索引 （ 突然不知道怎么表达，&lt;/del&gt; 如果不理解的话建议你试试 😂&lt;/p&gt;
+&lt;h3 id=&#34;highlight&#34;&gt;highlight&lt;/h3&gt;
+&lt;p&gt;代码高亮，想要使用代码高亮，得先把根目录的**&lt;code&gt;_config.yml&lt;/code&gt;里的highlight的enable置成false**&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-yml&#34; data-lang=&#34;yml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;# 插件&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#062873;font-weight:bold&#34;&gt;plugins&lt;/span&gt;:&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;  &lt;/span&gt;&lt;span style=&#34;color:#062873;font-weight:bold&#34;&gt;highlightjs&lt;/span&gt;:&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;    &lt;/span&gt;&lt;span style=&#34;color:#062873;font-weight:bold&#34;&gt;js&lt;/span&gt;:&lt;span style=&#34;color:#bbb&#34;&gt; &lt;/span&gt;https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.1/build/highlight.min.js&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;    &lt;/span&gt;&lt;span style=&#34;color:#062873;font-weight:bold&#34;&gt;css&lt;/span&gt;:&lt;span style=&#34;color:#bbb&#34;&gt; &lt;/span&gt;https://cdn.jsdelivr.net/npm/highlight.js@10.1.1/styles/github.css&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;    &lt;/span&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;# more: https://www.jsdelivr.com/package/npm/highlight.js?path=styles&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;注：&lt;/strong&gt;  hexo 5.0版本此处有bug（2020年8月10日写），就是渲染不出来大括号（&lt;code&gt;{&lt;/code&gt;和&lt;code&gt;}&lt;/code&gt;）&lt;/p&gt;
+&lt;p&gt;这里博主有点懒了，最近事多心烦，就等着hexo官方更新吧 QAQ&lt;/p&gt;
+&lt;h3 id=&#34;评论系统&#34;&gt;评论系统&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-yml&#34; data-lang=&#34;yml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;# 评论系统设置&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#062873;font-weight:bold&#34;&gt;comments&lt;/span&gt;:&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;  &lt;/span&gt;&lt;span style=&#34;color:#062873;font-weight:bold&#34;&gt;open&lt;/span&gt;:&lt;span style=&#34;color:#bbb&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;false&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;#是否开启评论系统&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;  &lt;/span&gt;&lt;span style=&#34;color:#062873;font-weight:bold&#34;&gt;system&lt;/span&gt;:&lt;span style=&#34;color:#bbb&#34;&gt; &lt;/span&gt;gitalk&lt;span style=&#34;color:#bbb&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;#选择评论系统 可选 valine gitalk livere&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;  &lt;/span&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;# Valine&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;  &lt;/span&gt;&lt;span style=&#34;color:#062873;font-weight:bold&#34;&gt;valine&lt;/span&gt;:&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;    &lt;/span&gt;&lt;span style=&#34;color:#062873;font-weight:bold&#34;&gt;appid&lt;/span&gt;:&lt;span style=&#34;color:#bbb&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;#Leancloud应用的AppID  这里和下面的要换成你自己的啊QAQ&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;    &lt;/span&gt;&lt;span style=&#34;color:#062873;font-weight:bold&#34;&gt;appkey&lt;/span&gt;:&lt;span style=&#34;color:#bbb&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;#Leancloud应用的AppKey&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;    &lt;/span&gt;&lt;span style=&#34;color:#062873;font-weight:bold&#34;&gt;verify&lt;/span&gt;:&lt;span style=&#34;color:#bbb&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;false&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;#验证码&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;    &lt;/span&gt;&lt;span style=&#34;color:#062873;font-weight:bold&#34;&gt;notify&lt;/span&gt;:&lt;span style=&#34;color:#bbb&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;true&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;#评论回复提醒&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;    &lt;/span&gt;&lt;span style=&#34;color:#062873;font-weight:bold&#34;&gt;avatar&lt;/span&gt;:&lt;span style=&#34;color:#bbb&#34;&gt; &lt;/span&gt;robohash&lt;span style=&#34;color:#bbb&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;#评论列表头像样式：&amp;#39;&amp;#39;/mm/identicon/monsterid/wavatar/retro/hide&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;    &lt;/span&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;#头像类型可见： https://valine.js.org/avatar.html&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;    &lt;/span&gt;&lt;span style=&#34;color:#062873;font-weight:bold&#34;&gt;placeholder&lt;/span&gt;:&lt;span style=&#34;color:#bbb&#34;&gt; &lt;/span&gt;留下你来过的痕迹~&lt;span style=&#34;color:#bbb&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;#评论框占位符&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;  &lt;/span&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;# Gitalk&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;  &lt;/span&gt;&lt;span style=&#34;color:#062873;font-weight:bold&#34;&gt;gitalk&lt;/span&gt;:&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;    &lt;/span&gt;&lt;span style=&#34;color:#062873;font-weight:bold&#34;&gt;owner&lt;/span&gt;:&lt;span style=&#34;color:#bbb&#34;&gt;  &lt;/span&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;#Github 用户名,&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;    &lt;/span&gt;&lt;span style=&#34;color:#062873;font-weight:bold&#34;&gt;repo&lt;/span&gt;:&lt;span style=&#34;color:#bbb&#34;&gt;  &lt;/span&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;#储存评论issue的github仓库名&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;    &lt;/span&gt;&lt;span style=&#34;color:#062873;font-weight:bold&#34;&gt;admin&lt;/span&gt;:&lt;span style=&#34;color:#bbb&#34;&gt;  &lt;/span&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;#Github 用户名&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;    &lt;/span&gt;&lt;span style=&#34;color:#062873;font-weight:bold&#34;&gt;clientID&lt;/span&gt;:&lt;span style=&#34;color:#bbb&#34;&gt;  &lt;/span&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;#`Github Application clientID`&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;    &lt;/span&gt;&lt;span style=&#34;color:#062873;font-weight:bold&#34;&gt;clientSecret&lt;/span&gt;:&lt;span style=&#34;color:#bbb&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;#`Github Application clientSecret`&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;  &lt;/span&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;#livere&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;  &lt;/span&gt;&lt;span style=&#34;color:#062873;font-weight:bold&#34;&gt;livere&lt;/span&gt;:&lt;span style=&#34;color:#bbb&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;# 前往 http://livere.com/ 申请账号&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;    &lt;/span&gt;&lt;span style=&#34;color:#062873;font-weight:bold&#34;&gt;dataId&lt;/span&gt;:&lt;span style=&#34;color:#bbb&#34;&gt; &lt;/span&gt;city&lt;span style=&#34;color:#bbb&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;#免费版本city&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;    &lt;/span&gt;&lt;span style=&#34;color:#062873;font-weight:bold&#34;&gt;dataUid&lt;/span&gt;:&lt;span style=&#34;color:#bbb&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;#安装代码中 data-uid 后面数据&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;这里的话相关教程大家网上搜就好了。这里就不赘诉了&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;还是写一些gitalk的坑吧，一个是repo这里 写的应该是&lt;strong&gt;仓库名&lt;/strong&gt;，而不是仓库链接或者其他的东西，然后gitalk要上线部署一次才可以，md文件名字最好用英文来命名，如果用中文的话，超出50个字符将会初始化失败&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;其他&#34;&gt;其他&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-yml&#34; data-lang=&#34;yml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;# 页脚&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#062873;font-weight:bold&#34;&gt;footer&lt;/span&gt;:&lt;span style=&#34;color:#bbb&#34;&gt; &lt;/span&gt;Power by [Hexo](http://hexo.io/) Theme by [White](https://github.com/FuShaoLei/hexo-theme-white)&lt;span style=&#34;color:#bbb&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;# markdown语法&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;#有分类时是否开启menu分类页和自定义名字&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#062873;font-weight:bold&#34;&gt;menu_categories&lt;/span&gt;:&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;  &lt;/span&gt;&lt;span style=&#34;color:#062873;font-weight:bold&#34;&gt;open&lt;/span&gt;:&lt;span style=&#34;color:#bbb&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;true&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;  &lt;/span&gt;&lt;span style=&#34;color:#062873;font-weight:bold&#34;&gt;name&lt;/span&gt;:&lt;span style=&#34;color:#bbb&#34;&gt; &lt;/span&gt;分类&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;#可自定义归档标签页名字 &lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#062873;font-weight:bold&#34;&gt;archive_tab_name&lt;/span&gt;:&lt;span style=&#34;color:#bbb&#34;&gt; &lt;/span&gt;Blog&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;#图片懒加载&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#062873;font-weight:bold&#34;&gt;lazyload&lt;/span&gt;:&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;  &lt;/span&gt;&lt;span style=&#34;color:#062873;font-weight:bold&#34;&gt;open&lt;/span&gt;:&lt;span style=&#34;color:#bbb&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;true&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;#是否开启&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;这里就不bb了 大家应该看的懂&lt;/p&gt;
+&lt;h2 id=&#34;进阶使用&#34;&gt;进阶使用&lt;/h2&gt;
+&lt;h3 id=&#34;平滑升级&#34;&gt;平滑升级&lt;/h3&gt;
+&lt;h4 id=&#34;配置&#34;&gt;配置&lt;/h4&gt;
+&lt;p&gt;因为主题的更新比较频繁，所以如果你想舒服用到最新的版本的话，就请使用平滑升级&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;在你&lt;strong&gt;根目录&lt;/strong&gt;下的&lt;code&gt;source&lt;/code&gt;文件夹下新建一个名为&lt;code&gt;_data&lt;/code&gt;的&lt;strong&gt;文件夹&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;复制&lt;strong&gt;主题文件夹&lt;/strong&gt;下的&lt;code&gt;_config.yml&lt;/code&gt;到&lt;code&gt;_data&lt;/code&gt;文件夹下，重命名为&lt;code&gt;white.yml&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;好了，到这里差不多完成了，以后你需要改动什么，只需要在这个&lt;code&gt;white.yml&lt;/code&gt;中进行修改(在编译时，会自动将此替换&lt;code&gt;_config.yml&lt;/code&gt;)&lt;/p&gt;
+&lt;h4 id=&#34;升级&#34;&gt;升级&lt;/h4&gt;
+&lt;p&gt;当你看到我的主题有&lt;a href=&#34;https://github.com/FuShaoLei/hexo-theme-white/issues/3&#34;&gt;变更&lt;/a&gt;时，在主题文件中执行&lt;code&gt;git pull&lt;/code&gt;拉取最新代码
+然后，对比最新主题文件夹下的&lt;code&gt;_config.yml&lt;/code&gt; 看看有无新增什么东西，添加到你的&lt;code&gt;white.yml&lt;/code&gt;中即可&lt;/p&gt;
+- https://fushaolei.github.io/post/doc-white-configration/ - </description>
+        </item>
+    
+    
+    
+        <item>
+        <title>IDEA安装</title>
+        <link>https://fushaolei.github.io/post/idea-note/</link>
+        <pubDate>Sun, 14 Jun 2020 21:36:08 +0000</pubDate>
+        
+        <guid>https://fushaolei.github.io/post/idea-note/</guid>
+        <description>FuShaoLei Blog https://fushaolei.github.io/post/idea-note/ -&lt;blockquote&gt;
+&lt;p&gt;哭唧唧，用惯了eclispe的我用起idea就像一个傻子，现在记录一下，以免忘记
+所用版本：idea 2020.1&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;1-下载和安装&#34;&gt;1. 下载和安装&lt;/h2&gt;
+&lt;p&gt;去官网下载：https://www.jetbrains.com/idea/download/
+安装随意，&lt;del&gt;破解的话 看这篇&lt;a href=&#34;https://nymane.github.io/post/2020-04-14-IntelliJ_IDEA_2020.1%E6%B3%A8%E5%86%8C%E7%A0%81%EF%BC%88%E4%BA%B2%E6%B5%8B%E6%9C%89%E6%95%88%EF%BC%8C%E5%8F%AF%E6%BF%80%E6%B4%BB%E8%87%B3_2089_%E5%B9%B4&#34;&gt;文章&lt;/a&gt;&lt;/del&gt;，有开源项目的建议可以试着申请下免费的一年使用权，链接指路：https://www.jetbrains.com/zh-cn/community/opensource/&lt;/p&gt;
+&lt;h2 id=&#34;2-配置maven&#34;&gt;2. 配置maven&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;maven的作用就是帮助我们下载需要的jar包，不需要在自己去网上找来找去了&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;点击这个链接：https://maven.apache.org/，去这个页面:
+&lt;img src=&#34;https://cdn.jsdelivr.net/gh/fushaolei/img/20200614230817.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;然后解压，记住你解压后的位置，比如我直接解压到E盘
+然后是配置环境，电脑&amp;gt;属性&amp;gt;高级系统设置&amp;gt;环境变量，在系统变量中添加一个变量为&lt;code&gt;M2_HOME&lt;/code&gt;，值为你的maven存放路径，然后到path里添加一个maven的bin路径，懒了不贴图了 
+在cmd中输入&lt;code&gt;mvn -v&lt;/code&gt;出现maven的版本号 ，就说明配置成功啦！&lt;/p&gt;
+&lt;p&gt;这时还没完：
+进入&lt;code&gt;E:\apache-maven-3.6.3\conf&lt;/code&gt;路径下。打开setting.xml
+在mirrors中添加一个镜像&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;     &lt;span style=&#34;color:#062873;font-weight:bold&#34;&gt;&amp;lt;mirror&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            &lt;span style=&#34;color:#062873;font-weight:bold&#34;&gt;&amp;lt;id&amp;gt;&lt;/span&gt;nexus-aliyun&lt;span style=&#34;color:#062873;font-weight:bold&#34;&gt;&amp;lt;/id&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            &lt;span style=&#34;color:#062873;font-weight:bold&#34;&gt;&amp;lt;mirrorOf&amp;gt;&lt;/span&gt;central&lt;span style=&#34;color:#062873;font-weight:bold&#34;&gt;&amp;lt;/mirrorOf&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            &lt;span style=&#34;color:#062873;font-weight:bold&#34;&gt;&amp;lt;name&amp;gt;&lt;/span&gt;Nexus aliyun&lt;span style=&#34;color:#062873;font-weight:bold&#34;&gt;&amp;lt;/name&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            &lt;span style=&#34;color:#062873;font-weight:bold&#34;&gt;&amp;lt;url&amp;gt;&lt;/span&gt;http://maven.aliyun.com/nexus/content/groups/public/&lt;span style=&#34;color:#062873;font-weight:bold&#34;&gt;&amp;lt;/url&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#062873;font-weight:bold&#34;&gt;&amp;lt;/mirror&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;阿里云镜像，到时候下载jar包时会更快&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;下载的路径还没修改，将在后续补上&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;3-idea配置maven&#34;&gt;3. Idea配置maven&lt;/h2&gt;
+&lt;p&gt;先随意创建一个项目。。。进去后
+&lt;img src=&#34;https://cdn.jsdelivr.net/gh/fushaolei/img/20200614233119.png&#34; alt=&#34;&#34;&gt;
+&lt;img src=&#34;https://cdn.jsdelivr.net/gh/fushaolei/img/20200614233133.png&#34; alt=&#34;&#34;&gt;
+&lt;img src=&#34;https://cdn.jsdelivr.net/gh/fushaolei/img/20200614233140.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;-Xms1024m -Xmx2048m
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;好了 这样后，每创建一个新的项目，都会自动给你配置maven的路径，然后下载jar包的速度也会相应的加快，这给我们的开发带来了极大的便利&lt;/p&gt;
+- https://fushaolei.github.io/post/idea-note/ - </description>
+        </item>
+    
+    
+    
+        <item>
+        <title>Git学习笔记</title>
+        <link>https://fushaolei.github.io/post/git-note/</link>
+        <pubDate>Mon, 03 Feb 2020 10:55:36 +0000</pubDate>
+        
+        <guid>https://fushaolei.github.io/post/git-note/</guid>
+        <description>FuShaoLei Blog https://fushaolei.github.io/post/git-note/ -&lt;blockquote&gt;
+&lt;p&gt;使用Git是程序员必备的一个技能，虽然以前有跟着老师学过，但是一知半解，所以重新学过，本文记录了我学习Git的全过程&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;参考教程&#34;&gt;参考教程&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;学习教程：&lt;a href=&#34;https://www.liaoxuefeng.com/wiki/896043488029600&#34;&gt;廖雪峰的Git教程&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;测试：&lt;a href=&#34;https://learngitbranching.js.org/&#34;&gt;learngitbranching&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;笔记&#34;&gt;笔记&lt;/h2&gt;
+&lt;h3 id=&#34;简介&#34;&gt;🥝简介&lt;/h3&gt;
+&lt;p&gt;由Linus用c语言开发的分布式版本控制系统&lt;/p&gt;
+&lt;h3 id=&#34;版本穿梭&#34;&gt;💉版本穿梭&lt;/h3&gt;
+&lt;p&gt;可先用&lt;code&gt;git log&lt;/code&gt;指令查看一下有几个版本提交到了仓库里
+&lt;img src=&#34;https://imgconvert.csdnimg.cn/aHR0cHM6Ly9jZG4uanNkZWxpdnIubmV0L2doL2Z1c2hhb2xlaS9pbWcvMjAyMDA1MDYyMzQ0MDcucG5n?x-oss-process=image/format,png&#34; alt=&#34;1&#34;&gt;&lt;/p&gt;
+&lt;p&gt;或用&lt;code&gt;git log --pretty=oneline&lt;/code&gt;可以简单的看到版本号&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://imgconvert.csdnimg.cn/aHR0cHM6Ly9jZG4uanNkZWxpdnIubmV0L2doL2Z1c2hhb2xlaS9pbWcvMjAyMDA1MDYyMzQ3NDkucG5n?x-oss-process=image/format,png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h4 id=&#34;版本倒退回过去&#34;&gt;版本倒退（回过去）&lt;/h4&gt;
+&lt;p&gt;&lt;code&gt;git reset --hard ?&lt;/code&gt;&lt;br&gt;
+&lt;strong&gt;?里&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;可以填&lt;code&gt;HEAD^&lt;/code&gt;标识上个版本，上上个版本就是&lt;code&gt;HEAD^^&lt;/code&gt;，假如更上的话就是&lt;code&gt;HEAD~100&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;也可以直接填版本号，只要写前几个就行，比如上面直接写&lt;code&gt;git reset --hard 9410f&lt;/code&gt;就会退回到上一个版本了&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://imgconvert.csdnimg.cn/aHR0cHM6Ly9jZG4uanNkZWxpdnIubmV0L2doL2Z1c2hhb2xlaS9pbWcvMjAyMDA1MDYyMzQ5MDEucG5n?x-oss-process=image/format,png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h4 id=&#34;版本恢复去未来&#34;&gt;版本恢复（去未来）&lt;/h4&gt;
+&lt;p&gt;首先查看一下历史信息&lt;code&gt;git reflog&lt;/code&gt;,然后根据版本号写&lt;code&gt;git reset --hard 版本号&lt;/code&gt;,就这么简单😋&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://imgconvert.csdnimg.cn/aHR0cHM6Ly9jZG4uanNkZWxpdnIubmV0L2doL2Z1c2hhb2xlaS9pbWcvMjAyMDA1MDYyMzUwMjIucG5n?x-oss-process=image/format,png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;工作区和暂存区&#34;&gt;🛀工作区和暂存区&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;git add 文件&lt;/code&gt;指令是把文件修改添加到暂存区
+而&lt;code&gt;git commit -m &amp;quot;XXXX&amp;quot;&lt;/code&gt;就是往分支上提交更改&lt;/p&gt;
+&lt;h4 id=&#34;撤销修改&#34;&gt;撤销修改&lt;/h4&gt;
+&lt;h5 id=&#34;撤销未被git-add的修改&#34;&gt;撤销未被&lt;code&gt;git add&lt;/code&gt;的修改&lt;/h5&gt;
+&lt;p&gt;&lt;code&gt;git checkout -- file&lt;/code&gt;可以把&lt;code&gt;file&lt;/code&gt;在工作区的修改全部撤销
+这里出现了两种情况&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;未&lt;code&gt;git add&lt;/code&gt;，那么将恢复到未被修改的样子&lt;/li&gt;
+&lt;li&gt;已&lt;code&gt;git add&lt;/code&gt;，然后又修改了一下，那么将恢复到&lt;code&gt;git add&lt;/code&gt;后的样子，就是恢复到最近一次&lt;code&gt;git add&lt;/code&gt;后的样子&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h5 id=&#34;撤销提交到git-add的修改&#34;&gt;撤销提交到&lt;code&gt;git add&lt;/code&gt;的修改&lt;/h5&gt;
+&lt;p&gt;这里分两步走：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;首先要把在暂存区的给提出来，&lt;code&gt;git restore --staged file&lt;/code&gt;，也就是恢复到未提交修改的状态&lt;/li&gt;
+&lt;li&gt;然后在&lt;code&gt;git checkout -- file&lt;/code&gt; 把在工作区的修改（&lt;code&gt;git restore --staged file&lt;/code&gt;提出来的）全部撤销&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;注：&lt;/strong&gt;
+由于git更新换代，所以这里与廖老师的有些出入，关于&lt;code&gt;git restore --staged file&lt;/code&gt;的功能如下：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://imgconvert.csdnimg.cn/aHR0cHM6Ly9jZG4uanNkZWxpdnIubmV0L2doL2Z1c2hhb2xlaS9pbWcvMjAyMDA1MDYyMzU0MzMucG5n?x-oss-process=image/format,png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h4 id=&#34;删除文件&#34;&gt;删除文件&lt;/h4&gt;
+&lt;h5 id=&#34;删错了&#34;&gt;删错了&lt;/h5&gt;
+&lt;p&gt;可以用&lt;code&gt;git checkout -- file（被删文件名）&lt;/code&gt;来恢复那个被删文件&lt;/p&gt;
+&lt;h5 id=&#34;确实要删&#34;&gt;确实要删&lt;/h5&gt;
+&lt;p&gt;直接&lt;code&gt;git rm file（要删文件名）&lt;/code&gt;，然后再&lt;code&gt;git commit &lt;/code&gt;提交修改，就行了&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;一些想法：这里的&lt;code&gt;git rm file&lt;/code&gt;实际上也是将要做的修改提交到暂存区，然后&lt;code&gt;git commit&lt;/code&gt;才提交修改，因此如果这里想反悔的话，可以用&lt;code&gt;git restore --staged file&lt;/code&gt;把在暂存区的修改给撤销掉
+&lt;img src=&#34;https://imgconvert.csdnimg.cn/aHR0cHM6Ly9jZG4uanNkZWxpdnIubmV0L2doL2Z1c2hhb2xlaS9pbWcvMjAyMDA1MDYyMzU1MDUucG5n?x-oss-process=image/format,png&#34; alt=&#34;&#34;&gt;
+由图很简单的知道，绿色就代表放入了暂存区，红色就代表未放入&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;由上面许许多多案列可以知道，git操作时，总是先在暂存区里进行操作，然后再提交到分支上🔑&lt;/p&gt;
+&lt;h3 id=&#34;分支管理&#34;&gt;🤳分支管理&lt;/h3&gt;
+&lt;h4 id=&#34;创建-合并分支&#34;&gt;创建 合并分支&lt;/h4&gt;
+&lt;h5 id=&#34;创建&#34;&gt;创建&lt;/h5&gt;
+&lt;p&gt;&lt;code&gt;git switch -c &amp;lt;branch~name&amp;gt;&lt;/code&gt;可以创建然后并转换到这个分支上
+&lt;code&gt;git switch &amp;lt;branch~name&amp;gt;&lt;/code&gt;可用于切换分支，&lt;code&gt;git branch&lt;/code&gt;可以看到已有分支，前面带一个&lt;code&gt;*&lt;/code&gt;的表示现在所在的分支
+&lt;code&gt;git branch -d &amp;lt;branch~name&amp;gt;&lt;/code&gt;这个指令用于删除分支，前提是切换到了其他分支，
+如下
+&lt;img src=&#34;https://imgconvert.csdnimg.cn/aHR0cHM6Ly9jZG4uanNkZWxpdnIubmV0L2doL2Z1c2hhb2xlaS9pbWcvMjAyMDA1MDYyMzU1MjgucG5n?x-oss-process=image/format,png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h5 id=&#34;关于合并&#34;&gt;关于合并&lt;/h5&gt;
+&lt;p&gt;&lt;code&gt;git merge &amp;lt;branch~name&amp;gt;&lt;/code&gt;合并分支，&lt;strong&gt;产生的冲突只发生在当前的分支上&lt;/strong&gt;&lt;/p&gt;
+&lt;h6 id=&#34;合并冲突与解决方法&#34;&gt;🔥合并冲突与解决方法&lt;/h6&gt;
+&lt;blockquote&gt;
+&lt;p&gt;产生原因：分支与分支在同一个地方（有待研究）的&lt;strong&gt;不同修改&lt;/strong&gt;导致合并时的冲突,这时只能手动的修改冲突的地方，并提交&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;产生冲突后：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://imgconvert.csdnimg.cn/aHR0cHM6Ly9jZG4uanNkZWxpdnIubmV0L2doL2Z1c2hhb2xlaS9pbWcvMjAyMDA1MDYyMzU1NTQucG5n?x-oss-process=image/format,png&#34; alt=&#34;&#34;&gt;
+&lt;img src=&#34;https://imgconvert.csdnimg.cn/aHR0cHM6Ly9jZG4uanNkZWxpdnIubmV0L2doL2Z1c2hhb2xlaS9pbWcvMjAyMDA1MDYyMzU2MTEucG5n?x-oss-process=image/format,png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;这时只能手动修改后提交（&lt;code&gt;git add&lt;/code&gt;， &lt;code&gt;git commit&lt;/code&gt;）&lt;/p&gt;
+&lt;p&gt;提交完后可通过 &lt;code&gt;git log --graph --pretty=oneline --abbrev-commit&lt;/code&gt;查看合并的情况
+&lt;img src=&#34;https://imgconvert.csdnimg.cn/aHR0cHM6Ly9jZG4uanNkZWxpdnIubmV0L2doL2Z1c2hhb2xlaS9pbWcvMjAyMDA1MDYyMzU3MzYucG5n?x-oss-process=image/format,png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;简单总结一下，合并产生的冲突&lt;strong&gt;只能手动解决后提交&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;终于明白上学期和别人合写App时会出现的&lt;code&gt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;HEAD&lt;/code&gt;标识了😋&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;####### 💧合并分支时的模式&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;普通的&lt;code&gt;git merge &amp;lt;branch~name&amp;gt;&lt;/code&gt; 优先采用&lt;code&gt;Fast forward&lt;/code&gt;模式，不会记录分支信息&lt;/li&gt;
+&lt;li&gt;用&lt;code&gt;git merge --no-ff -m &amp;quot;xxxx&amp;quot; &amp;lt;branch~name&amp;gt;&lt;/code&gt;会禁用&lt;code&gt;Fast forward&lt;/code&gt;模式 则会记录分支&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://imgconvert.csdnimg.cn/aHR0cHM6Ly9jZG4uanNkZWxpdnIubmV0L2doL2Z1c2hhb2xlaS9pbWcvMjAyMDA1MDYyMzU4MDgucG5n?x-oss-process=image/format,png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h4 id=&#34;bug分支&#34;&gt;BUG分支&lt;/h4&gt;
+&lt;p&gt;修复bug时，通过创建新的分支来进行修复，然后合并到&lt;code&gt;master&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;当工作现场没有完成的时候👉&lt;code&gt;git stash&lt;/code&gt;隐藏工作现场以方便修改bug，用&lt;code&gt;git stash list&lt;/code&gt;可查看隐藏的东西，当修复完后可用&lt;code&gt;git stash pop&lt;/code&gt;来进行恢复&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;注：&lt;/strong&gt; &lt;code&gt;git stash pop&lt;/code&gt;（恢复工作现场并删除隐藏）=&lt;code&gt;git stash apply&lt;/code&gt;（恢复工作现场）+&lt;code&gt;git stash drop&lt;/code&gt;（删除隐藏）&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;有的时候需要一个个恢复工作现场&lt;img src=&#34;https://imgconvert.csdnimg.cn/aHR0cHM6Ly9jZG4uanNkZWxpdnIubmV0L2doL2Z1c2hhb2xlaS9pbWcvMjAyMDA1MDYyMzU4MzIucG5n?x-oss-process=image/format,png&#34; alt=&#34;&#34;&gt;
+那就应该先&lt;code&gt;git stash list&lt;/code&gt;查看一下隐藏的列表，再&lt;code&gt;git stash apply stash@{x}&lt;/code&gt;恢复，然后还有&lt;code&gt;git stash drop&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;h5 id=&#34;在master修复的bug的操作复制到其他分支上&#34;&gt;在master修复的bug的操作复制到其他分支上&lt;/h5&gt;
+&lt;p&gt;在要复制到的分支（此分支得先&lt;code&gt;commit&lt;/code&gt;后再操作）上：&lt;code&gt;git cherry-pick  &amp;lt;commit码&amp;gt;&lt;/code&gt;这里的 &lt;code&gt;&amp;lt;commit~码&amp;gt;&lt;/code&gt;是指修复bug的分支的commit号，就像下面这张图的&lt;code&gt;34bbddd&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://imgconvert.csdnimg.cn/aHR0cHM6Ly9jZG4uanNkZWxpdnIubmV0L2doL2Z1c2hhb2xlaS9pbWcvMjAyMDA1MDYyMzU5NDkucG5n?x-oss-process=image/format,png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://imgconvert.csdnimg.cn/aHR0cHM6Ly9jZG4uanNkZWxpdnIubmV0L2doL2Z1c2hhb2xlaS9pbWcvMjAyMDA1MDcwMDAxNTUucG5n?x-oss-process=image/format,png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h4 id=&#34;多人协作待重读未总结&#34;&gt;📌多人协作(待重读，未总结)&lt;/h4&gt;
+&lt;p&gt;&lt;code&gt;git remote -v&lt;/code&gt;可以查看远程库的信息，可以发现，若本地的分支如不推送到远程，对其他人是不可见的，可用&lt;code&gt;git push origin &amp;lt;branch~name&amp;gt;&lt;/code&gt;来推送，如果失败可以先&lt;code&gt;git pull&lt;/code&gt;然后再修改什么的，在本地创建和远程分支对应的分支，使用&lt;code&gt;git checkout -b branch-name origin/branch-name&lt;/code&gt;，本地和远程分支的名称最好一致；
+建立本地分支和远程分支的关联，使用&lt;code&gt;git branch --set-upstream branch-name origin/branch-name&lt;/code&gt;
+从远程抓取分支，使用&lt;code&gt;git pull&lt;/code&gt;，如果有冲突，要先处理冲突。&lt;/p&gt;
+&lt;h4 id=&#34;rebase未理解&#34;&gt;📌rebase(未理解)&lt;/h4&gt;
+&lt;p&gt;&lt;code&gt;git rebase&lt;/code&gt;操作可以把本地未push的分叉提交历史整理成直线；&lt;/p&gt;
+&lt;h3 id=&#34;指令总结&#34;&gt;🍻指令总结&lt;/h3&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;指令&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;说明&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;code&gt;git init&lt;/code&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;初始化&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;code&gt;git status&lt;/code&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;查看状态&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;code&gt;git diff .&lt;/code&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;可以查看具体被修改了那些内容（应在&lt;code&gt;git add .&lt;/code&gt;前使用）&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;code&gt;git log&lt;/code&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;可以查看有几个版本提交到仓库里&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;code&gt;git log --pretty=oneline&lt;/code&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;同上，不过简化了些&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;code&gt;git reflog&lt;/code&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;可以查看每一次命令（可以看到版本号）&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;code&gt;gir reset --hard 版本号&lt;/code&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;版本退回或回溯&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;code&gt;git add 文件名&lt;/code&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;把修改放到暂存区&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;code&gt;git commit -m &amp;quot;xxxxx&amp;quot;&lt;/code&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;一次性把暂存区的所有修改提交到分支上&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;code&gt;git checkout -- &amp;lt;file~name&amp;gt;&lt;/code&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;可把未&lt;code&gt;git add&lt;/code&gt;的文件修改全部撤销&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;code&gt;git retore --staged &amp;lt;file~name&amp;gt;&lt;/code&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;把&lt;code&gt;&amp;lt;file~name&amp;gt;&lt;/code&gt;在暂存区的东西移出(到工作区，也就是可以进行&lt;code&gt;git checkout -- &amp;lt;file~name&amp;gt;&lt;/code&gt;操作)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;code&gt;git rm &amp;lt;file~name&amp;gt;&lt;/code&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;删除file文件，并提交修改到暂存区中&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;code&gt;git switch &amp;lt;branch~name&amp;gt;&lt;/code&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;切换分支&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;code&gt;git switch -c &amp;lt;branch~name&amp;gt;&lt;/code&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;创建并切换到新的分支&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;code&gt;git branch&lt;/code&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;查看已有分支，带&lt;code&gt;*&lt;/code&gt;的是现所在分支&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;code&gt;git branch -d &amp;lt;branch~name&amp;gt;&lt;/code&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;删除分支（前提是已&lt;code&gt;switch&lt;/code&gt;到其他分支上）&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;code&gt;git branch -D &amp;lt;branch~name&amp;gt;&lt;/code&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;删除分支,强行删除&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;code&gt;git merge &amp;lt;branch~name&amp;gt;&lt;/code&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;合并分支（优先采用&lt;code&gt;Fast forward&lt;/code&gt;模式）&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;code&gt;git merge --no-ff -m &amp;quot;xxxx&amp;quot; &amp;lt;branch~name&amp;gt;&lt;/code&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;合并分支（禁用&lt;code&gt;Fast forward&lt;/code&gt;模式）&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;code&gt;git log --graph --pretty=oneline --abbrev-commit&lt;/code&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;查看合并情况&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;code&gt;git stash&lt;/code&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;隐藏工作现场&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;code&gt;git stash list&lt;/code&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;可查看&lt;code&gt;stash&lt;/code&gt;的东西&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;code&gt;git stash pop&lt;/code&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;恢复工作现场，注：&lt;code&gt;git stash pop&lt;/code&gt;=&lt;code&gt;git stash apply&lt;/code&gt;+&lt;code&gt;git stash drop&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;code&gt;git cherry-pick  &amp;lt;commit码&amp;gt;&lt;/code&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;复制操作&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;code&gt;git remote&lt;/code&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;查看远程库的信息，用&lt;code&gt;git remote -v&lt;/code&gt;可以看到更详细的信息&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;code&gt;git push origin &amp;lt;branch~name&amp;gt;&lt;/code&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;推送名为&lt;code&gt;&amp;lt;branch~name&amp;gt;&lt;/code&gt;的分支&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;- https://fushaolei.github.io/post/git-note/ - </description>
+        </item>
+    
+    
+  </channel>
+</rss> 
